@@ -493,11 +493,25 @@
       }
 
       footer h2 {
+        margin: 0;
         font-size: 2rem;
       }
 
+      footer h3 {
+        margin-top: 0.5rem;
+      }
+
       footer p {
-        margin-bottom: auto;
+        margin-top: 0.6rem;
+      }
+
+      .socials {
+        margin-top: 0.75rem;
       }
     
+      footer img:hover {
+        transform: scale(1.10);
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
   }

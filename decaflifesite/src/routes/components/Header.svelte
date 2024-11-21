@@ -1,59 +1,91 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	let isMenuOpen = false;
+
+	const toggleMenu = () => {
+		isMenuOpen = !isMenuOpen;
+	};
+
+	const navElements = [
+		{ href: '/', name: 'Home' },
+		{ href: '#features', name: 'Features' },
+		{ href: '#testimonials', name: 'Testimonials' },
+		{ href: '#pricing', name: 'Pricing' }
+	];
 </script>
 
-<header class="bg-white shadow-sm">
+{#snippet humburgerNavElem(href: string, name: string)}
+	<a
+		{href}
+		class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-right text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-gray-900"
+	>
+		{name}
+	</a>
+{/snippet}
+
+{#snippet desktopNavElem(href: string, name: string)}
+	<a
+		{href}
+		class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
+	>
+		{name}
+	</a>
+{/snippet}
+
+<header class="border-primary-200 border-b">
 	<nav class="mx-auto max-w-7xl p-8 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between">
 			<div class="flex-shrink-0">
-				<a href="/" class="text-2xl font-semibold text-gray-900">My Decaf Life</a>
+				<a href="/" class="text-text-900 text-2xl font-semibold">My Decaf Life</a>
 			</div>
 
+			<!-- Hamburger menu toggle for mobile -->
+			<button class="sm:hidden" on:click={toggleMenu} aria-label="Toggle menu">
+				<svg class="h-6 w-6" fill="bg-text-800" stroke="currentColor" viewBox="0 0 24 24">
+					{#if isMenuOpen}
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					{:else}
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					{/if}
+				</svg>
+			</button>
+
+			<!-- Desktop navigation -->
 			<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-				<a
-					href="/"
-					class:active={$page.url.pathname === '/'}
-					class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-				>
-					Home
-				</a>
-				<a
-					href="/features"
-					class:active={$page.url.pathname === '/features'}
-					class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-				>
-					Features
-				</a>
-				<a
-					href="/testimonials"
-					class:active={$page.url.pathname === '/testimonials'}
-					class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-				>
-					Testimonials
-				</a>
-				<a
-					href="/pricing"
-					class:active={$page.url.pathname === '/pricing'}
-					class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-				>
-					Pricing
-				</a>
-			</div>
+				{#each navElements as navElement}
+					{@render desktopNavElem(navElement.href, navElement.name)}
+				{/each}
 
-			<div class="flex items-center">
-				<a
-					href="/get-app"
-					class="rounded-md bg-[#F5D0C5] px-4 py-2 text-sm font-medium text-gray-900 hover:bg-[#f0c1b4]"
-				>
-					Get the App
-				</a>
+				<!-- CTA button -->
+				<div class="flex items-center">
+					<a
+						href="/get-app"
+						class="rounded-md bg-[#F5D0C5] px-4 py-2 text-sm font-medium text-gray-900 hover:bg-[#f0c1b4]"
+					>
+						Get the App
+					</a>
+				</div>
 			</div>
 		</div>
+
+		<!-- Mobile menu outside of flex box -->
+		{#if isMenuOpen}
+			<div class="w-full sm:hidden">
+				<div class=" space-y-1 pb-3 pt-2">
+					{#each navElements as navElement}
+						{@render humburgerNavElem(navElement.href, navElement.name)}
+					{/each}
+				</div>
+			</div>
+		{/if}
 	</nav>
 </header>
-
-<style>
-	.active {
-		border-bottom: 2px solid #4b5563;
-	}
-</style>

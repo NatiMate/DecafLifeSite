@@ -11,7 +11,7 @@
 	/>
 </svelte:head>
 
-<div class="flex min-h-screen flex-col">
+<div class="bg-almost-white flex min-h-screen flex-col">
 	<Header />
 	<main class="flex-1">
 		{@render children()}

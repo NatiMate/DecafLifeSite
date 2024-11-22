@@ -73,29 +73,21 @@
 		}
 	];
 
-	let selectedTestimonial = $state(3);
+	let selectedTestimonial = $state(0);
 	let testimonialContainer: HTMLElement;
 
 	function decrementSelectedTestimonial() {
 		if (selectedTestimonial > 0) {
 			selectedTestimonial--;
-			scrollToTestimonial(selectedTestimonial);
+			const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
+			targetElement?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 		}
 	}
 	function incrementSelectedTestimonial() {
 		if (selectedTestimonial < testimonials.length - 1) {
 			selectedTestimonial++;
-			scrollToTestimonial(selectedTestimonial);
-		}
-	}
-
-	function scrollToTestimonial(index: number) {
-		const testimonialElement = document.getElementById(`testimonial-${index}`);
-		if (testimonialElement && testimonialContainer) {
-			testimonialContainer.scrollTo({
-				left: testimonialElement.offsetLeft - testimonialContainer.offsetLeft,
-				behavior: 'smooth'
-			});
+			const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
+			targetElement?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 		}
 	}
 </script>
@@ -103,16 +95,19 @@
 {#snippet testimonialSnippet(index: number, testimonial: Testimonial)}
 	<div
 		id={`testimonial-${index}`}
-		class="bg-primary-50 border-primary-200 min-w-[300px] rounded-2xl border p-8"
+		class="bg-primary-50 border-primary-200 flex h-full min-w-[300px] flex-col rounded-2xl border p-8"
 	>
-		<img
-			class="mb-2 w-[46px]"
-			src={index === selectedTestimonial ? greenQuotationMarks : quotationMarks}
-			alt="quotation marks"
-		/>
-		<h3 class="text-text-600">
-			{testimonial.quote}
-		</h3>
+		<div class="flex-grow">
+			<img
+				class="mb-2 w-[46px]"
+				src={index === selectedTestimonial ? greenQuotationMarks : quotationMarks}
+				alt="quotation marks"
+			/>
+			<h3 class="text-text-600">
+				{testimonial.quote}
+			</h3>
+		</div>
+
 		<div class="mt-4 flex flex-row items-center gap-2">
 			<img
 				class="h-[36px] w-[36px]"
@@ -133,13 +128,23 @@
 		<span> about quitting caffeine </span>
 	</h2>
 	<!-- Testimonial cards -->
-	<div class="my-6 flex gap-4 overflow-x-auto px-6" bind:this={testimonialContainer}>
+	<div
+		class="my-6 flex snap-x snap-mandatory gap-4 overflow-x-hidden scroll-smooth px-6"
+		bind:this={testimonialContainer}
+	>
 		{#each testimonials as testimonial, i}
-			{@render testimonialSnippet(i, testimonial)}
+			<div class="snap-center first:ml-auto last:mr-auto">
+				{@render testimonialSnippet(i, testimonial)}
+			</div>
 		{/each}
 	</div>
 	<div class="text-text-400 flex justify-center gap-8">
-		<button class="rounded-full" on:click={() => decrementSelectedTestimonial()}>
+		<button
+			class:invisible={selectedTestimonial === 0}
+			class="rounded-full"
+			onclick={() => decrementSelectedTestimonial()}
+			aria-label="Previous testimonial"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -151,7 +156,12 @@
 				<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 			</svg>
 		</button>
-		<button class="rounded-full" on:click={() => incrementSelectedTestimonial()}>
+		<button
+			class:invisible={selectedTestimonial === testimonials.length - 1}
+			class="rounded-full"
+			aria-label="Next testimonial"
+			onclick={() => incrementSelectedTestimonial()}
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

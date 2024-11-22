@@ -74,18 +74,44 @@
 	];
 
 	let selectedTestimonial = $state(3);
+	let testimonialContainer: HTMLElement;
+
+	function decrementSelectedTestimonial() {
+		if (selectedTestimonial > 0) {
+			selectedTestimonial--;
+			scrollToTestimonial(selectedTestimonial);
+		}
+	}
+	function incrementSelectedTestimonial() {
+		if (selectedTestimonial < testimonials.length - 1) {
+			selectedTestimonial++;
+			scrollToTestimonial(selectedTestimonial);
+		}
+	}
+
+	function scrollToTestimonial(index: number) {
+		const testimonialElement = document.getElementById(`testimonial-${index}`);
+		if (testimonialElement && testimonialContainer) {
+			testimonialContainer.scrollTo({
+				left: testimonialElement.offsetLeft - testimonialContainer.offsetLeft,
+				behavior: 'smooth'
+			});
+		}
+	}
 </script>
 
 {#snippet testimonialSnippet(index: number, testimonial: Testimonial)}
-	<div class="bg-primary-50 border-primary-200 min-w-[300px] rounded-2xl border p-8">
+	<div
+		id={`testimonial-${index}`}
+		class="bg-primary-50 border-primary-200 min-w-[300px] rounded-2xl border p-8"
+	>
 		<img
 			class="mb-2 w-[46px]"
 			src={index === selectedTestimonial ? greenQuotationMarks : quotationMarks}
 			alt="quotation marks"
 		/>
 		<h3 class="text-text-600">
-			I wake up ready to go, have continuous energy throughout the day and have had the most
-			productive, stress free year of my life.
+			{testimonial.quote}
 		</h3>
 		<div class="mt-4 flex flex-row items-center gap-2">
 			<img
@@ -107,13 +133,13 @@
 		<span> about quitting caffeine </span>
 	</h2>
 	<!-- Testimonial cards -->
-	<div class="my-6 flex gap-4 overflow-x-auto px-6">
+	<div class="my-6 flex gap-4 overflow-x-auto px-6" bind:this={testimonialContainer}>
 		{#each testimonials as testimonial, i}
 			{@render testimonialSnippet(i, testimonial)}
 		{/each}
 	</div>
 	<div class="text-text-400 flex justify-center gap-8">
-		<button class="rounded-full">
+		<button class="rounded-full" on:click={() => decrementSelectedTestimonial()}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -125,7 +151,7 @@
 				<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 			</svg>
 		</button>
-		<button class="rounded-full">
+		<button class="rounded-full" on:click={() => incrementSelectedTestimonial()}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

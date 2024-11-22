@@ -1,0 +1,141 @@
+<script lang="ts">
+	import quotationMarks from '$lib/assets/quotation_marks.png';
+	import greenQuotationMarks from '$lib/assets/quotation_marks_green.png';
+	import RedditLogo from '$lib/assets/reddit_logo.png';
+	import XLogo from '$lib/assets/x_logo.png';
+	import YoutubeLogo from '$lib/assets/youtube_logo.png';
+
+	interface Platform {
+		name: string;
+		logo: any;
+	}
+
+	interface Testimonial {
+		quote: string;
+		userName: string;
+		platform: Platform;
+	}
+	const youtube: Platform = {
+		name: 'Youtube',
+		logo: YoutubeLogo
+	};
+
+	const x: Platform = {
+		name: 'X',
+		logo: XLogo
+	};
+
+	const reddit: Platform = {
+		name: 'Reddit',
+		logo: RedditLogo
+	};
+
+	const testimonials: Testimonial[] = [
+		{
+			quote:
+				"My anxiety is gone. Like gone. It was about 5 weeks in when I realized, I'm just not anxious anymore. This was a life-long struggle, and this alone makes the sacrifice worthwhile.",
+			userName: 'Donniefitz2',
+			platform: reddit
+		},
+		{
+			quote:
+				"Caffeine gave me awful anxiety, after I quit I feel like a child... Just being myself it's amazing.",
+			userName: 'Olly_evans',
+			platform: youtube
+		},
+		{
+			quote:
+				'The quality of my sleep has improved and I feel less anxious. I never thought I would cut out caffiene.',
+			userName: 'ProgressWithChrstina',
+			platform: youtube
+		},
+		{
+			quote:
+				"I've suffered with brain fog since my mid teens, it's only since I stopped my caffeine intake that the clarity of my childhood has returned.",
+			userName: 'Genuinetrueblue',
+			platform: youtube
+		},
+		{
+			quote: 'Quitting caffeine was one of the best decisions I made.',
+			userName: 'Jhlotto',
+			platform: x
+		},
+		{
+			quote: 'No more anxiety + better sleep are the main wins for me.',
+			userName: 'moderntechtropolis',
+			platform: reddit
+		},
+		{
+			quote:
+				'I wake up ready to go, have continuous energy throughout the day and have had the most productive, stress free year of my life.',
+			userName: 'SweetSweetCrunkle',
+			platform: reddit
+		}
+	];
+
+	let selectedTestimonial = $state(3);
+</script>
+
+{#snippet testimonialSnippet(index: number, testimonial: Testimonial)}
+	<div class="bg-primary-50 border-primary-200 min-w-[300px] rounded-2xl border p-8">
+		<img
+			class="mb-2 w-[46px]"
+			src={index === selectedTestimonial ? greenQuotationMarks : quotationMarks}
+			alt="quotation marks"
+		/>
+		<h3 class="text-text-600">
+			I wake up ready to go, have continuous energy throughout the day and have had the most
+			productive, stress free year of my life.
+		</h3>
+		<div class="mt-4 flex flex-row items-center gap-2">
+			<img
+				class="h-[36px] w-[36px]"
+				src={testimonial.platform.logo}
+				alt={testimonial.platform.name}
+			/>
+			<div>
+				<p class="text-secondary-800 text-sm">{testimonial.userName}</p>
+				<p class="text-xs font-light">Posted on {testimonial.platform.name}</p>
+			</div>
+		</div>
+	</div>
+{/snippet}
+
+<section class="bg-primary-100 py-8">
+	<h2 class="text-center">
+		<span class=" text-secondary-500"> What people say </span>
+		<span> about quitting caffeine </span>
+	</h2>
+	<!-- Testimonial cards -->
+	<div class="my-6 flex gap-4 overflow-x-auto px-6">
+		{#each testimonials as testimonial, i}
+			{@render testimonialSnippet(i, testimonial)}
+		{/each}
+	</div>
+	<div class="text-text-400 flex justify-center gap-8">
+		<button class="rounded-full">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="h-[28px] w-[28px]"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+			</svg>
+		</button>
+		<button class="rounded-full">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="h-[28px] w-[28px]"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+			</svg>
+		</button>
+	</div>
+</section>

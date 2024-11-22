@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import Footer from './components/Footer.svelte';
 	import Header from './components/Header.svelte';
 	let { children } = $props();
 </script>
@@ -16,6 +17,7 @@
 	<main class="flex-1">
 		{@render children()}
 	</main>
+	<Footer />
 </div>
 
 <style>

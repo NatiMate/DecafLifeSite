@@ -11,9 +11,9 @@
 		class="mx-auto mb-8 w-full max-w-lg rounded-lg"
 	/>
 
-	<h1 class="mb-2 text-5xl font-bold md:text-5xl">Quit caffeine!</h1>
+	<h1 class="mb-2 font-bold">Quit caffeine!</h1>
 
-	<h2 class="text-secondary-500 mb-8 text-5xl font-bold md:text-4xl">For good.</h2>
+	<h1 class="text-secondary-500 mb-8 font-bold">For good.</h1>
 
 	<p class="text-text-600 mx-auto mb-6 max-w-2xl text-lg md:text-xl">
 		Finally kick your coffee addiction and the caffeine withdrawal for a caffeine free life!

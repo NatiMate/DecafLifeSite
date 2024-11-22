@@ -4,6 +4,26 @@ const config: Config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			fontSize: {
+				h1: [
+					'48px',
+					{
+						fontWeight: '600'
+					}
+				],
+				h2: [
+					'32px',
+					{
+						fontWeight: '600'
+					}
+				],
+				h3: [
+					'18px',
+					{
+						fontWeight: '400'
+					}
+				]
+			},
 			fontFamily: {
 				sans: ['Outfit', 'sans-serif']
 			},

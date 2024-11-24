@@ -1,6 +1,6 @@
 <button
 	type="button"
-	class=" flex items-center justify-center rounded-xl border border-black bg-transparent px-4 py-2 text-black"
+	class=" border-text-200 flex w-[100%] items-center justify-center rounded-lg border bg-transparent bg-white px-4 py-2 text-black"
 >
 	<div class="mr-3">
 		<svg viewBox="0 0 384 512" width="25">

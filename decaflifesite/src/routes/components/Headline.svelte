@@ -11,15 +11,15 @@
 		class="mx-auto mb-8 w-full max-w-lg rounded-lg"
 	/>
 
-	<h1 class="mb-2 font-bold">Quit caffeine!</h1>
+	<h1 class="m-0 mb-2 font-semibold leading-none">Quit caffeine!</h1>
 
-	<h1 class="text-secondary-500 mb-8 font-bold">For good.</h1>
+	<h1 class="text-secondary-500 mb-8 font-semibold leading-none">For good.</h1>
 
-	<p class="text-text-600 mx-auto mb-6 max-w-2xl text-lg md:text-xl">
+	<p class="text-text-400 mx-auto mb-6 max-w-2xl text-lg leading-snug md:text-xl">
 		Finally kick your coffee addiction and the caffeine withdrawal for a caffeine free life!
 	</p>
 
-	<div class="mb-6 flex flex-row justify-between gap-2 sm:flex-row">
+	<div class="mx-auto mb-6 flex max-w-md flex-col justify-between gap-2 sm:flex-row">
 		<GooglePlay />
 		<AppStore />
 	</div>

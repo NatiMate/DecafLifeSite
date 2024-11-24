@@ -123,7 +123,7 @@
 {/snippet}
 
 <section class="bg-primary-100 py-8">
-	<h2 class="text-center">
+	<h2 class="text-center leading-tight">
 		<span class=" text-secondary-500"> What people say </span>
 		<span> about quitting caffeine </span>
 	</h2>

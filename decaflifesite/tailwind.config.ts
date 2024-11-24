@@ -22,6 +22,14 @@ const config: Config = {
 					{
 						fontWeight: '400'
 					}
+				],
+				p: [
+					'16px',
+					{
+						fontWeight: '400',
+						lineHeight: '1.375',
+					}
+					
 				]
 			},
 			fontFamily: {

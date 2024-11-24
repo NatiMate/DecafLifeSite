@@ -24,19 +24,19 @@
 
 {#snippet benefit(emoji: string, name: string)}
 	<div
-		class="bg-secondary-50f border-secondary-200 flex items-center gap-1 rounded-lg border px-2 py-1 text-sm"
+		class="bg-secondary-50 border-secondary-200 flex items-center gap-1 rounded-lg border px-2 py-1 text-sm"
 	>
 		<span>{emoji}</span>
 		<span class="text-secondary-500 font-medium">{name}</span>
 	</div>
 {/snippet}
 
-<section class="bg-primary-50 mx-auto max-w-4xl py-8">
+<section class="bg-primary-50 border-primary-100 mx-auto max-w-4xl border-y py-8">
 	<h3 class="text-text-900 text-center font-medium">Reported benefits from caffeine quitters</h3>
 
 	<div class="flex flex-col gap-4 pt-6">
 		<div class="scroll-container">
-			<div class="scrolling-wrapper flex flex-row gap-6">
+			<div class="scrolling-wrapper flex flex-row gap-4">
 				{#each benefitsRow1 as { emoji, name }}
 					{@render benefit(emoji, name)}
 				{/each}
@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="scroll-container">
-			<div class="scrolling-wrapper-reverse flex flex-row gap-6">
+			<div class="scrolling-wrapper-reverse flex flex-row gap-4">
 				{#each benefitsRow2 as { emoji, name }}
 					{@render benefit(emoji, name)}
 				{/each}

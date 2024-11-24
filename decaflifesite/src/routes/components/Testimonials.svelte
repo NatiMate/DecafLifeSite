@@ -125,6 +125,7 @@
 <section class="bg-primary-100 py-8">
 	<h2 class="text-center leading-tight">
 		<span class=" text-secondary-500"> What people say </span>
+		<br />
 		<span> about quitting caffeine </span>
 	</h2>
 	<!-- Testimonial cards -->

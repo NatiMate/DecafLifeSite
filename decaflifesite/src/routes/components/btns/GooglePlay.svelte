@@ -1,6 +1,6 @@
 <button
 	type="button"
-	class="text-text-900 border-text-200 flex w-[100%] items-center justify-center rounded-lg border bg-white px-4 py-2"
+	class="text-text-900 border-text-200 hover:border-secondary-500 flex w-[100%] items-center justify-center rounded-lg border bg-white px-4 py-2"
 >
 	<div class="mr-3">
 		<svg viewBox="30 336.7 120.9 129.2" width="25">

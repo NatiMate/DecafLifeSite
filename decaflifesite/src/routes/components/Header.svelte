@@ -69,7 +69,7 @@
 				<div class="flex items-center">
 					<a
 						href="/get-app"
-						class="rounded-md bg-[#F5D0C5] px-4 py-2 text-sm font-medium text-gray-900 hover:bg-[#f0c1b4]"
+						class="bg-primary-100 text-primary-500 hover:border-primary-400 border-primary-200 rounded-md border px-4 py-2 text-sm font-medium"
 					>
 						Get the App
 					</a>

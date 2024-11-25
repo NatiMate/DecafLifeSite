@@ -95,7 +95,7 @@
 {#snippet testimonialSnippet(index: number, testimonial: Testimonial)}
 	<div
 		id={`testimonial-${index}`}
-		class="bg-primary-50 border-primary-200 flex h-full min-w-[300px] flex-col rounded-2xl border p-8"
+		class="bg-primary-50 border-primary-200 flex h-full min-w-[300px] flex-col rounded-2xl border p-8 lg:min-w-[340px]"
 	>
 		<div class="flex-grow">
 			<img
@@ -122,22 +122,33 @@
 	</div>
 {/snippet}
 
-<section class="bg-primary-100 py-8">
-	<h2 class="text-center leading-tight">
+<section class="bg-primary-100 lg:bg-primary-50 py-8 lg:py-32">
+	<h2 class="text-center leading-tight lg:mb-16 lg:text-5xl">
 		<span class=" text-secondary-500"> What people say </span>
 		<br />
 		<span> about quitting caffeine </span>
 	</h2>
-	<!-- Testimonial cards -->
-	<div
-		class="my-6 flex snap-x snap-mandatory gap-4 overflow-x-hidden scroll-smooth px-6"
-		bind:this={testimonialContainer}
-	>
-		{#each testimonials as testimonial, i}
-			<div class="snap-center first:ml-auto last:mr-auto">
-				{@render testimonialSnippet(i, testimonial)}
-			</div>
-		{/each}
+	<!-- Testimonial cards container -->
+	<div class="relative">
+		<!-- Gradient overlays for lg screens -->
+		<div
+			class="from-almost-white absolute left-0 top-0 z-10 hidden h-full w-96 bg-gradient-to-r to-transparent lg:block"
+		></div>
+		<div
+			class="from-almost-white absolute right-0 top-0 z-10 hidden h-full w-96 bg-gradient-to-l to-transparent lg:block"
+		></div>
+
+		<!-- Testimonials scroll container -->
+		<div
+			class="my-6 flex snap-x snap-mandatory gap-4 overflow-x-hidden scroll-smooth px-6 lg:mb-16"
+			bind:this={testimonialContainer}
+		>
+			{#each testimonials as testimonial, i}
+				<div class="snap-center first:ml-auto last:mr-auto">
+					{@render testimonialSnippet(i, testimonial)}
+				</div>
+			{/each}
+		</div>
 	</div>
 	<div class="text-text-400 flex justify-center gap-8">
 		<button

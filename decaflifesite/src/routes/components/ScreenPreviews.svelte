@@ -34,26 +34,37 @@
 			titleBlack2: 'to stay strong',
 			image: GetMotivationalContent,
 			description:
-				'Find out why some people can handle caffeine just fine and others suffer from anxiety, insomnia & other problems.'
+				'Get support when you are craving caffeine the most! You will receive reports from other caffeine quitters at times when you normally got your caffeine fix.'
 		}
 	];
 </script>
 
 {#snippet preview(p: ScreenPreview)}
-	<div class="flex flex-row gap-2 text-center">
-		<h2 class="leading-tight">
-			<span>{p.titleBlack1}</span> <span class="text-secondary-500">{p.titleGreen}</span>
-			<span>{p.titleBlack2}</span>
-		</h2>
+	<div class="mx-auto flex flex-col gap-8 lg:flex-row lg:gap-20">
+		<img src={p.image} alt="Preview" class="hidden max-w-[500px] lg:block" />
+		<div class="m-auto flex max-w-md flex-col gap-2 lg:gap-8">
+			<div class="gap-2 text-center">
+				<h2 class="leading-tight lg:text-left lg:text-5xl">
+					<span>{p.titleBlack1}</span> <span class="text-secondary-500">{p.titleGreen}</span>
+					<span>{p.titleBlack2}</span>
+				</h2>
+			</div>
+			<img src={p.image} alt="Preview" class="block lg:hidden" />
+			<h3
+				class="text-text-400 mb-8 text-center text-base font-normal lg:mb-0 lg:text-left lg:text-xl"
+			>
+				{p.description}
+			</h3>
+		</div>
 	</div>
-	<img src={p.image} alt="Preview" />
-	<h3 class="text-text-400 mb-8 text-center text-base font-normal">{p.description}</h3>
 {/snippet}
 
-<section class="px-6 pb-12 pt-8">
-	<h3 class="text-text-300 mb-8 text-center font-normal">We created an App to help you quit...</h3>
+<section class="px-6 pb-12 pt-8 lg:py-32">
+	<h3 class="text-text-300 mb-8 text-center font-normal lg:pb-12">
+		We created an App to help you quit...
+	</h3>
 
-	<div class="flex flex-col gap-5">
+	<div class="flex flex-col gap-5 lg:gap-24">
 		{#each screens as s}
 			{@render preview(s)}
 		{/each}

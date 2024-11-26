@@ -3,7 +3,7 @@
 		<div class="mx-auto max-w-5xl md:grid md:grid-cols-[1fr_auto_auto] md:gap-24">
 			<div class="mb-8 md:mb-0 md:max-w-xs">
 				<h2 class="mb-4 text-2xl font-semibold">My Decaf Life</h2>
-				<p class="text-text-600">The mobile app that helps you quit caffeine with ease.</p>
+				<p class="text-text-400">The mobile app that helps you quit caffeine with ease.</p>
 				<!-- Social media icons -->
 				<div class="mt-6 flex gap-4">
 					<a

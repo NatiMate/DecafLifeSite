@@ -5,7 +5,7 @@
 
 <section class="mb-12 px-6 py-8 text-center lg:mb-12">
 	<div class="mb-5 mt-12">
-		<h2 class="leading-snug lg:text-5xl">
+		<h2 class="leading-loose lg:text-5xl">
 			<span> Get the app to </span>
 			<br />
 			<span class="text-secondary-500"> quit caffeine for good!</span>

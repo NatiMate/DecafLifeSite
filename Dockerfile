@@ -1,5 +1,9 @@
 FROM node:21.1.0-alpine AS builder
 WORKDIR /app
+
+# Install Python and build dependencies
+RUN apk add --no-cache python3 make g++
+
 COPY package*.json .
 COPY .env .
 COPY *.py .

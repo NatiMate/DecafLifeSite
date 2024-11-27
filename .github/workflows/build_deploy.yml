@@ -49,11 +49,6 @@ jobs:
           echo "CUSTOMER_PORTAL_URL_TEST=$CUSTOMER_PORTAL_URL_TEST" >> .env
         shell: bash
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-
       - name: Build container image
         run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):${{ github.ref_name }} .
 

@@ -7,7 +7,7 @@ services:
       src_nginx_and_certbot:
         ipv4_address: '10.56.1.70'
     volumes:
-      - ./prisma:/app/prisma
+      - ./drizzle:/app/drizzle
       - ./logs:/app/logs
 networks:
   src_nginx_and_certbot:

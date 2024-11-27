@@ -1,6 +1,8 @@
-<button
-	type="button"
-	class=" border-text-200 hover:border-secondary-500 flex w-[100%] items-center justify-center rounded-lg border bg-transparent bg-white px-4 py-2 text-black"
+<a
+	href="https://apps.apple.com/us/app/quit-coffee-my-decaf-life/id6738061219"
+	target="_blank"
+	rel="noopener noreferrer"
+	class="border-text-200 hover:border-secondary-500 flex w-[100%] items-center justify-center rounded-lg border bg-transparent bg-white px-4 py-2 text-black"
 >
 	<div class="mr-3">
 		<svg viewBox="0 0 384 512" width="25">
@@ -15,4 +17,4 @@
 		<div class="text-xs">Download on the</div>
 		<div class="-mt-1 font-sans text-base font-semibold">App Store</div>
 	</div>
-</button>
+</a>

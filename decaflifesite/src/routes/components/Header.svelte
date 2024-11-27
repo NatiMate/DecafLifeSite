@@ -8,8 +8,7 @@
 	const navElements = [
 		{ href: '/', name: 'Home' },
 		{ href: '#features', name: 'Features' },
-		{ href: '#testimonials', name: 'Testimonials' },
-		{ href: '#pricing', name: 'Pricing' }
+		{ href: '#testimonials', name: 'Testimonials' }
 	];
 </script>
 
@@ -68,7 +67,7 @@
 				<!-- CTA button -->
 				<div class="flex items-center">
 					<a
-						href="/get-app"
+						href="#cta"
 						class="bg-primary-100 text-primary-500 hover:border-primary-400 border-primary-200 rounded-md border px-4 py-2 text-sm font-medium"
 					>
 						Get the App

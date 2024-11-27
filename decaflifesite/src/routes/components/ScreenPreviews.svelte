@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GetMotivationalContent from '$lib/assets/get_motivational_content.webp';
-	import GetScienceInsights from '$lib/assets/get_science_insights.webp';
-	import TrackStreak from '$lib/assets/track_your_streak.webp';
+	import GetMotivationalContent from '$lib/assets/get_motivational_content.png';
+	import GetScienceInsights from '$lib/assets/get_science_insights.png';
+	import TrackStreak from '$lib/assets/track_your_streak.png';
 
 	interface ScreenPreview {
 		titleBlack1: string;
@@ -59,7 +59,7 @@
 	</div>
 {/snippet}
 
-<section class="px-6 pb-12 pt-8 lg:py-32">
+<section id="features" class="px-6 pb-12 pt-8 lg:py-32">
 	<h3 class="text-text-300 mb-8 text-center font-normal lg:pb-12">
 		We created an App to help you quit...
 	</h3>

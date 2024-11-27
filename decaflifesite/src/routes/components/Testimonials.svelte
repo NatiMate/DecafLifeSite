@@ -122,7 +122,7 @@
 	</div>
 {/snippet}
 
-<section class="bg-primary-100 lg:bg-primary-50 py-8 lg:py-32">
+<section id="testimonials" class="bg-primary-100 lg:bg-primary-50 py-8 lg:py-32">
 	<h2 class="text-center leading-tight lg:mb-16 lg:text-5xl">
 		<span class=" text-secondary-500"> What people say </span>
 		<br />

@@ -34,7 +34,9 @@
 <section
 	class="bg-primary-50 border-primary-100 mx-auto my-12 border-y py-8 lg:my-0 lg:bg-transparent"
 >
-	<h3 class="text-text-900 text-center font-medium">Reported benefits from caffeine quitters</h3>
+	<h3 class="text-text-700 text-center font-medium md:text-2xl">
+		Reported benefits from caffeine quitters
+	</h3>
 
 	<div class="flex flex-col gap-4 pt-6">
 		<div class="relative">

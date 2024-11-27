@@ -1,6 +1,8 @@
-<button
-	type="button"
-	class="text-text-900 border-text-200 hover:border-secondary-500 flex w-[100%] items-center justify-center rounded-lg border bg-white px-4 py-2"
+<a
+	href="https://play.google.com/store/apps/details?id=com.natimate.decaflife"
+	target="_blank"
+	rel="noopener noreferrer"
+	class="text-text-900 border-text-200 hover:border-secondary-500 flex w-[100%] items-center justify-center rounded-lg border bg-white px-4 py-2 transition-colors duration-200"
 >
 	<div class="mr-3">
 		<svg viewBox="30 336.7 120.9 129.2" width="25">
@@ -30,4 +32,4 @@
 		<div class="text-xs">GET IT ON</div>
 		<div class="-mt-1 font-sans text-base font-semibold">Google Play</div>
 	</div>
-</button>
+</a>

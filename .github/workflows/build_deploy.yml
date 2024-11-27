@@ -21,7 +21,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
-          source: 'docker-compose.yml,prisma/schema.prisma'
+          source: 'docker-compose.yml'
           target: '/full_server_docker/my-decaf-life/'
           command_timeout: 60s
 
@@ -49,10 +49,12 @@ jobs:
           echo "CUSTOMER_PORTAL_URL_TEST=$CUSTOMER_PORTAL_URL_TEST" >> .env
         shell: bash
 
-      - name: Build container image
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+
+      - name: Build container image
         run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):${{ github.ref_name }} .
 
       - name: Install doctl

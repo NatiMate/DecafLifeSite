@@ -50,6 +50,9 @@ jobs:
         shell: bash
 
       - name: Build container image
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
         run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):${{ github.ref_name }} .
 
       - name: Install doctl

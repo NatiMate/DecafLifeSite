@@ -10,7 +10,7 @@ COPY *.py .
 RUN npm ci
 COPY . .
 RUN npm run build
-RUN npm prune --production
+RUN npm ci --omit=dev
 
 FROM node:21.1.0-alpine
 WORKDIR /app

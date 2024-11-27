@@ -1,18 +1,21 @@
-import adapter from '@sveltejs/adapter-auto';
+import { default as autoAdapter } from '@sveltejs/adapter-auto';
+import { default as nodeAdapter } from '@sveltejs/adapter-node';
+
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+const dev = process.env.NODE_ENV === 'development';
 
-/** @type {import('@sveltejs/kit').Config} */
+console.log('ENV: ', process.env.NODE_ENV);
+
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
+	onwarn: (warning, handler) => {
+		if (warning.code === 'css-unused-selector') {
+			return;
+		}
+		handler(warning);
+	},
 	preprocess: vitePreprocess(),
-
 	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
+		adapter: dev ? autoAdapter() : nodeAdapter()
 	}
 };
-
 export default config;

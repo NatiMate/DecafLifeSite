@@ -4,6 +4,7 @@ WORKDIR /app
 # Install Python and build dependencies
 RUN apk add --no-cache python3 make g++
 
+RUN mkdir -p drizzle
 COPY package*.json .
 COPY .env .
 COPY *.py .
@@ -18,6 +19,7 @@ COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
 COPY --from=builder /app/.env .
 COPY --from=builder /app/*.py .
+COPY --from=builder /app/drizzle drizzle/
 COPY package.json .
 EXPOSE 3000
 ENV NODE_ENV=production

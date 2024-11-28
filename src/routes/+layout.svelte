@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
+	import Analytics from './components/Analytics.svelte';
 	import Footer from './components/Footer.svelte';
+	import GdprBanner from './components/GdprBanner.svelte';
 	import Header from './components/Header.svelte';
 	let { children } = $props();
 </script>
@@ -12,10 +14,12 @@
 	/>
 </svelte:head>
 
-<div class="bg-almost-white flex min-h-screen flex-col">
+<div class="flex min-h-screen flex-col bg-almost-white">
+	<Analytics />
 	<Header />
 	<main class="flex-1">
 		{@render children()}
+		<GdprBanner />
 	</main>
 	<Footer />
 </div>

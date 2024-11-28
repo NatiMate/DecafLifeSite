@@ -41,6 +41,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@beyonk/gdpr-cookie-consent-banner": "^12.1.4",
 		"@node-rs/argon2": "^1.1.0",
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",

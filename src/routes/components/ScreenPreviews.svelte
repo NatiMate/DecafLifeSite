@@ -42,7 +42,7 @@
 {#snippet preview(p: ScreenPreview, i: number)}
 	<!-- Desktop version -->
 	<div class="mx-auto hidden flex-row gap-20 lg:flex" class:flex-row-reverse={i % 2 === 1}>
-		<img src={p.image} alt="Preview" class="max-w-[500px]" />
+		<img src={p.image} alt="Preview" class="max-w-[500px] rounded-[35px]" />
 		<div class="m-auto flex max-w-md flex-col gap-8">
 			<!-- Headline -->
 			<div class="gap-2 text-center">
@@ -69,7 +69,7 @@
 					<span>{p.titleBlack2}</span>
 				</h2>
 			</div>
-			<img src={p.image} alt="Preview" />
+			<img src={p.image} alt="Preview" class="rounded-[35px]" />
 			<h3
 				class="mb-8 text-center text-base font-normal text-text-400 lg:mb-0 lg:text-left lg:text-xl"
 			>

@@ -80,20 +80,65 @@
 
 	let testimonialContainer: HTMLElement;
 	let isScrolling = false;
+	let touchStartX = 0;
+	let isDragging = false;
 
 	onMount(() => {
 		// Start at the middle set
 		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
 		targetElement?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
+
+		// Add touch/mouse event listeners
+		testimonialContainer?.addEventListener('touchstart', handleDragStart);
+		testimonialContainer?.addEventListener('touchend', handleDragEnd);
+		testimonialContainer?.addEventListener('mousedown', handleDragStart);
+		testimonialContainer?.addEventListener('mouseup', handleDragEnd);
+
+		return () => {
+			// Cleanup listeners on component destroy
+			testimonialContainer?.removeEventListener('touchstart', handleDragStart);
+			testimonialContainer?.removeEventListener('touchend', handleDragEnd);
+			testimonialContainer?.removeEventListener('mousedown', handleDragStart);
+			testimonialContainer?.removeEventListener('mouseup', handleDragEnd);
+		};
 	});
 
-	function decrementSelectedTestimonial() {
-		if (isScrolling) return;
+	function handleDragStart(e: MouseEvent | TouchEvent) {
+		isDragging = true;
+		touchStartX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+	}
+
+	function handleDragEnd(e: MouseEvent | TouchEvent) {
+		if (!isDragging) return;
+
+		const touchEndX = 'changedTouches' in e ? e.changedTouches[0].clientX : e.clientX;
+		const deltaX = touchEndX - touchStartX;
+
+		if (Math.abs(deltaX) > 50) {
+			// Minimum drag distance to trigger change
+			if (deltaX > 0) {
+				decrementSelectedTestimonial(true);
+			} else {
+				incrementSelectedTestimonial(true);
+			}
+		}
+
+		isDragging = false;
+	}
+
+	function decrementSelectedTestimonial(isManualScroll = false) {
+		if (isScrolling) {
+			return;
+		}
 		isScrolling = true;
 
 		selectedTestimonial--;
 		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
-		targetElement?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+		targetElement?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center',
+			inline: 'center'
+		});
 
 		// If we're at the start of the first set, jump to the middle set
 		if (selectedTestimonial < testimonials.length) {
@@ -102,20 +147,27 @@
 				const newTarget = document.getElementById(`testimonial-${selectedTestimonial}`);
 				newTarget?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
 				isScrolling = false;
-			}, 500); // Wait for smooth scroll to finish
+			}, 500);
 		} else {
 			setTimeout(() => {
 				isScrolling = false;
 			}, 500);
 		}
 	}
-	function incrementSelectedTestimonial() {
-		if (isScrolling) return;
+
+	function incrementSelectedTestimonial(isManualScroll = false) {
+		if (isScrolling) {
+			return;
+		}
 		isScrolling = true;
 
 		selectedTestimonial++;
 		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
-		targetElement?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+		targetElement?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center',
+			inline: 'center'
+		});
 
 		// If we're at the end of the middle set, jump back to the start of the middle set
 		if (selectedTestimonial >= testimonials.length * 2) {
@@ -124,7 +176,7 @@
 				const newTarget = document.getElementById(`testimonial-${selectedTestimonial}`);
 				newTarget?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
 				isScrolling = false;
-			}, 500); // Wait for smooth scroll to finish
+			}, 500);
 		} else {
 			setTimeout(() => {
 				isScrolling = false;
@@ -184,11 +236,12 @@
 
 		<!-- Testimonials scroll container -->
 		<div
-			class="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
+			class="scrollbar-hide flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
+			style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;"
 			bind:this={testimonialContainer}
 		>
 			{#each repeatedTestimonials as testimonial, i}
-				<div class="shrink-0 snap-center">
+				<div class="shrink-0 snap-center transition-transform duration-150">
 					{@render testimonialSnippet(i, testimonial)}
 				</div>
 			{/each}

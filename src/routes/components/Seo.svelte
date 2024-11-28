@@ -5,6 +5,7 @@
 	export let description;
 	export let type = 'Website';
 	export let image;
+	export let keywords;
 
 	let url = $page.url.href;
 </script>
@@ -14,10 +15,7 @@
 	<meta name="title" content={title} />
 	<meta name="description" content={description} />
 	<meta name="robots" content="index, follow" />
-	<meta
-		name="keywords"
-		content="günstige, rezepte, angebote, im Angebot, günstig, einfach, lecker, kochen, kochrezepte, kochideen, essen, rabatt, sparen, supermarkt"
-	/>
+	<meta name="keywords" content={keywords} />
 	<meta name="image" content="" />
 	{@html `<script type="application/ld+json">
 		{

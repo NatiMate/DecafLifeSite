@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import headerImage from '$lib/assets/header_image.png';
-	import headerImageAfter from '$lib/assets/header_image_after.jpg';
+	import headerImage from '$lib/assets/header_image.webp';
+	import headerImageAfter from '$lib/assets/header_image_after.webp';
 	import ImageSlider from './ImageSlider.svelte';
 	import AppStore from './btns/AppStore.svelte';
 	import GooglePlay from './btns/GooglePlay.svelte';

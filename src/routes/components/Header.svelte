@@ -1,4 +1,5 @@
 <script lang="ts">
+	import logo from '$lib/assets/decaf_logo.png';
 	let isMenuOpen = false;
 
 	const toggleMenu = () => {
@@ -31,9 +32,16 @@
 {/snippet}
 
 <header class="border-primary-200 border-b">
-	<nav class="mx-auto max-w-7xl p-8 sm:px-6 lg:px-8">
+	<nav class="mx-auto max-w-7xl px-6 py-8 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between">
-			<div class="flex-shrink-0">
+			<div class="flex-shrink-0 flex flex-row items-center gap-2">
+				<a href="/">
+					<img
+						src={logo}
+						alt="My Decaf Life"
+						class="border-primary-50 h-12 w-auto rounded-md border"
+					/>
+				</a>
 				<a href="/" class="text-text-900 text-2xl font-semibold">My Decaf Life</a>
 			</div>
 

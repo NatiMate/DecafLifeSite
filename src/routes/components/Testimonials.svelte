@@ -76,10 +76,9 @@
 
 	// Create a duplicated array of testimonials for infinite scroll effect
 	const repeatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
-	let selectedTestimonial = $state(testimonials.length); // Start with middle set
+	let selectedTestimonial = $state(testimonials.length + 3); // Start with middle set
 
 	let testimonialContainer: HTMLElement;
-
 	let isScrolling = false;
 
 	onMount(() => {
@@ -140,11 +139,14 @@
 		class="flex h-full w-[340px] flex-col rounded-2xl border border-primary-200 bg-primary-50 p-8"
 	>
 		<div class="flex-grow">
+			<!-- Desktop quotes -->
 			<img
-				class="mb-2 w-[46px]"
+				class="mb-2 hidden w-[46px] lg:block"
 				src={index === selectedTestimonial ? greenQuotationMarks : quotationMarks}
 				alt="quotation marks"
 			/>
+
+			<img class="mb-2 w-[46px] lg:hidden" src={greenQuotationMarks} alt="quotation marks" />
 			<h3 class="text-text-600">
 				{testimonial.quote}
 			</h3>

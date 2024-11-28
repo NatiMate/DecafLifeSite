@@ -86,21 +86,11 @@
 	onMount(() => {
 		// Start at the middle set
 		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
-		targetElement?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
-
-		// Add touch/mouse event listeners
-		testimonialContainer?.addEventListener('touchstart', handleDragStart);
-		testimonialContainer?.addEventListener('touchend', handleDragEnd);
-		testimonialContainer?.addEventListener('mousedown', handleDragStart);
-		testimonialContainer?.addEventListener('mouseup', handleDragEnd);
-
-		return () => {
-			// Cleanup listeners on component destroy
-			testimonialContainer?.removeEventListener('touchstart', handleDragStart);
-			testimonialContainer?.removeEventListener('touchend', handleDragEnd);
-			testimonialContainer?.removeEventListener('mousedown', handleDragStart);
-			testimonialContainer?.removeEventListener('mouseup', handleDragEnd);
-		};
+		if (targetElement) {
+			testimonialContainer.scrollLeft =
+				targetElement?.offsetLeft -
+				(testimonialContainer.offsetWidth - targetElement?.offsetWidth) / 2;
+		}
 	});
 
 	function handleDragStart(e: MouseEvent | TouchEvent) {

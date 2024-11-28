@@ -4,6 +4,7 @@
 	import RedditLogo from '$lib/assets/reddit_logo.png';
 	import XLogo from '$lib/assets/x_logo.png';
 	import YoutubeLogo from '$lib/assets/youtube_logo.png';
+	import { onMount } from 'svelte';
 
 	interface Platform {
 		name: string;
@@ -73,21 +74,62 @@
 		}
 	];
 
-	let selectedTestimonial = $state(0);
+	// Create a duplicated array of testimonials for infinite scroll effect
+	const repeatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+	let selectedTestimonial = $state(testimonials.length); // Start with middle set
+
 	let testimonialContainer: HTMLElement;
 
+	let isScrolling = false;
+
+	onMount(() => {
+		// Start at the middle set
+		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
+		targetElement?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
+	});
+
 	function decrementSelectedTestimonial() {
-		if (selectedTestimonial > 0) {
-			selectedTestimonial--;
-			const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
-			targetElement?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+		if (isScrolling) return;
+		isScrolling = true;
+
+		selectedTestimonial--;
+		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
+		targetElement?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+
+		// If we're at the start of the first set, jump to the middle set
+		if (selectedTestimonial < testimonials.length) {
+			setTimeout(() => {
+				selectedTestimonial = selectedTestimonial + testimonials.length;
+				const newTarget = document.getElementById(`testimonial-${selectedTestimonial}`);
+				newTarget?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
+				isScrolling = false;
+			}, 500); // Wait for smooth scroll to finish
+		} else {
+			setTimeout(() => {
+				isScrolling = false;
+			}, 500);
 		}
 	}
 	function incrementSelectedTestimonial() {
-		if (selectedTestimonial < testimonials.length - 1) {
-			selectedTestimonial++;
-			const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
-			targetElement?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+		if (isScrolling) return;
+		isScrolling = true;
+
+		selectedTestimonial++;
+		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
+		targetElement?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+
+		// If we're at the end of the middle set, jump back to the start of the middle set
+		if (selectedTestimonial >= testimonials.length * 2) {
+			setTimeout(() => {
+				selectedTestimonial = selectedTestimonial - testimonials.length;
+				const newTarget = document.getElementById(`testimonial-${selectedTestimonial}`);
+				newTarget?.scrollIntoView({ behavior: 'instant', block: 'center', inline: 'center' });
+				isScrolling = false;
+			}, 500); // Wait for smooth scroll to finish
+		} else {
+			setTimeout(() => {
+				isScrolling = false;
+			}, 500);
 		}
 	}
 </script>
@@ -95,7 +137,7 @@
 {#snippet testimonialSnippet(index: number, testimonial: Testimonial)}
 	<div
 		id={`testimonial-${index}`}
-		class="bg-primary-50 border-primary-200 flex h-full min-w-[300px] flex-col rounded-2xl border p-8 lg:min-w-[340px]"
+		class="flex h-full w-[340px] flex-col rounded-2xl border border-primary-200 bg-primary-50 p-8"
 	>
 		<div class="flex-grow">
 			<img
@@ -115,44 +157,43 @@
 				alt={testimonial.platform.name}
 			/>
 			<div>
-				<p class="text-secondary-800 text-sm">{testimonial.userName}</p>
+				<p class="text-sm text-secondary-800">{testimonial.userName}</p>
 				<p class="text-xs font-light">Posted on {testimonial.platform.name}</p>
 			</div>
 		</div>
 	</div>
 {/snippet}
 
-<section id="testimonials" class="bg-primary-100 lg:bg-primary-50 py-8 lg:py-32">
+<section id="testimonials" class="bg-primary-100 py-8 lg:bg-primary-50 lg:py-32">
 	<h2 class="text-center leading-tight lg:mb-16 lg:text-5xl">
 		<span class=" text-secondary-500"> What people say </span>
 		<br />
 		<span> about quitting caffeine </span>
 	</h2>
 	<!-- Testimonial cards container -->
-	<div class="relative">
+	<div class="relative w-full overflow-hidden">
 		<!-- Gradient overlays for lg screens -->
 		<div
-			class="from-almost-white absolute left-0 top-0 z-10 hidden h-full w-96 bg-gradient-to-r to-transparent lg:block"
+			class="absolute left-0 top-0 z-10 hidden h-full w-[20%] bg-gradient-to-r from-primary-50 to-transparent lg:block"
 		></div>
 		<div
-			class="from-almost-white absolute right-0 top-0 z-10 hidden h-full w-96 bg-gradient-to-l to-transparent lg:block"
+			class="absolute right-0 top-0 z-10 hidden h-full w-[20%] bg-gradient-to-l from-primary-50 to-transparent lg:block"
 		></div>
 
 		<!-- Testimonials scroll container -->
 		<div
-			class="my-6 flex snap-x snap-mandatory gap-4 overflow-x-hidden scroll-smooth px-6 lg:mb-16"
+			class="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
 			bind:this={testimonialContainer}
 		>
-			{#each testimonials as testimonial, i}
-				<div class="snap-center first:ml-auto last:mr-auto">
+			{#each repeatedTestimonials as testimonial, i}
+				<div class="shrink-0 snap-center">
 					{@render testimonialSnippet(i, testimonial)}
 				</div>
 			{/each}
 		</div>
 	</div>
-	<div class="text-text-400 flex justify-center gap-8">
+	<div class="flex justify-center gap-8 text-text-400">
 		<button
-			class:invisible={selectedTestimonial === 0}
 			class="rounded-full"
 			onclick={() => decrementSelectedTestimonial()}
 			aria-label="Previous testimonial"
@@ -169,10 +210,9 @@
 			</svg>
 		</button>
 		<button
-			class:invisible={selectedTestimonial === testimonials.length - 1}
 			class="rounded-full"
-			aria-label="Next testimonial"
 			onclick={() => incrementSelectedTestimonial()}
+			aria-label="Next testimonial"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

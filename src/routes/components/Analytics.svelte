@@ -8,6 +8,12 @@
 			if (typeof gtag === 'undefined') {
 				// Pass if gtag is not defined
 			} else if ($analyticsCookies || $trackingCookies) {
+				gtag('consent', 'default', {
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					ad_storage: 'denied',
+					analytics_storage: 'denied'
+				});
 				gtag('consent', 'update', {
 					ad_user_data: $trackingCookies ? 'granted' : 'denied',
 					ad_personalization: $trackingCookies ? 'granted' : 'denied',
@@ -31,6 +37,10 @@
 	<!-- End Google Analytics Code Definitions -->
 	{#if $analyticsCookies || $trackingCookies}
 		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 			gtag('consent', 'default', {
 				ad_user_data: 'denied',
 				ad_personalization: 'denied',

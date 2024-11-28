@@ -75,6 +75,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
+          database_url: ${{ secrets.DATABASE_URL}}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
           envs: IMAGE_NAME,REGISTRY,${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }},GITHUB_SHA
@@ -82,6 +83,7 @@ jobs:
             # Login to registry
             docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
             export SERVER_VERSION=${{ github.ref_name }}
+            export DATABASE_URL=${{ secrets.DATABASE_URL}}
             history -c && history -w
             # Run a new container from a new image
             docker compose -f /full_server_docker/my-decaf-life/docker-compose.yml pull

@@ -9,6 +9,10 @@ services:
     volumes:
       - ./drizzle:/app/drizzle
       - ./logs:/app/logs
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    ports:
+      - '3000:3000'
 networks:
   src_nginx_and_certbot:
     external: true

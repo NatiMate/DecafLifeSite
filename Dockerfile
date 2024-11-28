@@ -6,7 +6,6 @@ RUN apk add --no-cache python3 make g++
 
 RUN mkdir -p drizzle
 COPY package*.json .
-COPY .env .
 COPY *.py .
 RUN npm ci
 COPY . .
@@ -17,7 +16,6 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
-COPY --from=builder /app/.env .
 COPY --from=builder /app/*.py .
 COPY --from=builder /app/drizzle drizzle/
 COPY package.json .

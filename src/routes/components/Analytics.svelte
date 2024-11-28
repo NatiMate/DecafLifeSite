@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { analyticsCookies, trackingCookies } from '$lib/stores/analyticsStores';
 </script>
 
 <svelte:head>
-	{#if $analyticsCookies || $trackingCookies}
+	{#if true}
 		<!-- Google Analytics Code -->
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WT7KNJNYZ"></script>

@@ -236,8 +236,8 @@
 
 		<!-- Testimonials scroll container -->
 		<div
-			class="scrollbar-hide flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
-			style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;"
+			class="scrollbar-hide pointer-events-none flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
+			style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; user-select: none;"
 			bind:this={testimonialContainer}
 		>
 			{#each repeatedTestimonials as testimonial, i}
@@ -249,7 +249,7 @@
 	</div>
 	<div class="flex justify-center gap-8 text-text-400">
 		<button
-			class="rounded-full"
+			class="h-[48px] w-[48px] rounded-full"
 			onclick={() => decrementSelectedTestimonial()}
 			aria-label="Previous testimonial"
 		>
@@ -265,7 +265,7 @@
 			</svg>
 		</button>
 		<button
-			class="rounded-full"
+			class="h-[48px] w-[48px] rounded-full"
 			onclick={() => incrementSelectedTestimonial()}
 			aria-label="Next testimonial"
 		>

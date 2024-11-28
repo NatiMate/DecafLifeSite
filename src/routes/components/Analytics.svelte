@@ -30,6 +30,14 @@
 
 	<!-- End Google Analytics Code Definitions -->
 	{#if $analyticsCookies || $trackingCookies}
+		<script>
+			gtag('consent', 'default', {
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				ad_storage: 'denied',
+				analytics_storage: 'denied'
+			});
+		</script>
 		<!-- Trigger the gtag only after the default settings -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WT7KNJNYZ"></script>
 		<script>

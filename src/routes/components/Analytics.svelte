@@ -26,6 +26,12 @@
 </script>
 
 <svelte:head>
+	<!-- Umami Analytics Code -->
+	<script
+		defer
+		src="https://cloud.umami.is/script.js"
+		data-website-id="04045760-03aa-4f5f-8ea1-036b7d0aaf20"
+	></script>
 	<!-- Google Analytics Code Definitions -->
 	<script>
 		window.dataLayer = window.dataLayer || [];

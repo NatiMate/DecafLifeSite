@@ -8,6 +8,7 @@
 
 	const navElements = [
 		{ href: '/', name: 'Home' },
+		{ href: '/blog', name: 'Blog' },
 		{ href: '#features', name: 'Features' },
 		{ href: '#testimonials', name: 'Testimonials' }
 	];
@@ -31,18 +32,18 @@
 	</a>
 {/snippet}
 
-<header class="border-primary-200 border-b">
+<header class="border-b border-primary-200">
 	<nav class="mx-auto max-w-7xl px-6 py-8 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between">
-			<div class="flex-shrink-0 flex flex-row items-center gap-2">
+			<div class="flex flex-shrink-0 flex-row items-center gap-2">
 				<a href="/">
 					<img
 						src={logo}
 						alt="My Decaf Life"
-						class="border-primary-50 h-12 w-auto rounded-md border"
+						class="h-12 w-auto rounded-md border border-primary-50"
 					/>
 				</a>
-				<a href="/" class="text-text-900 text-2xl font-semibold">My Decaf Life</a>
+				<a href="/" class="text-2xl font-semibold text-text-900">My Decaf Life</a>
 			</div>
 
 			<!-- Hamburger menu toggle for mobile -->
@@ -76,7 +77,7 @@
 				<div class="flex items-center">
 					<a
 						href="#cta"
-						class="bg-primary-100 text-primary-500 hover:border-primary-400 border-primary-200 rounded-md border px-4 py-2 text-sm font-medium"
+						class="rounded-md border border-primary-200 bg-primary-100 px-4 py-2 text-sm font-medium text-primary-500 hover:border-primary-400"
 					>
 						Get the App
 					</a>

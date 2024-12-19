@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "logs\\.fa6a10124e45d599292b469dd7b87684e047ea18-audit.json",
+    "files": [
+        {
+            "date": 1734637261277,
+            "name": "logs\\stripe-server-2024-12-19.log",
+            "hash": "693f65007b5c979df992a17cb945815654ec65a57e0979b502ef8c8141a9e800"
+        }
+    ],
+    "hashType": "sha256"
+}

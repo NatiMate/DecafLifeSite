@@ -6,6 +6,10 @@ import { encodeBase32LowerCase } from '@oslojs/encoding';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const createUser = async (username: string, password: string) => {
+	if (typeof password !== 'string') {
+		throw new Error('Password must be a string');
+	}
+
 	const userId = generateUserId();
 	const passwordHash = await hash(password, {
 		// recommended minimum parameters

@@ -2,6 +2,8 @@ import * as auth from '$lib/server/auth.js';
 import { initDb } from '$lib/server/db/init_db';
 import type { Handle } from '@sveltejs/kit';
 
+console.log('STARTING HOOKS SERVER');
+
 await initDb();
 
 const handleAuth: Handle = async ({ event, resolve }) => {

@@ -9,11 +9,6 @@
             "date": 1734637261277,
             "name": "logs\\stripe-server-2024-12-19.log",
             "hash": "693f65007b5c979df992a17cb945815654ec65a57e0979b502ef8c8141a9e800"
-        },
-        {
-            "date": 1734650565804,
-            "name": "logs\\stripe-server-2024-12-20.log",
-            "hash": "31932ef75660c1bcf18bf8ff7f6d1017723e053dc57b074fede09b3a8d61c994"
         }
     ],
     "hashType": "sha256"

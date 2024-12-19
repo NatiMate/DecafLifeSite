@@ -22,10 +22,12 @@ export const articleSchema = z.object({
 			title: z.string(),
 			imageName: z.string(),
 			content: z.string(),
-			subsections: z.object({
-				title: z.string(),
-				content: z.string()
-			})
+			subsections: z
+				.object({
+					title: z.string(),
+					content: z.string()
+				})
+				.optional()
 		})
 	)
 });

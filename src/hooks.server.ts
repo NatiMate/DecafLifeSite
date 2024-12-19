@@ -1,8 +1,7 @@
 import * as auth from '$lib/server/auth.js';
-import { initDb } from '$lib/server/db/init_db';
 import type { Handle } from '@sveltejs/kit';
 
-await initDb();
+//await initDb();
 
 const handleAuth: Handle = async ({ event, resolve }) => {
 	const sessionToken = event.cookies.get(auth.sessionCookieName);

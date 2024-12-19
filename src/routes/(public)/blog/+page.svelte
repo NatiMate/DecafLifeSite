@@ -12,7 +12,7 @@
 					href={`/blog/${article.name}`}
 					class="flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md sm:w-1/2 md:w-1/3"
 				>
-					<img src={`/images/${article.image}`} alt={article.title} class="h-44 w-full" />
+					<img src={`${article.image}`} alt={article.title} class="h-44 w-full" />
 					<div class="p-4">
 						<h2 class="mb-2 text-xl">{article.title}</h2>
 						<p class="text-gray-600">{article.description}</p>

@@ -32,7 +32,7 @@
 	</a>
 {/snippet}
 
-<header class="border-b border-primary-200">
+<header class="sticky top-0 z-10 border-b border-primary-200 bg-white">
 	<nav class="mx-auto max-w-7xl px-6 py-8 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between">
 			<div class="flex flex-shrink-0 flex-row items-center gap-2">
@@ -47,7 +47,7 @@
 			</div>
 
 			<!-- Hamburger menu toggle for mobile -->
-			<button class="sm:hidden" on:click={toggleMenu} aria-label="Toggle menu">
+			<button class="md:hidden" on:click={toggleMenu} aria-label="Toggle menu">
 				<svg class="h-6 w-6" fill="bg-text-800" stroke="currentColor" viewBox="0 0 24 24">
 					{#if isMenuOpen}
 						<path
@@ -68,7 +68,7 @@
 			</button>
 
 			<!-- Desktop navigation -->
-			<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+			<div class="hidden md:ml-6 md:flex md:space-x-8">
 				{#each navElements as navElement}
 					{@render desktopNavElem(navElement.href, navElement.name)}
 				{/each}

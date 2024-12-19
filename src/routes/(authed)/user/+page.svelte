@@ -18,7 +18,7 @@
 
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-8">
-			<h1 class="text-3xl font-bold text-gray-900">Kulturvergnügen Admin</h1>
+			<h1 class="text-3xl font-bold text-gray-900">Decaf Admin</h1>
 		</div>
 
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -37,35 +37,13 @@
 			</div>
 
 			<div class="min-h-40 rounded-lg bg-white p-6 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.1)]">
-				<h2 class="mb-4 text-xl font-semibold text-gray-800">Touren bearbeiten</h2>
-				<p class="mb-4 text-gray-600">Tour hinzufügen, bearbeiten und löschen</p>
+				<h2 class="mb-4 text-xl font-semibold text-gray-800">Blogbeiträge bearbeiten</h2>
+				<p class="mb-4 text-gray-600">Blogbeiträge hinzufügen, bearbeiten und löschen</p>
 				<a
-					href="/user/touren"
+					href="/user/blog"
 					class="inline-block rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
 				>
-					Touren bearbeiten
-				</a>
-			</div>
-
-			<div class="min-h-40 rounded-lg bg-white p-6 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.1)]">
-				<h2 class="mb-4 text-xl font-semibold text-gray-800">Termine bearbeiten</h2>
-				<p class="mb-4 text-gray-600">Termine hinzufügen, bearbeiten und löschen</p>
-				<a
-					href="/user/termine"
-					class="inline-block rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
-				>
-					Termine bearbeiten
-				</a>
-			</div>
-
-			<div class="min-h-40 rounded-lg bg-white p-6 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.1)]">
-				<h2 class="mb-4 text-xl font-semibold text-gray-800">Allgemeine Informationen</h2>
-				<p class="mb-4 text-gray-600">Informationen die unter jeder Tour stehen.</p>
-				<a
-					href="/user/allgemeine_informationen"
-					class="inline-block rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
-				>
-					Informationen bearbeiten
+					Blog bearbeiten
 				</a>
 			</div>
 		</div>

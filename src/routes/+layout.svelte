@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Toaster } from 'svelte-sonner';
 	import '../app.css';
 	import Analytics from './components/Analytics.svelte';
 	import Footer from './components/Footer.svelte';
@@ -14,6 +15,7 @@
 	/>
 </svelte:head>
 
+<Toaster richColors position="top-right" />
 <div class="flex min-h-screen flex-col bg-almost-white">
 	<Analytics />
 	<Header />

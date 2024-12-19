@@ -11,23 +11,23 @@ export const signInSchema = z.object({
 		.max(300, { message: 'Passwort darf nicht länger als 300 Zeichen sein' })
 });
 
-export const tourSchema = z.object({
-	id: z.string(),
+export const articleSchema = z.object({
+	name: z.string(),
 	title: z.string(),
-	subtitle: z.string(),
-	description: z.array(z.string()),
-	additionalInfo: z.array(z.string()),
-	costs: z.array(z.string()),
+	description: z.string(),
+	date: z.string(),
 	image: z.string(),
-	price: z.number().multipleOf(0.01),
-	duration: z.number(),
-	location: z.string(),
-	grouping: z.array(z.string()),
-	meetingPoint: z.string(),
-	destination: z.string(),
-	shopifyId: z.string(),
-	shopifyGutscheinVariantId: z.string().optional(),
-	shopifyGutscheinProductId: z.string().optional()
+	sections: z.array(
+		z.object({
+			title: z.string(),
+			imageName: z.string(),
+			content: z.string(),
+			subsections: z.object({
+				title: z.string(),
+				content: z.string()
+			})
+		})
+	)
 });
 
 export const tourPurchaseSchema = z.object({

@@ -50,6 +50,7 @@
 		"better-sqlite3": "^11.1.2",
 		"drizzle-orm": "^0.33.0",
 		"lucide-svelte": "^0.468.0",
+		"svelte-sonner": "^0.3.28",
 		"sveltekit-superforms": "^2.22.1",
 		"winston": "^3.17.0",
 		"winston-daily-rotate-file": "^5.0.0"

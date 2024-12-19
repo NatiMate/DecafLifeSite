@@ -59,14 +59,14 @@
 				})}
 			</p>
 
-			<div class="flex flex-col sm:flex-row">
+			<div class="flex flex-col md:flex-row">
 				<!-- Table of Contents -->
 				<div
-					class="flex w-1/4 p-4"
-					style="position: -webkit-sticky; position: sticky; top: 0; height: 100vh; overflow-y: auto;"
+					class="flex flex-1 p-4 md:sticky md:w-1/4"
+					style="position: -webkit-sticky; top: 110px; height: 100vh; overflow-y: auto;"
 				>
 					<button
-						class="mb-4 flex w-full items-center justify-center gap-2 sm:hidden"
+						class="mb-4 flex w-full items-center justify-center gap-2 md:hidden"
 						onclick={() => (showTOC = !showTOC)}
 					>
 						{#if showTOC}
@@ -103,7 +103,7 @@
 							</svg>
 						{/if}
 					</button>
-					<div class="{showTOC ? 'block' : 'hidden'} sm:block">
+					<div class="{showTOC ? 'block' : 'hidden'} md:block">
 						<h2>Table of Contents</h2>
 						<ul>
 							{#each article.sections as section}
@@ -120,16 +120,12 @@
 					</div>
 				</div>
 
-				<div class="w-3/4 p-4">
-					<img class="w-full rounded-3xl" src={`/images/${article.image}`} alt={article.title} />
+				<div class="flex flex-1 flex-col p-4 md:w-3/4 md:flex-none">
+					<img class="w-full rounded-3xl" src={`${article.image}`} alt={article.title} />
 					<div class="sm:mx-16">
 						{#each article.sections as section}
-							<h2 class="mt-4" id={section.title}>{section.title}</h2>
-							<img
-								class="w-full rounded-lg"
-								src={`/images/${section.imageName}`}
-								alt={section.title}
-							/>
+							<h2 class="mt-4 scroll-mt-32" id={section.title}>{section.title}</h2>
+							<img class="w-full rounded-lg" src={`${section.imageName}`} alt={section.title} />
 							<p>{section.content}</p>
 
 							{#if section.subsections}
@@ -161,7 +157,7 @@
 <style>
 	#scroll-progress {
 		position: fixed;
-		top: 0;
+		top: 110px;
 		left: 0;
 		height: 4px;
 		background-color: #bc6f53; /* Updated color */

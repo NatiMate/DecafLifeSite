@@ -18,6 +18,9 @@ COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
 COPY --from=builder /app/*.py .
 COPY --from=builder /app/drizzle drizzle/
+COPY --from=builder /app/static static/
+COPY --from=builder /app/static/articles static/articles/
+COPY --from=builder /app/static/images static/images/
 COPY package.json .
 EXPOSE 3000
 ENV NODE_ENV=production

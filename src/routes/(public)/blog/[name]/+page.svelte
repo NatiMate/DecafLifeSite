@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ChevronRight, House } from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import Seo from '../../../components/Seo.svelte';
 	let { data } = $props();
 	let article = data.content ? JSON.parse(data.content) : null;
 	let showTOC = $state(false); // State to control TOC visibility
@@ -33,6 +34,13 @@
 	});
 </script>
 
+<Seo
+	title={`${article.title} | My Decaf Life`}
+	image={article.image}
+	description={article.description}
+	type="Website"
+	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, better life, health, wellness, lifestyle, coffee, tea, energy, focus, productivity, sleep, anxiety, depression, withdrawal, addiction, natural, alternative, healthy, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
+/>
 <div id="scroll-progress"></div>
 
 {#if article}

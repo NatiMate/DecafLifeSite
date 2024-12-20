@@ -9,6 +9,7 @@ services:
     volumes:
       - ./drizzle:/app/drizzle
       - ./logs:/app/logs
+      - ./static:/app/static
     environment:
       - DATABASE_URL=${DATABASE_URL}
     ports:

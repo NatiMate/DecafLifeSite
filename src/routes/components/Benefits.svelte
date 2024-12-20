@@ -24,27 +24,27 @@
 
 {#snippet benefit(emoji: string, name: string)}
 	<div
-		class="bg-secondary-50 border-secondary-200 flex items-center gap-1 rounded-lg border px-2 py-1 text-sm lg:text-lg"
+		class="flex items-center gap-1 rounded-lg border border-secondary-200 bg-secondary-50 px-2 py-1 text-sm lg:text-lg"
 	>
 		<span>{emoji}</span>
-		<span class="text-secondary-500 font-medium">{name}</span>
+		<span class="font-medium text-secondary-500">{name}</span>
 	</div>
 {/snippet}
 
 <section
-	class="bg-primary-50 border-primary-100 mx-auto my-12 border-y py-8 lg:my-0 lg:bg-transparent"
+	class="max-w-screen my-12 border-y border-primary-100 bg-primary-50 py-8 lg:my-0 lg:bg-transparent"
 >
-	<h3 class="text-text-700 text-center font-medium md:text-2xl">
+	<h3 class="mx-auto w-fit text-center font-medium text-text-700 md:text-2xl">
 		Reported benefits from caffeine quitters
 	</h3>
 
 	<div class="flex flex-col gap-4 pt-6">
 		<div class="relative">
 			<div
-				class="from-almost-white absolute left-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-r to-transparent lg:block"
+				class="absolute left-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-r from-almost-white to-transparent lg:block"
 			></div>
 			<div
-				class="from-almost-white absolute right-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-l to-transparent lg:block"
+				class="absolute right-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-l from-almost-white to-transparent lg:block"
 			></div>
 
 			<div class="scroll-container">
@@ -61,10 +61,10 @@
 
 		<div class="relative">
 			<div
-				class="from-almost-white absolute left-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-r to-transparent lg:block"
+				class="absolute left-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-r from-almost-white to-transparent lg:block"
 			></div>
 			<div
-				class="from-almost-white absolute right-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-l to-transparent lg:block"
+				class="absolute right-0 top-0 z-10 hidden h-full w-72 bg-gradient-to-l from-almost-white to-transparent lg:block"
 			></div>
 
 			<div class="scroll-container">
@@ -115,11 +115,5 @@
 	.scrolling-wrapper-reverse {
 		display: inline-flex;
 		animation: scroll-reverse 50s linear infinite;
-	}
-
-	/* Pause animation on hover */
-	.scrolling-wrapper:hover,
-	.scrolling-wrapper-reverse:hover {
-		animation-play-state: paused;
 	}
 </style>

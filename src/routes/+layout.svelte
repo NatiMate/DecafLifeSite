@@ -19,7 +19,7 @@
 <div class="flex min-h-screen flex-col bg-almost-white">
 	<Analytics />
 	<Header />
-	<main class="flex flex-1 flex-col">
+	<main class="max-w-screen flex flex-1 flex-col">
 		{@render children()}
 		<GdprBanner />
 	</main>

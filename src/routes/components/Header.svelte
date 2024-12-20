@@ -9,8 +9,8 @@
 	const navElements = [
 		{ href: '/', name: 'Home' },
 		{ href: '/blog', name: 'Blog' },
-		{ href: '#features', name: 'Features' },
-		{ href: '#testimonials', name: 'Testimonials' }
+		{ href: '/#features', name: 'Features' },
+		{ href: '/#testimonials', name: 'Testimonials' }
 	];
 </script>
 

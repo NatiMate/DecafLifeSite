@@ -5,7 +5,6 @@
 	import Footer from './components/Footer.svelte';
 	import GdprBanner from './components/GdprBanner.svelte';
 	import Header from './components/Header.svelte';
-	import Seo from './components/Seo.svelte';
 	let { children } = $props();
 </script>
 
@@ -16,13 +15,6 @@
 	/>
 </svelte:head>
 
-<Seo
-	title="My Decaf Life"
-	image="https://my-decaf-life.com/favicon.webp"
-	description="Quit caffeine for a better life."
-	type="Website"
-	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, better life, health, wellness, lifestyle, coffee, tea, energy, focus, productivity, sleep, anxiety, depression, withdrawal, addiction, natural, alternative, healthy, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
-/>
 <Toaster richColors position="top-right" />
 <div class="flex min-h-screen flex-col bg-almost-white">
 	<Analytics />

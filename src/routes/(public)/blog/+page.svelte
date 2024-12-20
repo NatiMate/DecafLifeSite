@@ -1,8 +1,17 @@
 <script>
+	import Seo from '../../components/Seo.svelte';
+
 	export let data;
 	const { articles } = data;
 </script>
 
+<Seo
+	title="Advice to Quit and Stop Caffeine | My Decaf Life"
+	image="https://my-decaf-life.com/favicon.webp"
+	description="Blog articles and advice on how to quit caffeine. The impact of coffee and caffeine on sleep, anxiety, and depression."
+	type="Website"
+	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
+/>
 <main class="m-auto flex max-w-7xl flex-1 flex-col items-center justify-center p-4">
 	<h1 class="mb-4 text-2xl">Blog Articles</h1>
 	{#if articles && articles.length > 0}

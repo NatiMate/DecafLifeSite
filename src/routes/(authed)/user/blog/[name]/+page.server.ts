@@ -46,7 +46,6 @@ export const actions = {
 			const filePath = join(staticDir, 'articles', `${articleForm.data.name}.json`);
 
 			// Write the form data to the JSON file
-			console.log('Writing article data to file:', articleForm.data);
 			writeFileSync(filePath, JSON.stringify(articleForm.data, null, 2));
 
 			return {

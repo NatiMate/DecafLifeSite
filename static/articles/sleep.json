@@ -1,27 +1,35 @@
 {
   "name": "sleep",
   "title": "The Importance of Sleep for Health and Wellbeing 2",
-  "description": "Explore the vital role of sleep in maintaining physical and mental wellbeing, including its effects on memory, immunity, metabolism and overall health. Learn about recommended sleep durations and habits for optimal rest.",
+  "description": "Explore the vital role of sleep in maintaining physical and mental wellbeing.",
   "date": "2024-01-17",
-  "image": "/images/sleep/1734643771301-1.png",
+  "image": "/images/sleep/1734729026051-DALL·E 2024-12-20 12.42.42 - A cinematic, abstract, hyperrealistic image representing 'Why Is Caffeine Hard to Quit_' Features a surreal depiction of a coffee cup morphing into ch.webp",
   "sections": [
     {
       "title": "Sleep is a good thing",
       "imageName": "/images/sleep.png",
       "content": "Sleep is essential for our physical and mental wellbeing. Getting adequate sleep helps improve memory, strengthen the immune system, regulate metabolism, and reduce stress. Most adults need between 7-9 hours of quality sleep per night. Creating good sleep habits like maintaining a consistent schedule, avoiding screens before bedtime, and having a relaxing nighttime routine can help ensure better sleep.",
-      "subsections": {
-        "title": "Sleep is a good thing",
-        "content": "Sleep is essential for our physical and mental wellbeing. It helps restore our bodies and minds, allowing us to wake up feeling refreshed and energized. During sleep, our brains process and consolidate memories from the day, while our bodies repair tissues, build bone and muscle, and strengthen our immune system. Lack of sleep can lead to decreased cognitive function, mood changes, weakened immunity, and other health issues. That's why maintaining good sleep habits is crucial for overall wellness."
-      }
+      "subsections": [
+        {
+          "title": "Sleep is a good thing",
+          "content": "Sleep is essential for our physical and mental wellbeing. It helps restore our bodies and minds, allowing us to wake up feeling refreshed and energized. During sleep, our brains process and consolidate memories from the day, while our bodies repair tissues, build bone and muscle, and strengthen our immune system. Lack of sleep can lead to decreased cognitive function, mood changes, weakened immunity, and other health issues. That's why maintaining good sleep habits is crucial for overall wellness."
+        }
+      ]
     },
     {
       "title": "Sleep is a good thing or not really",
       "imageName": "/images/sleep/1734642186795-1.png",
       "content": "Sleep is a fundamental biological process that helps restore and rejuvenate our bodies and minds. During sleep, our brains process information and consolidate memories while our bodies repair tissues, produce growth hormones, and strengthen immunity. Research shows that consistent quality sleep improves cognitive function, emotional wellbeing, physical performance and overall health. Poor sleep habits or chronic sleep deprivation can lead to serious health issues including weakened immunity, increased risk of obesity and cardiovascular disease, impaired memory and concentration, and mood disorders. That's why sleep experts emphasize the importance of good sleep hygiene - maintaining a regular sleep schedule, creating a relaxing bedtime routine, and optimizing your sleep environment.",
-      "subsections": {
-        "title": "Sleep is a good thing",
-        "content": "Sleep plays a vital role in maintaining our physical and mental health. Quality sleep helps regulate hormones, repair tissues, consolidate memories, and support immune function. Poor sleep habits can lead to various health issues including decreased cognitive performance, mood disorders, weakened immunity, and metabolic problems. Creating a consistent sleep schedule, optimizing your sleep environment, and practicing relaxation techniques before bed can help improve sleep quality. Most adults need 7-9 hours of sleep per night to function optimally and maintain good health."
-      }
+      "subsections": [
+        {
+          "title": "Sleep is a good thing",
+          "content": "Sleep plays a vital role in maintaining our physical and mental health. Quality sleep helps regulate hormones, repair tissues, consolidate memories, and support immune function. Poor sleep habits can lead to various health issues including decreased cognitive performance, mood disorders, weakened immunity, and metabolic problems. Creating a consistent sleep schedule, optimizing your sleep environment, and practicing relaxation techniques before bed can help improve sleep quality. Most adults need 7-9 hours of sleep per night to function optimally and maintain good health."
+        },
+        {
+          "title": "Sleep is powerful",
+          "content": "Makes you feel nice"
+        }
+      ]
     }
   ]
 }

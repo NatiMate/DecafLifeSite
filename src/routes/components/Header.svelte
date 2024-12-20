@@ -87,7 +87,7 @@
 
 		<!-- Mobile menu outside of flex box -->
 		{#if isMenuOpen}
-			<div class="w-full sm:hidden">
+			<div class="w-full md:hidden">
 				<div class=" space-y-1 pb-3 pt-2">
 					{#each navElements as navElement}
 						{@render humburgerNavElem(navElement.href, navElement.name)}

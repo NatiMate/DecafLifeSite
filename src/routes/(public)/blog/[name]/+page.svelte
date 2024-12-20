@@ -134,8 +134,10 @@
 							<p>{section.content}</p>
 
 							{#if section.subsections}
-								<h3 class="mb-4 mt-8 text-2xl font-semibold">{section.subsections.title}</h3>
-								<p>{section.subsections.content}</p>
+								{#each section.subsections as subsection}
+									<h3 class="mb-4 mt-8 text-2xl font-semibold">{subsection.title}</h3>
+									<p>{subsection.content}</p>
+								{/each}
 							{/if}
 						{/each}
 					</div>

@@ -23,10 +23,12 @@ export const articleSchema = z.object({
 			imageName: z.string(),
 			content: z.string(),
 			subsections: z
-				.object({
-					title: z.string(),
-					content: z.string()
-				})
+				.array(
+					z.object({
+						title: z.string(),
+						content: z.string()
+					})
+				)
 				.optional()
 		})
 	)

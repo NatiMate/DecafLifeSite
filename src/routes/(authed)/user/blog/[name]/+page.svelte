@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { articleSchema } from '$lib/shared/zod_schemas.js';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import { zod } from 'sveltekit-superforms/adapters';
 	import { superForm } from 'sveltekit-superforms/client';
 	// Ensure you have a toast library imported
 	let { data } = $props();
@@ -12,7 +10,6 @@
 	const articleForm = superForm(data.articleForm, {
 		delayMs: 2000,
 		timeoutMs: 5000,
-		validators: zod(articleSchema),
 		resetForm: false,
 		dataType: 'json'
 	});
@@ -147,6 +144,44 @@
 		}
 	}
 
+	// Function to add a new section
+	function addSection() {
+		$sfArticleForm.sections = [
+			...$sfArticleForm.sections,
+			{ title: '', content: '', imageName: '', subsections: [{ title: '', content: '' }] }
+		];
+	}
+
+	// Function to remove a section by index
+	function removeSection(index: number) {
+		$sfArticleForm.sections = $sfArticleForm.sections.filter((_, i) => i !== index);
+	}
+
+	// Function to add a new subsection to a section
+	function addSubsection(sectionIndex: number) {
+		const section = $sfArticleForm.sections[sectionIndex];
+		if (!Array.isArray(section.subsections)) {
+			section.subsections = [{ title: '', content: '' }];
+		}
+		$sfArticleForm.sections[sectionIndex] = {
+			...section,
+			subsections: [...section.subsections, { title: '', content: '' }]
+		};
+	}
+
+	// Function to remove a subsection by index from a section
+	function removeSubsection(sectionIndex: number, subsectionIndex: number) {
+		const section = $sfArticleForm.sections[sectionIndex];
+		if (!Array.isArray(section.subsections)) {
+			section.subsections = [] as { title: string; content: string }[];
+			return;
+		}
+		$sfArticleForm.sections[sectionIndex] = {
+			...section,
+			subsections: section.subsections.filter((_, i: number) => i !== subsectionIndex)
+		};
+	}
+
 	onMount(() => {
 		console.log(sfArticleForm);
 		window.addEventListener('scroll', updateScrollProgress);
@@ -193,14 +228,14 @@
 
 				<textarea
 					id="title"
-					class="text-4xl font-bold"
+					class="bordered-textarea text-4xl font-bold"
 					bind:value={$sfArticleForm.title}
 					oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
 				></textarea>
 
 				<textarea
 					id="description"
-					class="w-full"
+					class="bordered-textarea w-full"
 					bind:value={$sfArticleForm.description}
 					oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
 				></textarea>
@@ -267,27 +302,64 @@
 
 								<textarea
 									id={`section-content-${index}`}
-									class="w-full"
+									class="bordered-textarea h-32 w-full"
 									bind:value={$sfArticleForm.sections[index].content}
+									oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
 								></textarea>
 
 								{#if section.subsections}
 									<div class="flex flex-col">
-										<input
-											type="text"
-											id={`subsection-title-${index}`}
-											class="w-full text-xl font-semibold"
-											bind:value={$sfArticleForm.sections[index].subsections.title}
-										/>
+										{#each section.subsections as subsection, subIndex}
+											<input
+												type="text"
+												placeholder="Subsection title"
+												id={`subsection-title-${index}-${subIndex}`}
+												class="bordered-textarea w-full text-xl font-semibold"
+												bind:value={$sfArticleForm.sections[index].subsections[subIndex].title}
+											/>
+											<div class="h-2"></div>
+											<textarea
+												id={`subsection-content-${index}-${subIndex}`}
+												placeholder="Subsection content"
+												class="bordered-textarea h-32 w-full"
+												bind:value={$sfArticleForm.sections[index].subsections[subIndex].content}
+												oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
+											></textarea>
+											<!-- Button to remove subsection -->
+											<button
+												class="mt-2 rounded-md bg-red-500 px-4 py-2 text-white"
+												onclick={() => removeSubsection(index, subIndex)}
+											>
+												Remove Subsection
+											</button>
+										{/each}
 
-										<textarea
-											id={`subsection-content-${index}`}
-											class="w-full"
-											bind:value={$sfArticleForm.sections[index].subsections.content}
-										></textarea>
+										<!-- Button to add a new subsection -->
+										<button
+											class="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white"
+											onclick={() => addSubsection(index)}
+										>
+											Add Subsection
+										</button>
 									</div>
 								{/if}
+
+								<!-- Button to remove section -->
+								<button
+									class="mt-2 rounded-md bg-red-500 px-4 py-2 text-white"
+									onclick={() => removeSection(index)}
+								>
+									Remove Section
+								</button>
 							{/each}
+
+							<!-- Button to add a new section -->
+							<button
+								class="mt-4 rounded-md bg-green-500 px-4 py-2 text-white"
+								onclick={addSection}
+							>
+								Add Section
+							</button>
 						</div>
 					</div>
 				</div>
@@ -313,5 +385,11 @@
 		background-color: #bc6f53; /* Updated color */
 		width: 0;
 		z-index: 1000;
+	}
+
+	.bordered-textarea {
+		border: 1px solid #ccc; /* Add a light gray border */
+		border-radius: 4px; /* Optional: Add rounded corners */
+		padding: 8px; /* Optional: Add some padding */
 	}
 </style>

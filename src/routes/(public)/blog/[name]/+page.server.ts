@@ -7,7 +7,6 @@ export async function load({ params }) {
 	try {
 		const filePath = path.resolve('static/articles', `${name}.json`);
 		const fileContent = fs.readFileSync(filePath, 'utf-8');
-		console.log('Loaded file: ', fileContent);
 		return {
 			content: fileContent,
 			name

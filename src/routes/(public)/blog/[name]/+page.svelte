@@ -69,10 +69,7 @@
 
 			<div class="flex flex-col md:flex-row">
 				<!-- Table of Contents -->
-				<div
-					class="flex flex-1 p-4 md:sticky md:w-1/4"
-					style="position: -webkit-sticky; top: 110px; height: 100vh; overflow-y: auto;"
-				>
+				<div class="md-sticky flex flex-1 flex-col p-4 md:w-1/4">
 					<button
 						class="mb-4 flex w-full items-center justify-center gap-2 md:hidden"
 						onclick={() => (showTOC = !showTOC)}
@@ -171,5 +168,15 @@
 		background-color: #bc6f53; /* Updated color */
 		width: 0;
 		z-index: 1000;
+	}
+
+	/* Add media query to control sticky behavior */
+	@media (min-width: 768px) {
+		.md-sticky {
+			position: sticky;
+			top: 110px;
+			height: 100vh;
+			overflow-y: auto;
+		}
 	}
 </style>

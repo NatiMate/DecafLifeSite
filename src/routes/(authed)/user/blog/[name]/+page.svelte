@@ -273,6 +273,7 @@
 									type="text"
 									id={`section-title-${index}`}
 									bind:value={$sfArticleForm.sections[index].title}
+									placeholder="Section title"
 									class="mb-4 mt-8 w-full border-none text-2xl font-semibold focus:outline-none focus:ring-0"
 								/>
 								<div class="relative">
@@ -294,6 +295,7 @@
 									</button>
 									<input
 										type="file"
+										placeholder="Section image"
 										id={`section-image-input-${index}`}
 										class="hidden"
 										onchange={(e) => handleFileSelect(e, index)}
@@ -302,6 +304,7 @@
 
 								<textarea
 									id={`section-content-${index}`}
+									placeholder="Section content"
 									class="bordered-textarea h-32 w-full"
 									bind:value={$sfArticleForm.sections[index].content}
 									oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
@@ -333,16 +336,15 @@
 												Remove Subsection
 											</button>
 										{/each}
-
-										<!-- Button to add a new subsection -->
-										<button
-											class="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white"
-											onclick={() => addSubsection(index)}
-										>
-											Add Subsection
-										</button>
 									</div>
 								{/if}
+								<!-- Button to add a new subsection -->
+								<button
+									class="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white"
+									onclick={() => addSubsection(index)}
+								>
+									Add Subsection
+								</button>
 
 								<!-- Button to remove section -->
 								<button

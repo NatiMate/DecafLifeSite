@@ -135,12 +135,12 @@
 							{#if section.imageName !== ''}
 								<img class="w-full rounded-lg" src={`${section.imageName}`} alt={section.title} />
 							{/if}
-							<p>{section.content}</p>
+							{@html section.content}
 
 							{#if section.subsections}
 								{#each section.subsections as subsection}
 									<h3 class="mb-4 mt-8 text-2xl font-semibold">{subsection.title}</h3>
-									<p>{subsection.content}</p>
+									{@html subsection.content}
 								{/each}
 							{/if}
 						{/each}

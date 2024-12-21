@@ -76,7 +76,7 @@
 				<!-- CTA button -->
 				<div class="flex items-center">
 					<a
-						href="#cta"
+						href="/#cta"
 						class="rounded-md border border-primary-200 bg-primary-100 px-4 py-2 text-sm font-medium text-primary-500 hover:border-primary-400"
 					>
 						Get the App

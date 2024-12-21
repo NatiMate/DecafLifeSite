@@ -12,15 +12,19 @@
 	type="Website"
 	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
 />
-<main class="m-auto mt-16 flex max-w-6xl flex-1 flex-col items-center justify-center p-4">
-	<h1 class="mr-auto mb-4 text-6xl text-text-950">Quit caffeine blog</h1>
-	<p class="text-lg max-w-2xl mr-auto text-gray-600 font-400">Discover tips, stories, and expert advice to help you quit caffeine and embrace a healthier, more balanced lifestyle. Whether you're cutting back or quitting entirely, we’re here to guide you every step of the way.</p>
+<main class="m-auto mt-16 flex max-w-7xl flex-1 flex-col items-center justify-center p-4">
+	<h1 class="mb-4 mr-auto text-6xl text-text-950">Quit caffeine blog</h1>
+	<p class="font-400 mr-auto max-w-2xl text-lg text-gray-600">
+		Discover tips, stories, and expert advice to help you quit caffeine and embrace a healthier,
+		more balanced lifestyle. Whether you're cutting back or quitting entirely, we’re here to guide
+		you every step of the way.
+	</p>
 	{#if articles && articles.length > 0}
-		<div class="flex w-full flex-wrap md:my-16 gap-4">
+		<div class="mt-2 flex w-full flex-wrap gap-4 md:my-16">
 			{#each articles as article}
 				<a
 					href={`/blog/${article.name}`}
-					class="flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-sm sm:w-1/2 md:w-1/3"
+					class="my-2 flex w-[300px] flex-col overflow-hidden rounded-lg bg-white shadow-sm md:w-[360px]"
 				>
 					<img src={`${article.image}`} alt={article.title} class="h-44 w-full object-cover" />
 					<div class="p-4">

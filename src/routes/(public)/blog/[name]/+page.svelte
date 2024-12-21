@@ -133,14 +133,21 @@
 						{#each article.sections as section}
 							<h2 class="mt-6 scroll-mt-32" id={section.title}>{section.title}</h2>
 							{#if section.imageName !== ''}
-								<img class="w-full rounded-lg" src={`${section.imageName}`} alt={section.title} />
+								<img
+									class="w-full rounded-lg py-4"
+									src={`${section.imageName}`}
+									alt={section.title}
+								/>
 							{/if}
-							{@html section.content}
-
+							<div class="pl-4">
+								{@html section.content}
+							</div>
 							{#if section.subsections}
 								{#each section.subsections as subsection}
 									<h3 class="mb-4 mt-8 text-2xl font-semibold">{subsection.title}</h3>
-									{@html subsection.content}
+									<div class="pl-4">
+										{@html subsection.content}
+									</div>
 								{/each}
 							{/if}
 						{/each}

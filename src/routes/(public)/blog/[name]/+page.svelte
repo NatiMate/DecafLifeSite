@@ -46,19 +46,19 @@
 {#if article}
 	<div class="max-w-8xl m-auto flex flex-1 flex-row items-start justify-center">
 		<!-- Article Content -->
-		<div class="p-4 flex max-w-6xl w-full flex-col items-start justify-start text-left">
+		<div class="flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
 			<!-- Breadcrumb Navigation -->
-			<div class="mb-4 mt-12 flex w-full gap-2 sm:mt-24 text-sm">
-				<House size={20} color="gray"/>
-				<ChevronRight size={20} color="gray"/>	
+			<div class="mb-4 mt-12 flex w-full gap-2 text-sm sm:mt-24">
+				<House size={20} color="gray" />
+				<ChevronRight size={20} color="gray" />
 				<a href="/blog" class="text-text-600 hover:underline">Posts</a>
-				<ChevronRight size={20} color="gray"/>
-				<a href={`/blog/${article.name}`} class="text-secondary-500 font-medium hover:underline">
+				<ChevronRight size={20} color="gray" />
+				<a href={`/blog/${article.name}`} class="font-medium text-secondary-500 hover:underline">
 					{article.title}
 				</a>
 			</div>
-			<h1 class="py-4 text-left max-w-5xl text-6xl leading-none tracking-tight">{article.title}</h1>
-			<p class="text-lg mb-8 max-w-2xl text-text-600 max-">{article.description}</p>
+			<h1 class="max-w-5xl py-4 text-left text-6xl leading-none tracking-tight">{article.title}</h1>
+			<p class="max- mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
 			<p>
 				{new Date(article.date).toLocaleDateString('en-US', {
 					month: 'short',
@@ -126,11 +126,15 @@
 				</div>
 
 				<div class="flex flex-1 flex-col p-4 md:w-3/4 md:flex-none">
-					<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
+					{#if article.image !== ''}
+						<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
+					{/if}
 					<div class="sm:mx-16">
 						{#each article.sections as section}
 							<h2 class="mt-6 scroll-mt-32" id={section.title}>{section.title}</h2>
-							<img class="w-full rounded-lg" src={`${section.imageName}`} alt={section.title} />
+							{#if section.imageName !== ''}
+								<img class="w-full rounded-lg" src={`${section.imageName}`} alt={section.title} />
+							{/if}
 							<p>{section.content}</p>
 
 							{#if section.subsections}

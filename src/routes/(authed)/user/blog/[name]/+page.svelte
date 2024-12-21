@@ -134,8 +134,12 @@
 			$sfArticleForm.title = jsonData.title || '';
 			$sfArticleForm.description = jsonData.description || '';
 			$sfArticleForm.date = jsonData.date || '';
-			$sfArticleForm.image = jsonData.image || '';
-			$sfArticleForm.sections = jsonData.sections || [];
+			$sfArticleForm.image = ''; // Set main image to empty string
+			$sfArticleForm.sections = jsonData.sections.map((section: { subsections?: any[] }) => ({
+				...section,
+				imageName: '', // Set section imageName to empty string
+				subsections: section.subsections || []
+			}));
 			toast.success('Data loaded successfully');
 			isNewArticle = false;
 		} catch (error) {
@@ -280,7 +284,7 @@
 									<img
 										class="h-[400px] w-full rounded-3xl"
 										src={`${section.imageName}`}
-										alt={$sfArticleForm.sections[index].title}
+										alt={$sfArticleForm.sections[index]?.title}
 									/>
 									<button
 										class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100"
@@ -318,14 +322,14 @@
 												placeholder="Subsection title"
 												id={`subsection-title-${index}-${subIndex}`}
 												class="bordered-textarea w-full text-xl font-semibold"
-												bind:value={$sfArticleForm.sections[index].subsections[subIndex].title}
+												bind:value={$sfArticleForm.sections[index]!.subsections[subIndex]!.title}
 											/>
 											<div class="h-2"></div>
 											<textarea
 												id={`subsection-content-${index}-${subIndex}`}
 												placeholder="Subsection content"
 												class="bordered-textarea h-32 w-full"
-												bind:value={$sfArticleForm.sections[index].subsections[subIndex].content}
+												bind:value={$sfArticleForm.sections[index]!.subsections[subIndex]!.content}
 												oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
 											></textarea>
 											<!-- Button to remove subsection -->

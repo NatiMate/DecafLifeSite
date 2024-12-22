@@ -13,7 +13,9 @@
 	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
 />
 <main class="m-auto mt-16 flex max-w-7xl flex-1 flex-col items-center justify-center p-4">
-	<h1 class="mb-4 mr-auto text-6xl text-text-950">Quit caffeine blog</h1>
+	<h1 class="md: mb-4 mr-auto text-3xl text-text-950 md:text-5xl">
+		Articles about caffeine, habits & how to quit.
+	</h1>
 	<p class="font-400 mr-auto max-w-2xl text-lg text-gray-600">
 		Discover tips, stories, and expert advice to help you quit caffeine and embrace a healthier,
 		more balanced lifestyle. Whether you're cutting back or quitting entirely, we’re here to guide

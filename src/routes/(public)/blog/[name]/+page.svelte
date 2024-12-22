@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { ChevronRight, House } from 'lucide-svelte';
+	import { browser } from '$app/environment';
+	import { ChevronRight, Facebook, House, Instagram, Link, Linkedin, Twitter } from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import { toast } from 'svelte-sonner';
 	import Seo from '../../../components/Seo.svelte';
 	let { data } = $props();
 	let article = data.content ? JSON.parse(data.content) : null;
@@ -25,11 +27,49 @@
 		}
 	}
 
+	// Function to handle sharing the link
+	async function shareLink(sectionId: string) {
+		const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+		const shareData = {
+			title: article.title,
+			text: article.description,
+			url: url
+		};
+
+		if (navigator.share) {
+			navigator
+				.share(shareData)
+				.then(() => console.log('Successful share'))
+				.catch((error) => console.error('Error sharing', error));
+		} else {
+			// Fallback to copy link to clipboard if share is not supported
+			copyLinkToClipboard(sectionId);
+		}
+	}
+
+	// Function to copy the link to the clipboard
+	function copyLinkToClipboard(sectionId: string) {
+		const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+		var dummy = document.createElement('input'),
+			text = url;
+
+		document.body.appendChild(dummy);
+		dummy.value = text;
+		dummy.select();
+		document.execCommand('copy');
+		document.body.removeChild(dummy);
+		toast.success('Link copied to clipboard!');
+	}
+
 	onMount(() => {
 		console.log(article);
-		window.addEventListener('scroll', updateScrollProgress);
+		if (browser) {
+			window.addEventListener('scroll', updateScrollProgress);
+		}
 		return () => {
-			window.removeEventListener('scroll', updateScrollProgress);
+			if (browser) {
+				window.removeEventListener('scroll', updateScrollProgress);
+			}
 		};
 	});
 </script>
@@ -57,32 +97,45 @@
 					{article.title}
 				</a>
 			</div>
-			<h1 class="max-w-5xl py-4 text-left text-6xl leading-none tracking-tight">{article.title}</h1>
+			<h1 class="max-w-5xl py-4 text-left text-3xl leading-none tracking-tight md:text-5xl">
+				{article.title}
+			</h1>
 			<p class="max- mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
-			<p>
-				{new Date(article.date).toLocaleDateString('en-US', {
-					month: 'short',
-					day: 'numeric',
-					year: 'numeric'
-				})}
-			</p>
+			<!-- Author Information -->
+			<div class="mb-2 flex items-center">
+				<img
+					src="/images/stefan_profile_image.jpg"
+					alt="The author of the article"
+					class="mr-2 h-20 w-20 rounded-full"
+				/>
+				<div class="flex flex-col">
+					<span class="text-lg font-medium">Stefan Meintrup</span>
+					<span>
+						{new Date(article.date).toLocaleDateString('en-US', {
+							month: 'short',
+							day: 'numeric',
+							year: 'numeric'
+						})}
+					</span>
+				</div>
+			</div>
 
 			<div class="my-16 flex flex-col md:flex-row">
 				<!-- Table of Contents -->
-				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/4">
+				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/3">
 					<button
-						class="mb-4 flex w-full items-center justify-center gap-2 md:hidden"
+						class="mb-4 mr-4 inline-flex items-center justify-center gap-2 rounded-full border border-primary-500 px-4 py-2 md:hidden"
 						onclick={() => (showTOC = !showTOC)}
 					>
 						{#if showTOC}
-							Hide Table of Contents
+							<span class="text-primary-500">Hide Table of Contents</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="h-4 w-4"
+								class="h-4 w-4 text-primary-500"
 							>
 								<path
 									stroke-linecap="round"
@@ -91,14 +144,14 @@
 								/>
 							</svg>
 						{:else}
-							Show Table of Contents
+							<span class="text-primary-500">Show Table of Contents</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="h-4 w-4"
+								class="h-4 w-4 text-primary-500"
 							>
 								<path
 									stroke-linecap="round"
@@ -108,43 +161,118 @@
 							</svg>
 						{/if}
 					</button>
-					<div class="{showTOC ? 'block' : 'hidden'} md:block">
-						<h2 class="text-lg">Table of Contents</h2>
+					<div
+						class="overflow-hidden transition-[max-height] duration-500 ease-in-out md:overflow-visible"
+						style="max-height: {showTOC ? '1000px' : '0px'}"
+					>
+						<h2 class="mb-4 text-lg text-primary-500">Table of Contents</h2>
 						<ul>
 							{#each article.sections as section}
-								<li>
+								<li class="mb-2">
 									<a
 										href={`#${section.title}`}
+										class="text-xl hover:underline"
 										onclick={(event) => scrollToSection(event, section.title)}
 									>
 										{section.title}
 									</a>
+									{#if section.subsections}
+										<ul class="pl-4">
+											{#each section.subsections as subsection}
+												<li class="mt-1">
+													<a
+														href={`#${subsection.title}`}
+														class="hover:underline"
+														onclick={(event) => scrollToSection(event, subsection.title)}
+													>
+														{subsection.title}
+													</a>
+												</li>
+											{/each}
+										</ul>
+									{/if}
 								</li>
 							{/each}
 						</ul>
+						<!-- New Link for Copying or Sharing -->
+						<div class="mt-4 flex gap-2">
+							<button
+								onclick={() => shareLink('')}
+								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+							>
+								<Link size={20} color="#BC6F53" />
+							</button>
+							<!-- Sharing Options -->
+							<a
+								href={`https://twitter.com/intent/tweet?url=https://my-decaf-life.com/blog/${article.name}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+							>
+								<Twitter size={20} color="#BC6F53" />
+							</a>
+							<a
+								href={`https://www.facebook.com/sharer/sharer.php?u=https://my-decaf-life.com/blog/${article.name}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+							>
+								<Facebook size={20} color="#BC6F53" />
+							</a>
+							<a
+								href={`https://www.linkedin.com/shareArticle?mini=true&url=https://my-decaf-life.com/blog/${article.name}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+							>
+								<Linkedin size={20} color="#BC6F53" />
+							</a>
+							<!-- Instagram Sharing Button -->
+							<a
+								href={`https://www.instagram.com/share?url=https://my-decaf-life.com/blog/${article.name}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+							>
+								<Instagram size={20} color="#BC6F53" />
+							</a>
+						</div>
 					</div>
 				</div>
 
-				<div class="flex flex-1 flex-col p-4 md:w-3/4 md:flex-none">
+				<div class="flex flex-1 flex-col p-4 md:w-2/3 md:flex-none">
 					{#if article.image !== ''}
 						<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
 					{/if}
 					<div class="sm:mx-16">
 						{#each article.sections as section}
-							<h2 class="mt-6 scroll-mt-32" id={section.title}>{section.title}</h2>
+							<h2 class="mt-6 flex scroll-mt-32 items-center" id={section.title}>
+								{section.title}
+								<button onclick={() => shareLink(section.title)} class="ml-2">
+									<Link size={20} color="gray" />
+								</button>
+							</h2>
 							{#if section.imageName !== ''}
 								<img
-									class="w-full rounded-lg py-4"
+									class="w-full rounded-lg pt-4"
 									src={`${section.imageName}`}
 									alt={section.title}
 								/>
 							{/if}
-							<div class="pl-4">
+							<div class="pl-4 pt-4">
 								{@html section.content}
 							</div>
 							{#if section.subsections}
 								{#each section.subsections as subsection}
-									<h3 class="mb-4 mt-8 text-2xl font-semibold">{subsection.title}</h3>
+									<h3
+										class="mb-4 mt-8 flex items-center text-2xl font-semibold"
+										id={subsection.title}
+									>
+										{subsection.title}
+										<button onclick={() => shareLink(subsection.title)} class="ml-2">
+											<Link size={20} color="gray" />
+										</button>
+									</h3>
 									<div class="pl-4">
 										{@html subsection.content}
 									</div>
@@ -191,5 +319,18 @@
 			height: 100vh;
 			overflow-y: auto;
 		}
+	}
+
+	/* Add padding to the Table of Contents on mobile */
+	@media (max-width: 767px) {
+		.md-sticky {
+			padding-left: 16px; /* Adjust the padding value as needed */
+		}
+	}
+
+	/* New styles for TOC animation */
+	.toc-transition {
+		transition: max-height 0.5s ease-in-out;
+		overflow: hidden;
 	}
 </style>

@@ -14,7 +14,7 @@
 		{#if articles && articles.length > 0}
 			{#each articles as article}
 				<a
-					href={`/user/blog/${article.name}`}
+					href={`/user/blog/${article.blogUrlEnding || article.name}`}
 					class="flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md sm:w-1/2 md:w-1/3"
 				>
 					<img src={`${article.image}`} alt={article.title} class="h-44 w-full" />

@@ -51,6 +51,7 @@
 	async function storeArticle() {
 		if (submittingArticleForm) return;
 		submittingArticleForm = true;
+		$sfArticleForm.blogUrlEnding = $sfArticleForm.title.replace(/ /g, '-');
 		const promise = new Promise(async (resolve, reject) => {
 			await new Promise((r) => setTimeout(r, 100));
 			const startTime = Date.now();

@@ -6,7 +6,8 @@ import { superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 
 export async function load({ params }) {
-	const { name } = params;
+	let { name } = params;
+	name = name.replace(/-/g, ' ');
 
 	const articleForm = await superValidate(zod(articleSchema));
 	if (name === 'new') {

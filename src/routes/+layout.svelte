@@ -41,6 +41,7 @@
 <style>
 	:global(html) {
 		font-family: 'Outfit', sans-serif;
+		scroll-padding-top: 7rem;
 	}
 	@keyframes fade-in {
 		from {

@@ -1,24 +1,33 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import logo from '$lib/assets/decaf_logo.png';
-	let isMenuOpen = false;
+	import { isMenuOpen } from '$lib/stores/menuStore';
 
 	const toggleMenu = () => {
-		isMenuOpen = !isMenuOpen;
+		isMenuOpen.update((value) => !value);
 	};
 
+	let isHome = $state(false);
+
+	$effect(() => {
+		isHome = $page.url.pathname === '/' || $page.url.pathname === '';
+	});
+
 	const navElements = [
-		{ href: '/', name: 'Home' },
-		{ href: '/blog', name: 'Blog' },
-		{ href: '/#features', name: 'Features' },
-		{ href: '/#testimonials', name: 'Testimonials' }
+		{ href: '/', name: 'Home', isHomeNav: false },
+		{ href: '/blog', name: 'Blog', isHomeNav: false },
+		{ href: '/#features', name: 'Features', isHomeNav: true },
+		{ href: '/#testimonials', name: 'Testimonials', isHomeNav: true }
 	];
 </script>
 
-{#snippet humburgerNavElem(href: string, name: string)}
+{#snippet humburgerNavElem(href: string, name: string, isHomeNav: boolean)}
 	<a
 		{href}
 		class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-right text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-gray-900"
-		on:click={() => (isMenuOpen = false)}
+		onclick={(e) => {
+			isMenuOpen.set(false);
+		}}
 	>
 		{name}
 	</a>
@@ -48,9 +57,9 @@
 			</div>
 
 			<!-- Hamburger menu toggle for mobile -->
-			<button class="md:hidden" on:click={toggleMenu} aria-label="Toggle menu">
+			<button class="md:hidden" onclick={toggleMenu} aria-label="Toggle menu">
 				<svg class="h-6 w-6" fill="bg-text-800" stroke="currentColor" viewBox="0 0 24 24">
-					{#if isMenuOpen}
+					{#if $isMenuOpen}
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -88,12 +97,12 @@
 
 		<!-- Mobile menu outside of flex box -->
 		<div
-			class="w-full overflow-hidden transition-all duration-300 ease-in-out md:hidden"
-			style:max-height={isMenuOpen ? '300px' : '0px'}
+			class="w-full overflow-hidden border-primary-200 bg-white transition-all duration-300 ease-in-out md:hidden"
+			style:max-height={$isMenuOpen ? '300px' : '0px'}
 		>
 			<div class="space-y-1 pb-3 pt-2">
 				{#each navElements as navElement}
-					{@render humburgerNavElem(navElement.href, navElement.name)}
+					{@render humburgerNavElem(navElement.href, navElement.name, navElement.isHomeNav)}
 				{/each}
 			</div>
 		</div>

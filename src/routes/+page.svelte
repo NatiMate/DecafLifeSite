@@ -5,6 +5,16 @@
 	import ScreenPreviews from './components/ScreenPreviews.svelte';
 	import Seo from './components/Seo.svelte';
 	import Testimonials from './components/Testimonials.svelte';
+
+	$effect(() => {
+		const hash = window.location.hash;
+		if (hash) {
+			const element = document.querySelector(hash);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
 </script>
 
 <Seo

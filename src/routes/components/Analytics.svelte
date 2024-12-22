@@ -27,51 +27,53 @@
 
 <svelte:head>
 	<!-- Umami Analytics Code -->
-	<script
-		defer
-		src="https://cloud.umami.is/script.js"
-		data-website-id="04045760-03aa-4f5f-8ea1-036b7d0aaf20"
-	></script>
-	<!-- Google Analytics Code Definitions -->
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-	</script>
-
-	<!-- End Google Analytics Code Definitions -->
-	{#if $analyticsCookies || $trackingCookies}
+	{#if browser && window.location.protocol === 'https:'}
+		<script
+			defer
+			src="https://cloud.umami.is/script.js"
+			data-website-id="04045760-03aa-4f5f-8ea1-036b7d0aaf20"
+		></script>
+		<!-- Google Analytics Code Definitions -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
 			}
-			gtag('consent', 'default', {
-				ad_user_data: 'denied',
-				ad_personalization: 'denied',
-				ad_storage: 'denied',
-				analytics_storage: 'denied'
-			});
 		</script>
-		<!-- Trigger the gtag only after the default settings -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WT7KNJNYZ"></script>
-		<script>
-			gtag('js', new Date());
-			gtag('config', 'G-7WT7KNJNYZ');
-			let lastUrlGoogleAnalytics = location.href;
-			new MutationObserver(() => {
-				const url = location.href;
-				if (
-					url !== lastUrlGoogleAnalytics &&
-					url.split('#')[0] !== lastUrlGoogleAnalytics.split('#')[0]
-				) {
-					lastUrlGoogleAnalytics = url;
-					gtag('js', new Date());
-					gtag('config', 'G-7WT7KNJNYZ');
+
+		<!-- End Google Analytics Code Definitions -->
+		{#if $analyticsCookies || $trackingCookies}
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
 				}
-			}).observe(document, { subtree: true, childList: true });
-		</script>
-		<!-- End Google Analytics Code -->
+				gtag('consent', 'default', {
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					ad_storage: 'denied',
+					analytics_storage: 'denied'
+				});
+			</script>
+			<!-- Trigger the gtag only after the default settings -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WT7KNJNYZ"></script>
+			<script>
+				gtag('js', new Date());
+				gtag('config', 'G-7WT7KNJNYZ');
+				let lastUrlGoogleAnalytics = location.href;
+				new MutationObserver(() => {
+					const url = location.href;
+					if (
+						url !== lastUrlGoogleAnalytics &&
+						url.split('#')[0] !== lastUrlGoogleAnalytics.split('#')[0]
+					) {
+						lastUrlGoogleAnalytics = url;
+						gtag('js', new Date());
+						gtag('config', 'G-7WT7KNJNYZ');
+					}
+				}).observe(document, { subtree: true, childList: true });
+			</script>
+			<!-- End Google Analytics Code -->
+		{/if}
 	{/if}
 </svelte:head>

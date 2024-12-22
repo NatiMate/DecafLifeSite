@@ -29,14 +29,4 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={image} />
 	<meta name="twitter:url" content={url} />
-	{@html `<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "${type}",
-			"name": "${title}",
-            "image": "${image}",
-			"description": "${description}",
-			"url": "${url}"
-		}
-</script>`}
 </svelte:head>

@@ -132,6 +132,7 @@
 			const jsonData = JSON.parse(jsonInput);
 			$sfArticleForm.name = jsonData.name || '';
 			$sfArticleForm.title = jsonData.title || '';
+			$sfArticleForm.blogUrlEnding = jsonData.title.replace(/ /g, '-') || '';
 			$sfArticleForm.description = jsonData.description || '';
 			$sfArticleForm.date = jsonData.date || '';
 			$sfArticleForm.image = ''; // Set main image to empty string

@@ -17,6 +17,7 @@ export const articleSchema = z.object({
 	description: z.string(),
 	date: z.string(),
 	image: z.string(),
+	blogUrlEnding: z.string(),
 	sections: z.array(
 		z.object({
 			title: z.string(),

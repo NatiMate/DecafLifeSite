@@ -47,6 +47,8 @@
 		}
 	}
 
+	let articleLink = `https://my-decaf-life.com/blog/${article.blogUrlEnding}`;
+
 	// Function to copy the link to the clipboard
 	function copyLinkToClipboard(sectionId: string) {
 		const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
@@ -93,7 +95,10 @@
 				<ChevronRight size={20} color="gray" />
 				<a href="/blog" class="text-text-600 hover:underline">Posts</a>
 				<ChevronRight size={20} color="gray" />
-				<a href={`/blog/${article.name}`} class="font-medium text-secondary-500 hover:underline">
+				<a
+					href={`/blog/${article.blogUrlEnding}`}
+					class="font-medium text-secondary-500 hover:underline"
+				>
 					{article.title}
 				</a>
 			</div>
@@ -204,7 +209,7 @@
 							</button>
 							<!-- Sharing Options -->
 							<a
-								href={`https://twitter.com/intent/tweet?url=https://my-decaf-life.com/blog/${article.name}`}
+								href={`https://twitter.com/intent/tweet?url=${articleLink}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -212,7 +217,7 @@
 								<Twitter size={20} color="#BC6F53" />
 							</a>
 							<a
-								href={`https://www.facebook.com/sharer/sharer.php?u=https://my-decaf-life.com/blog/${article.name}`}
+								href={`https://www.facebook.com/sharer/sharer.php?u=${articleLink}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -220,7 +225,7 @@
 								<Facebook size={20} color="#BC6F53" />
 							</a>
 							<a
-								href={`https://www.linkedin.com/shareArticle?mini=true&url=https://my-decaf-life.com/blog/${article.name}`}
+								href={`https://www.linkedin.com/shareArticle?mini=true&url=${articleLink}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -229,7 +234,7 @@
 							</a>
 							<!-- Instagram Sharing Button -->
 							<a
-								href={`https://www.instagram.com/share?url=https://my-decaf-life.com/blog/${article.name}`}
+								href={`https://www.instagram.com/share?url=${articleLink}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"

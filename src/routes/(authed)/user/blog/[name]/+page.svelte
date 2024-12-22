@@ -6,6 +6,8 @@
 	// Ensure you have a toast library imported
 	let { data } = $props();
 
+	const { articles } = data;
+
 	// Ensure data.articleForm is defined before using it
 	const articleForm = superForm(data.articleForm, {
 		delayMs: 2000,
@@ -23,6 +25,24 @@
 
 	let isNewArticle = $state($sfArticleForm.name === 'new'); // State to check if the article is new
 	let jsonInput = ''; // State to hold JSON input
+
+	// Define the type for the form including blogUrlEnding
+	type ArticleForm = {
+		name: string;
+		title: string;
+		image: string;
+		description: string;
+		date: string;
+		sections: {
+			content: string;
+			title: string;
+			imageName: string;
+			subsections?: { content: string; title: string }[] | undefined;
+		}[];
+		previousArticleName?: string | undefined;
+		nextArticleName?: string | undefined;
+		blogUrlEnding?: string;
+	};
 
 	// Function to update the scroll progress
 	function updateScrollProgress() {
@@ -142,6 +162,8 @@
 				imageName: '', // Set section imageName to empty string
 				subsections: section.subsections || []
 			}));
+			$sfArticleForm.previousArticleName = jsonData.previousArticleName || '';
+			$sfArticleForm.nextArticleName = jsonData.nextArticleName || '';
 			toast.success('Data loaded successfully');
 			isNewArticle = false;
 		} catch (error) {
@@ -231,6 +253,20 @@
 					bind:value={$sfArticleForm.name}
 					placeholder="Enter url ending (without spaces, use - instead of spaces and _)"
 				/>
+
+				<select bind:value={$sfArticleForm.previousArticleName}>
+					<option value="">Select Previous Article</option>
+					{#each articles as article}
+						<option value={article.name}>{article.title}</option>
+					{/each}
+				</select>
+
+				<select bind:value={$sfArticleForm.nextArticleName}>
+					<option value="">Select Next Article</option>
+					{#each articles as article}
+						<option value={article.name}>{article.title}</option>
+					{/each}
+				</select>
 
 				<textarea
 					id="title"
@@ -324,14 +360,14 @@
 												placeholder="Subsection title"
 												id={`subsection-title-${index}-${subIndex}`}
 												class="bordered-textarea w-full text-xl font-semibold"
-												bind:value={$sfArticleForm.sections[index]!.subsections[subIndex]!.title}
+												bind:value={subsection.title}
 											/>
 											<div class="h-2"></div>
 											<textarea
 												id={`subsection-content-${index}-${subIndex}`}
 												placeholder="Subsection content"
 												class="bordered-textarea h-32 w-full"
-												bind:value={$sfArticleForm.sections[index]!.subsections[subIndex]!.content}
+												bind:value={subsection.content}
 												oninput={(e) => adjustTextareaHeight(e.target as HTMLTextAreaElement)}
 											></textarea>
 											<!-- Button to remove subsection -->

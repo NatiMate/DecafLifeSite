@@ -1,6 +1,15 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { ChevronRight, Facebook, House, Instagram, Link, Linkedin, Twitter } from 'lucide-svelte';
+	import {
+		ChevronLeft,
+		ChevronRight,
+		Facebook,
+		House,
+		Instagram,
+		Link,
+		Linkedin,
+		Twitter
+	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
 	import Seo from '../../../components/Seo.svelte';
@@ -31,8 +40,6 @@
 	async function shareLink(sectionId: string) {
 		const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
 		const shareData = {
-			title: article.title,
-			text: article.description,
 			url: url
 		};
 
@@ -86,10 +93,77 @@
 />
 <div id="scroll-progress"></div>
 
+{#snippet sharingOptions()}
+	<!-- Copying or Sharing -->
+	<div class="mt-4 flex gap-2">
+		<button
+			onclick={() => shareLink('')}
+			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+		>
+			<Link size={20} color="#BC6F53" />
+		</button>
+		<!-- Sharing Options -->
+		<a
+			href={`https://twitter.com/intent/tweet?url=${articleLink}&text=${article.title}`}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+		>
+			<Twitter size={20} color="#BC6F53" />
+		</a>
+		<a
+			href={`https://www.facebook.com/sharer/sharer.php?u=${articleLink}&title=${article.title}`}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+		>
+			<Facebook size={20} color="#BC6F53" />
+		</a>
+		<a
+			href={`https://www.linkedin.com/shareArticle?mini=true&url=${articleLink}&title=${article.title}`}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+		>
+			<Linkedin size={20} color="#BC6F53" />
+		</a>
+		<!-- Instagram Sharing Button -->
+		<a
+			href={`https://www.instagram.com/share?url=${articleLink}&text=${article.title}`}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
+		>
+			<Instagram size={20} color="#BC6F53" />
+		</a>
+	</div>
+{/snippet}
+
+{#snippet author()}
+	<!-- Author Information -->
+	<div class="mb-2 flex items-center">
+		<img
+			src="/images/stefan_profile_image.jpg"
+			alt="The author of the article"
+			class="mr-2 h-16 w-16 rounded-full"
+		/>
+		<div class="flex flex-col">
+			<span class="text-lg font-medium">Stefan Meintrup</span>
+			<span>
+				{new Date(article.date).toLocaleDateString('en-US', {
+					month: 'short',
+					day: 'numeric',
+					year: 'numeric'
+				})}
+			</span>
+		</div>
+	</div>
+{/snippet}
+
 {#if article}
 	<div class="max-w-8xl m-auto flex flex-1 flex-row items-start justify-center">
 		<!-- Article Content -->
-		<div class="flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
+		<div class=" flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
 			<!-- Breadcrumb Navigation -->
 			<div class="mb-4 mt-12 flex w-full gap-2 text-sm sm:mt-24">
 				<House size={20} color="gray" />
@@ -103,27 +177,12 @@
 			<h1 class="max-w-5xl py-4 text-left text-3xl leading-none tracking-tight md:text-5xl">
 				{article.title}
 			</h1>
-			<p class="max- mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
-			<!-- Author Information -->
-			<div class="mb-2 flex items-center">
-				<img
-					src="/images/stefan_profile_image.jpg"
-					alt="The author of the article"
-					class="mr-2 h-20 w-20 rounded-full"
-				/>
-				<div class="flex flex-col">
-					<span class="text-lg font-medium">Stefan Meintrup</span>
-					<span>
-						{new Date(article.date).toLocaleDateString('en-US', {
-							month: 'short',
-							day: 'numeric',
-							year: 'numeric'
-						})}
-					</span>
-				</div>
+			<div class="flex w-full max-w-5xl flex-row items-center justify-between">
+				<p class="max- mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
+				{@render author()}
 			</div>
 
-			<div class="my-16 flex flex-col md:flex-row">
+			<div class="ml-16 flex flex-col md:flex-row">
 				<!-- Table of Contents -->
 				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/3">
 					<button
@@ -197,49 +256,7 @@
 								</li>
 							{/each}
 						</ul>
-						<!-- New Link for Copying or Sharing -->
-						<div class="mt-4 flex gap-2">
-							<button
-								onclick={() => shareLink('')}
-								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-							>
-								<Link size={20} color="#BC6F53" />
-							</button>
-							<!-- Sharing Options -->
-							<a
-								href={`https://twitter.com/intent/tweet?url=${articleLink}&text=${article.title}`}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-							>
-								<Twitter size={20} color="#BC6F53" />
-							</a>
-							<a
-								href={`https://www.facebook.com/sharer/sharer.php?u=${articleLink}&title=${article.title}`}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-							>
-								<Facebook size={20} color="#BC6F53" />
-							</a>
-							<a
-								href={`https://www.linkedin.com/shareArticle?mini=true&url=${articleLink}&title=${article.title}`}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-							>
-								<Linkedin size={20} color="#BC6F53" />
-							</a>
-							<!-- Instagram Sharing Button -->
-							<a
-								href={`https://www.instagram.com/share?url=${articleLink}&text=${article.title}`}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-							>
-								<Instagram size={20} color="#BC6F53" />
-							</a>
-						</div>
+						{@render sharingOptions()}
 					</div>
 				</div>
 
@@ -282,6 +299,44 @@
 								{/each}
 							{/if}
 						{/each}
+
+						<hr class="my-8 h-px border-0 bg-primary-200" />
+						<!-- Add the new section here -->
+						<div class="mt-8 flex flex-1 flex-col items-center">
+							<div class="flex w-full flex-col items-center md:flex-row md:justify-between">
+								<h2 class="text-2xl font-medium">Share this post</h2>
+								<div class="mt-2 md:mt-0">
+									{@render sharingOptions()}
+								</div>
+							</div>
+							<div class="mt-8 flex w-full flex-col items-center md:flex-row md:justify-between">
+								<h2 class="text-2xl font-medium">Written by</h2>
+								{@render author()}
+							</div>
+						</div>
+
+						<div class="flex w-full flex-row justify-between pt-8 text-xl">
+							{#if article.previousArticleName}
+								<div class="flex flex-row items-center">
+									<a
+										href={`/blog/${article.previousArticleName}`}
+										class="flex items-center text-primary-500"
+									>
+										<ChevronLeft size={20} color="#BC6F53" />
+										<span>Previous Article</span>
+									</a>
+								</div>
+							{/if}
+							{#if article.nextArticleName}
+								<a
+									href={`/blog/${article.nextArticleName}`}
+									class="flex items-center text-primary-500"
+								>
+									<span>Next Article</span>
+									<ChevronRight size={20} color="#BC6F53" />
+								</a>
+							{/if}
+						</div>
 					</div>
 				</div>
 			</div>

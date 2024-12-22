@@ -7,6 +7,13 @@ import { zod } from 'sveltekit-superforms/adapters';
 
 export async function load({ params }) {
 	const { name } = params;
+	const articlesDir = path.resolve('static/articles');
+	const files = fs.readdirSync(articlesDir);
+	const articles = files.map((file) => {
+		const filePath = path.join(articlesDir, file);
+		const content = fs.readFileSync(filePath, 'utf-8');
+		return JSON.parse(content);
+	});
 
 	const articleForm = await superValidate(zod(articleSchema));
 	if (name === 'new') {
@@ -20,6 +27,7 @@ export async function load({ params }) {
 		const filePath = path.resolve('static/articles', `${name}.json`);
 		articleForm.data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 		return {
+			articles,
 			articleForm
 		};
 	} catch (error) {

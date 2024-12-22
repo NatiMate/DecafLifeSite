@@ -80,7 +80,7 @@
 	title={`${article.title} | My Decaf Life`}
 	image={`https://my-decaf-life.com${article.image}`}
 	description={article.description}
-	type="Website"
+	type="article"
 	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, better life, health, wellness, lifestyle, coffee, tea, energy, focus, productivity, sleep, anxiety, depression, withdrawal, addiction, natural, alternative, healthy, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
 />
 <div id="scroll-progress"></div>

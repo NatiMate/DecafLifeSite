@@ -18,11 +18,13 @@
 	<meta name="keywords" property="keywords" content={keywords} />
 	<meta name="image" property="image" content={image} />
 	<meta name="url" property="url" content={url} />
+	<meta name="type" property="type" content={type} />
 
 	<meta name="og:title" property="og:title" content={title} />
 	<meta name="og:description" property="og:description" content={description} />
 	<meta name="og:image" property="og:image" content={image} />
 	<meta name="og:url" property="og:url" content={url} />
+	<meta name="og:type" property="og:type" content={type} />
 
 	<meta name="twitter:card" property="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" property="twitter:title" content={title} />

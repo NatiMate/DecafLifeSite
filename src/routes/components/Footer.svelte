@@ -1,4 +1,4 @@
-<footer class="border-text-100 border-t p-12">
+<footer class="border-t border-text-100 p-12">
 	<div class="container mx-auto">
 		<div class="mx-auto max-w-5xl md:grid md:grid-cols-[1fr_auto_auto] md:gap-24">
 			<div class="mb-8 md:mb-0 md:max-w-xs">
@@ -47,16 +47,7 @@
 			</div>
 
 			<div class="mb-8 md:mb-0">
-				<span class="text-text-900 mb-4 block text-lg font-medium">COMPANY</span>
-				<nav class="flex flex-col gap-3">
-					<a href="/imprint" class="text-text-600 hover:text-secondary-500">Imprint</a>
-					<a href="/terms" class="text-text-600 hover:text-secondary-500">Terms of Service</a>
-					<a href="/privacy" class="text-text-600 hover:text-secondary-500">Privacy Policy</a>
-				</nav>
-			</div>
-
-			<div>
-				<span class="text-text-900 mb-4 block text-lg font-medium">RESOURCES</span>
+				<span class="mb-4 block text-lg font-medium text-text-900">RESOURCES</span>
 				<nav class="flex flex-col gap-3">
 					<a
 						href="https://www.reddit.com/r/decaf/"
@@ -66,11 +57,20 @@
 					<a href="/blog" class="text-text-600 hover:text-secondary-500">Blog</a>
 				</nav>
 			</div>
+
+			<div>
+				<span class="mb-4 block text-lg font-medium text-text-900">COMPANY</span>
+				<nav class="flex flex-col gap-3">
+					<a href="/imprint" class="text-text-600 hover:text-secondary-500">Imprint</a>
+					<a href="/terms" class="text-text-600 hover:text-secondary-500">Terms of Service</a>
+					<a href="/privacy" class="text-text-600 hover:text-secondary-500">Privacy Policy</a>
+				</nav>
+			</div>
 		</div>
 	</div>
 
 	<!-- Copyright section -->
 	<div class="mt-12 text-center">
-		<p class="text-text-900/50 text-sm">© 2024 My Decaf Life</p>
+		<p class="text-sm text-text-900/50">© 2024 My Decaf Life</p>
 	</div>
 </footer>

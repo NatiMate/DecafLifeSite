@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onNavigate } from '$app/navigation';
 	import { Toaster } from 'svelte-sonner';
 	import '../app.css';
 	import Analytics from './components/Analytics.svelte';
@@ -6,6 +7,17 @@
 	import GdprBanner from './components/GdprBanner.svelte';
 	import Header from './components/Header.svelte';
 	let { children } = $props();
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <svelte:head>
@@ -29,5 +41,17 @@
 <style>
 	:global(html) {
 		font-family: 'Outfit', sans-serif;
+	}
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+	}
+
+	:root::view-transition-old(root) {
+	}
+
+	:root::view-transition-new(root) {
+		animation: 600ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
 	}
 </style>

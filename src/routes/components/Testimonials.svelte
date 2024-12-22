@@ -84,6 +84,14 @@
 	let isDragging = false;
 
 	onMount(() => {
+		// Check if the URL contains the #testimonials hash
+		if (window.location.hash === '#testimonials') {
+			const testimonialsSection = document.getElementById('testimonials');
+			if (testimonialsSection) {
+				testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+
 		// Start at the middle set
 		const targetElement = document.getElementById(`testimonial-${selectedTestimonial}`);
 		if (targetElement) {
@@ -226,7 +234,7 @@
 
 		<!-- Testimonials scroll container -->
 		<div
-			class="scrollbar-hide pointer-events-none flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth px-6 py-6 lg:gap-8"
+			class="pointer-events-none flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth px-6 py-6 scrollbar-hide lg:gap-8"
 			style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; user-select: none;"
 			bind:this={testimonialContainer}
 		>

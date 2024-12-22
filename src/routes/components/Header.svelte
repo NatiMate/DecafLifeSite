@@ -18,6 +18,7 @@
 	<a
 		{href}
 		class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-right text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-gray-900"
+		on:click={() => (isMenuOpen = false)}
 	>
 		{name}
 	</a>
@@ -86,14 +87,15 @@
 		</div>
 
 		<!-- Mobile menu outside of flex box -->
-		{#if isMenuOpen}
-			<div class="w-full md:hidden">
-				<div class=" space-y-1 pb-3 pt-2">
-					{#each navElements as navElement}
-						{@render humburgerNavElem(navElement.href, navElement.name)}
-					{/each}
-				</div>
+		<div
+			class="w-full overflow-hidden transition-all duration-300 ease-in-out md:hidden"
+			style:max-height={isMenuOpen ? '300px' : '0px'}
+		>
+			<div class="space-y-1 pb-3 pt-2">
+				{#each navElements as navElement}
+					{@render humburgerNavElem(navElement.href, navElement.name)}
+				{/each}
 			</div>
-		{/if}
+		</div>
 	</nav>
 </header>

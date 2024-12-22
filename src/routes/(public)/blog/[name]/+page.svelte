@@ -163,9 +163,9 @@
 {#if article}
 	<div class="max-w-8xl m-auto flex flex-1 flex-row items-start justify-center">
 		<!-- Article Content -->
-		<div class=" flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
+		<div class="flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
 			<!-- Breadcrumb Navigation -->
-			<div class="mb-4 mt-12 flex w-full gap-2 text-sm sm:mt-24">
+			<div class="mb-4 mt-6 flex w-full gap-2 text-sm sm:mt-16">
 				<House size={20} color="gray" />
 				<ChevronRight size={20} color="gray" />
 				<a href="/blog" class="text-text-600 hover:underline">Posts</a>
@@ -177,16 +177,18 @@
 			<h1 class="max-w-5xl py-4 text-left text-3xl leading-none tracking-tight md:text-5xl">
 				{article.title}
 			</h1>
-			<div class="flex w-full max-w-5xl flex-row items-center justify-between">
-				<p class="max- mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
-				{@render author()}
+			<div class="flex w-full max-w-5xl flex-col items-center justify-between md:flex-row">
+				<p class="mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
+				<div class="self-start">
+					{@render author()}
+				</div>
 			</div>
 
-			<div class="ml-16 flex flex-col md:flex-row">
+			<div class="flex flex-col justify-between md:ml-16 md:flex-row md:justify-normal">
 				<!-- Table of Contents -->
 				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/3">
 					<button
-						class="mb-4 mr-4 inline-flex items-center justify-center gap-2 rounded-full border border-primary-500 px-4 py-2 md:hidden"
+						class="mb-4 mr-4 inline-flex items-center justify-center gap-2 rounded-full border border-primary-500 py-2 md:hidden"
 						onclick={() => (showTOC = !showTOC)}
 					>
 						{#if showTOC}
@@ -260,7 +262,7 @@
 					</div>
 				</div>
 
-				<div class="flex flex-1 flex-col p-4 md:w-2/3 md:flex-none">
+				<div class="flex flex-1 flex-col md:w-2/3 md:flex-none md:p-4">
 					{#if article.image !== ''}
 						<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
 					{/if}
@@ -300,7 +302,7 @@
 							{/if}
 						{/each}
 
-						<hr class="my-8 h-px border-0 bg-primary-200" />
+						<hr class="mb-8 mt-16 h-px border-0 bg-primary-200 md:my-16" />
 						<!-- Add the new section here -->
 						<div class="mt-8 flex flex-1 flex-col items-center">
 							<div class="flex w-full flex-col items-center md:flex-row md:justify-between">
@@ -310,7 +312,7 @@
 								</div>
 							</div>
 							<div class="mt-8 flex w-full flex-col items-center md:flex-row md:justify-between">
-								<h2 class="text-2xl font-medium">Written by</h2>
+								<h2 class="mb-4 text-2xl font-medium md:mb-0">Written by</h2>
 								{@render author()}
 							</div>
 						</div>
@@ -320,19 +322,21 @@
 								<div class="flex flex-row items-center">
 									<a
 										href={`/blog/${article.previousArticleName}`}
+										target="_self"
 										class="flex items-center text-primary-500"
 									>
 										<ChevronLeft size={20} color="#BC6F53" />
-										<span>Previous Article</span>
+										<span>{article.previousArticleName}</span>
 									</a>
 								</div>
 							{/if}
 							{#if article.nextArticleName}
 								<a
 									href={`/blog/${article.nextArticleName}`}
+									target="_self"
 									class="flex items-center text-primary-500"
 								>
-									<span>Next Article</span>
+									<span>{article.nextArticleName}</span>
 									<ChevronRight size={20} color="#BC6F53" />
 								</a>
 							{/if}
@@ -340,6 +344,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="md:h-16"></div>
 		</div>
 	</div>
 {:else}

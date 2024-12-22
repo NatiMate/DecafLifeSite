@@ -76,7 +76,7 @@
 			await new Promise((r) => setTimeout(r, 100));
 			const startTime = Date.now();
 			const checkDelay = async () => {
-				if (Date.now() - startTime > 5000) {
+				if (Date.now() - startTime > 1000) {
 					if ($page.status === 200) {
 						resolve({ success: true });
 						submittingArticleForm = false;
@@ -89,7 +89,7 @@
 					checkDelay();
 				}
 			};
-			new Promise((r) => setTimeout(r, 2000)).then(() => {
+			new Promise((r) => setTimeout(r, 400)).then(() => {
 				articleForm.submit();
 			});
 			await checkDelay();

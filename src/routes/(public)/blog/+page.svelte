@@ -13,8 +13,8 @@
 	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
 	logo="https://my-decaf-life.com/favicon.webp"
 />
-<main class="m-auto mt-16 flex max-w-7xl flex-1 flex-col items-center justify-center p-4">
-	<h1 class="md: mb-4 mr-auto text-3xl text-text-950 md:text-5xl">
+<main class="m-auto mt-2 flex max-w-7xl flex-1 flex-col items-center justify-center p-4 md:mt-16">
+	<h1 class="mr-auto text-3xl text-text-950 md:mb-4 md:text-5xl">
 		Articles about caffeine, habits & how to quit.
 	</h1>
 	<p class="font-400 mr-auto max-w-2xl text-lg text-gray-600">

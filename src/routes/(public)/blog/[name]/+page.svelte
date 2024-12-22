@@ -36,7 +36,7 @@
 			url: url
 		};
 
-		if (navigator.share) {
+		if (navigator.share && window.innerWidth <= 768) {
 			navigator
 				.share(shareData)
 				.then(() => console.log('Successful share'))
@@ -60,7 +60,7 @@
 		dummy.select();
 		document.execCommand('copy');
 		document.body.removeChild(dummy);
-		toast.success('Link copied to clipboard!');
+		toast.success('Link copied. You can now share it!');
 	}
 
 	onMount(() => {
@@ -207,7 +207,7 @@
 							</button>
 							<!-- Sharing Options -->
 							<a
-								href={`https://twitter.com/intent/tweet?url=${articleLink}`}
+								href={`https://twitter.com/intent/tweet?url=${articleLink}&text=${article.title}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -215,7 +215,7 @@
 								<Twitter size={20} color="#BC6F53" />
 							</a>
 							<a
-								href={`https://www.facebook.com/sharer/sharer.php?u=${articleLink}`}
+								href={`https://www.facebook.com/sharer/sharer.php?u=${articleLink}&title=${article.title}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -223,7 +223,7 @@
 								<Facebook size={20} color="#BC6F53" />
 							</a>
 							<a
-								href={`https://www.linkedin.com/shareArticle?mini=true&url=${articleLink}`}
+								href={`https://www.linkedin.com/shareArticle?mini=true&url=${articleLink}&title=${article.title}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
@@ -232,7 +232,7 @@
 							</a>
 							<!-- Instagram Sharing Button -->
 							<a
-								href={`https://www.instagram.com/share?url=${articleLink}`}
+								href={`https://www.instagram.com/share?url=${articleLink}&text=${article.title}`}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"

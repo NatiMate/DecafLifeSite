@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import { Toaster } from 'svelte-sonner';
 	import '../app.css';
 	import Analytics from './components/Analytics.svelte';
@@ -17,6 +18,14 @@
 				await navigation.complete;
 			});
 		});
+	});
+
+	onMount(() => {
+		const header = document.querySelector('header'); // Adjust selector as needed
+		if (header) {
+			const headerHeight = header.offsetHeight;
+			document.documentElement.style.scrollPaddingTop = `${headerHeight}px`;
+		}
 	});
 </script>
 
@@ -41,8 +50,8 @@
 <style>
 	:global(html) {
 		font-family: 'Outfit', sans-serif;
-		scroll-padding-top: 7rem;
 	}
+
 	@keyframes fade-in {
 		from {
 			opacity: 0;

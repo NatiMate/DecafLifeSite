@@ -25,7 +25,7 @@
 		<div class="mt-2 flex w-full flex-wrap gap-4 md:my-16">
 			{#each articles as article}
 				<a
-					href={`/blog/${article.blogUrlEnding}`}
+					href={`/blog/${article.name}`}
 					class="my-2 flex w-[300px] flex-col overflow-hidden rounded-lg bg-white shadow-sm md:w-[360px]"
 				>
 					<img src={`${article.image}`} alt={article.title} class="h-44 w-full object-cover" />

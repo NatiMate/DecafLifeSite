@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export async function load({ params }) {
-	let { name } = params;
-	name = name.replace(/-/g, ' ');
+	const { name } = params;
 
 	try {
 		const filePath = path.resolve('static/articles', `${name}.json`);

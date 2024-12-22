@@ -51,7 +51,7 @@
 	async function storeArticle() {
 		if (submittingArticleForm) return;
 		submittingArticleForm = true;
-		$sfArticleForm.blogUrlEnding = $sfArticleForm.title.replace(/ /g, '-');
+		$sfArticleForm.name = $sfArticleForm.name.replace(/ /g, '-').replace('_', '-').toLowerCase();
 		const promise = new Promise(async (resolve, reject) => {
 			await new Promise((r) => setTimeout(r, 100));
 			const startTime = Date.now();
@@ -229,7 +229,7 @@
 					id="name"
 					class="mb-4 mt-8 w-full border-none text-2xl font-semibold focus:outline-none focus:ring-0"
 					bind:value={$sfArticleForm.name}
-					placeholder="Enter new name"
+					placeholder="Enter url ending (without spaces, use - instead of spaces and _)"
 				/>
 
 				<textarea

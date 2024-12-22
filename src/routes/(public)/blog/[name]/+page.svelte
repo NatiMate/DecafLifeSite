@@ -47,7 +47,7 @@
 		}
 	}
 
-	let articleLink = `https://my-decaf-life.com/blog/${article.blogUrlEnding}`;
+	let articleLink = `https://my-decaf-life.com/blog/${article.name}`;
 
 	// Function to copy the link to the clipboard
 	function copyLinkToClipboard(sectionId: string) {
@@ -95,10 +95,7 @@
 				<ChevronRight size={20} color="gray" />
 				<a href="/blog" class="text-text-600 hover:underline">Posts</a>
 				<ChevronRight size={20} color="gray" />
-				<a
-					href={`/blog/${article.blogUrlEnding}`}
-					class="font-medium text-secondary-500 hover:underline"
-				>
+				<a href={`/blog/${article.name}`} class="font-medium text-secondary-500 hover:underline">
 					{article.title}
 				</a>
 			</div>

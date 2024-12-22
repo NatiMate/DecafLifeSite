@@ -11,6 +11,7 @@
 	description="Blog articles and advice on how to quit caffeine. The impact of coffee and caffeine on sleep, anxiety, and depression."
 	type="Website"
 	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
+	logo="https://my-decaf-life.com/favicon.webp"
 />
 <main class="m-auto mt-16 flex max-w-7xl flex-1 flex-col items-center justify-center p-4">
 	<h1 class="md: mb-4 mr-auto text-3xl text-text-950 md:text-5xl">

@@ -280,9 +280,6 @@
 					{/if}
 					<div class="sm:mx-16">
 						{#each article.sections as section, index}
-							{#if index === 1}
-								{@render cta()}
-							{/if}
 							<h2 class="mt-6 flex scroll-mt-32 items-center" id={section.title}>
 								{section.title}
 								<button onclick={() => shareLink(section.title)} class="ml-2">

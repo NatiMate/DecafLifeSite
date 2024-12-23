@@ -1,7 +1,7 @@
 <footer class="border-t border-text-100 p-12">
 	<div class="container mx-auto">
-		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-4">
-			<div class="mb-8 md:mb-0 md:max-w-xs">
+		<div class="mx-auto grid grid-cols-1 gap-6 md:grid-cols-4 justify-center md:max-w-6xl">
+			<div class="mb-8 md:mb-0 md:min-w-xs">
 				<h2 class="mb-4 text-2xl font-semibold">My Decaf Life</h2>
 				<p class="text-text-400">The mobile app that helps you quit caffeine with ease.</p>
 				<!-- Social media icons -->
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 
-			<div class="mb-8 md:mb-0">
+			<div class="mb-8 md:mb-0 md:w-fit">
 				<span class="mb-4 block text-lg font-medium text-text-900">OUR OTHER APPS</span>
 				<nav class="flex flex-col gap-3">
 					<a
@@ -57,12 +57,12 @@
 					<a
 						href="https://www.natimate.com"
 						target="_blank"
-						class="text-text-600 hover:text-secondary-500">SpeekDive</a
+						class="text-text-600 hover:text-secondary-500">SpeakDive</a
 					>
 				</nav>
 			</div>
 
-			<div class="mb-8 md:mb-0">
+			<div class="mb-8 md:mb-0 md:w-fit">
 				<span class="mb-4 block text-lg font-medium text-text-900">RESOURCES</span>
 				<nav class="flex flex-col gap-3">
 					<a
@@ -74,7 +74,7 @@
 				</nav>
 			</div>
 
-			<div>
+			<div class="md:w-fit">
 				<span class="mb-4 block text-lg font-medium text-text-900">COMPANY</span>
 				<nav class="flex flex-col gap-3">
 					<a href="/imprint" class="text-text-600 hover:text-secondary-500">Imprint</a>

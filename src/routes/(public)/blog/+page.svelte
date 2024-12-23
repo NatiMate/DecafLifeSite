@@ -27,12 +27,18 @@
 			{#each articles as article}
 				<a
 					href={`/blog/${article.name}`}
-					class="my-2 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-sm md:w-[360px]"
+					class="my-2 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 md:w-[360px]"
 				>
-					<img src={`${article.image}`} alt={article.title} class="h-44 w-full object-cover" />
+					<img 
+						src={`${article.image}`} 
+						alt={article.title} 
+						class="h-44 w-full object-cover" 
+					/>
 					<div class="p-4">
 						<p class="text-text-500">{article.date}</p>
-						<h2 class="mb-2 text-xl text-text-700">{article.title}</h2>
+						<h2 class="mb-2 text-xl text-text-700 transition-colors duration-300 hover:text-primary-600">
+							{article.title}
+						</h2>
 
 						<!-- Add more fields as necessary -->
 					</div>

@@ -87,15 +87,15 @@
 	image={`https://my-decaf-life.com${article.image}`}
 	description={article.description}
 	type="article"
-	keywords="quit coffee, quite caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, better life, health, wellness, lifestyle, coffee, tea, energy, focus, productivity, sleep, anxiety, depression, withdrawal, addiction, natural, alternative, healthy, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
+	keywords="quit coffee, quit caffeine, stop coffee, bad sleep, better sleep, stop caffeine, decaf, caffeine, quit, better life, health, wellness, lifestyle, coffee, tea, energy, focus, productivity, sleep, anxiety, depression, withdrawal, addiction, natural, alternative, healthy, lifestyle change, natural energy, no caffeine, no coffee, no tea, no energy drinks"
 	logo="https://my-decaf-life.com/favicon.webp"
 />
 <div id="scroll-progress"></div>
 
 {#snippet cta()}
-	<div class="mt-8 w-full rounded-lg border border-primary-500 bg-primary-50 p-6">
+	<div class="mt-8 w-full rounded-lg border-2 border-secondary-500 bg-secondary-50 p-6">
 		<div class="flex w-full flex-col items-center md:flex-row md:justify-between">
-			<h2 class="mb-4 text-xl font-medium text-primary-700 underline md:mb-0 md:text-2xl">
+			<h2 class="mb-4 text-xl font-medium text-secondary-600 md:mb-0 md:text-2xl">
 				Our app helps you quit caffeine
 			</h2>
 			<!-- CTA button -->
@@ -103,7 +103,7 @@
 				<a
 					href="/#cta"
 					target="_self"
-					class="rounded-md border border-primary-500 bg-primary-100 px-4 py-2 font-medium text-primary-500 hover:border-primary-400 hover:bg-primary-200 hover:text-black"
+					class="rounded-md border border-secondary-300 bg-secondary-500 px-4 py-2 font-medium text-secondary-50 hover:border-secondary-300 hover:bg-secondary-600 hover:text-white"
 				>
 					Get the App
 				</a>
@@ -155,10 +155,10 @@
 		<img
 			src="/images/stefan_profile_image.jpg"
 			alt="The author of the article"
-			class="mr-2 h-16 w-16 rounded-full"
+			class="mr-2 h-8 w-8 rounded-full"
 		/>
-		<div class="flex flex-col">
-			<span class="text-lg font-medium">Stefan Meintrup</span>
+		<div class="flex flex-row gap-1">
+			<span class="text-md font-medium text-text-800">Stefan Meintrup, </span>
 			<span>
 				{new Date(article.date).toLocaleDateString('en-US', {
 					month: 'short',
@@ -189,16 +189,16 @@
 			<h1 class="max-w-5xl py-4 text-left text-3xl leading-none tracking-tight md:text-5xl">
 				{article.title}
 			</h1>
-			<div class="flex w-full max-w-5xl flex-col items-center justify-between md:flex-row">
-				<p class="mb-8 max-w-2xl text-lg text-text-600">{article.description}</p>
-				<div class="self-start">
+			<div class="flex w-full max-w-5xl flex-col items-center justify-between md:flex-col">
+				<p class="mb-2 max-w-2xl mr-auto text-lg text-text-600">{article.description}</p>
+				<div class="self-start md:mb-8 mb-4">
 					{@render author()}
 				</div>
 			</div>
 
-			<div class="flex flex-col justify-between md:ml-16 md:flex-row md:justify-normal">
+			<div class="flex flex-col justify-between md:ml-4 md:flex-row md:justify-normal">
 				<!-- Table of Contents -->
-				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/3">
+				<div class="md-sticky flex flex-1 flex-col py-4 md:w-1/4">
 					<button
 						class="mb-4 mr-4 inline-flex items-center justify-center gap-2 rounded-full border border-primary-500 py-2 md:hidden"
 						onclick={() => (showTOC = !showTOC)}
@@ -241,7 +241,7 @@
 						class="overflow-hidden transition-[max-height] duration-500 ease-in-out md:overflow-visible"
 						style="max-height: {showTOC ? '1000px' : '0px'}"
 					>
-						<h2 class="mb-4 text-lg text-primary-500">Table of Contents</h2>
+						<h2 class="mb-4 text-base font-normal text-primary-500">TABLE OF CONTENTS</h2>
 						<ul>
 							{#each article.sections as section, index}
 								<li class="mb-2">
@@ -274,7 +274,7 @@
 					</div>
 				</div>
 
-				<div class="flex flex-1 flex-col md:w-2/3 md:flex-none md:p-4">
+				<div class="flex flex-1 flex-col md:w-3/4 md:flex-none md:p-4">
 					{#if article.image !== ''}
 						<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
 					{/if}

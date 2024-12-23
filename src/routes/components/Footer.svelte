@@ -1,6 +1,6 @@
 <footer class="border-t border-text-100 p-12">
 	<div class="container mx-auto">
-		<div class="mx-auto max-w-5xl md:grid md:grid-cols-[1fr_auto_auto] md:gap-24">
+		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-4">
 			<div class="mb-8 md:mb-0 md:max-w-xs">
 				<h2 class="mb-4 text-2xl font-semibold">My Decaf Life</h2>
 				<p class="text-text-400">The mobile app that helps you quit caffeine with ease.</p>
@@ -44,6 +44,22 @@
 						</svg>
 					</a>
 				</div>
+			</div>
+
+			<div class="mb-8 md:mb-0">
+				<span class="mb-4 block text-lg font-medium text-text-900">OUR OTHER APPS</span>
+				<nav class="flex flex-col gap-3">
+					<a
+						href="https://www.was-kann-ich-essen.com"
+						target="_blank"
+						class="text-text-600 hover:text-secondary-500">Was kann ich essen?</a
+					>
+					<a
+						href="https://www.natimate.com"
+						target="_blank"
+						class="text-text-600 hover:text-secondary-500">SpeekDive</a
+					>
+				</nav>
 			</div>
 
 			<div class="mb-8 md:mb-0">

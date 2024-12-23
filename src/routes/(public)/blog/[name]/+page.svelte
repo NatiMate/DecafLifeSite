@@ -93,6 +93,26 @@
 />
 <div id="scroll-progress"></div>
 
+{#snippet cta()}
+	<div class="mt-8 w-full rounded-lg border border-primary-500 bg-primary-50 p-6">
+		<div class="flex w-full flex-col items-center md:flex-row md:justify-between">
+			<h2 class="mb-4 text-xl font-medium text-primary-700 underline md:mb-0 md:text-2xl">
+				Our app helps you quit caffeine
+			</h2>
+			<!-- CTA button -->
+			<div class="flex items-center">
+				<a
+					href="/#cta"
+					target="_self"
+					class="rounded-md border border-primary-500 bg-primary-100 px-4 py-2 font-medium text-primary-500 hover:border-primary-400 hover:bg-primary-200 hover:text-black"
+				>
+					Get the App
+				</a>
+			</div>
+		</div>
+	</div>
+{/snippet}
+
 {#snippet sharingOptions()}
 	<!-- Copying or Sharing -->
 	<div class="mt-4 flex gap-2">
@@ -231,7 +251,7 @@
 					>
 						<h2 class="mb-4 text-lg text-primary-500">Table of Contents</h2>
 						<ul>
-							{#each article.sections as section}
+							{#each article.sections as section, index}
 								<li class="mb-2">
 									<a
 										href={`#${section.title}`}
@@ -267,7 +287,10 @@
 						<img class="w-full rounded-3xl pb-2" src={`${article.image}`} alt={article.title} />
 					{/if}
 					<div class="sm:mx-16">
-						{#each article.sections as section}
+						{#each article.sections as section, index}
+							{#if index === 1}
+								{@render cta()}
+							{/if}
 							<h2 class="mt-6 flex scroll-mt-32 items-center" id={section.title}>
 								{section.title}
 								<button onclick={() => shareLink(section.title)} class="ml-2">
@@ -315,6 +338,7 @@
 								<h2 class="mb-4 text-2xl font-medium md:mb-0">Written by</h2>
 								{@render author()}
 							</div>
+							{@render cta()}
 						</div>
 
 						<div class="flex w-full flex-row justify-between pt-8 text-xl">

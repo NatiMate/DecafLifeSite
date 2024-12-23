@@ -11,6 +11,9 @@ export async function load() {
 			return JSON.parse(content);
 		});
 
+		// Sort articles by date in descending order
+		articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 		return {
 			articles
 		};

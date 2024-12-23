@@ -5,7 +5,6 @@
 		ChevronRight,
 		Facebook,
 		House,
-		Instagram,
 		Link,
 		Linkedin,
 		Twitter
@@ -147,15 +146,6 @@
 		>
 			<Linkedin size={20} color="#BC6F53" />
 		</a>
-		<!-- Instagram Sharing Button -->
-		<a
-			href={`https://www.instagram.com/share?url=${articleLink}&text=${article.title}`}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="rounded-full border border-primary-500 bg-primary-100 p-2 hover:bg-primary-200"
-		>
-			<Instagram size={20} color="#BC6F53" />
-		</a>
 	</div>
 {/snippet}
 
@@ -186,7 +176,9 @@
 		<div class="flex w-full max-w-6xl flex-col items-start justify-start p-4 text-left">
 			<!-- Breadcrumb Navigation -->
 			<div class="mb-4 mt-6 flex w-full gap-2 text-sm sm:mt-16">
-				<House size={20} color="gray" />
+				<a href="/" class="text-text-600 hover:underline">
+					<House size={20} color="gray" />
+				</a>
 				<ChevronRight size={20} color="gray" />
 				<a href="/blog" class="text-text-600 hover:underline">Posts</a>
 				<ChevronRight size={20} color="gray" />

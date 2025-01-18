@@ -1,7 +1,8 @@
 <script lang="ts">
-	import GetMotivationalContent from '$lib/assets/get_motivational_content.png';
-	import GetScienceInsights from '$lib/assets/get_science_insights.png';
-	import TrackStreak from '$lib/assets/track_your_streak.png';
+	import GetMotivationalContent from '$lib/assets/get_motivational_content.webp';
+	import GetScienceInsights from '$lib/assets/get_science_insights.webp';
+	import TrackStreak from '$lib/assets/track_your_streak.webp';
+	import JoinCommunity from '$lib/assets/join_community.webp';
 
 	interface ScreenPreview {
 		titleBlack1: string;
@@ -35,6 +36,14 @@
 			image: GetMotivationalContent,
 			description:
 				'Get support when you are craving caffeine the most! You will receive reports from other caffeine quitters at times when you normally got your caffeine fix.'
+		},
+		{
+			titleBlack1: 'Join our',
+			titleGreen: 'caffeine free',
+			titleBlack2: ' community',
+			image: JoinCommunity,
+			description:
+				'Share your own experience with the community or read about the experiences of other caffeine quitters. Your support group for staying on track with your new lifestyle!'
 		}
 	];
 </script>

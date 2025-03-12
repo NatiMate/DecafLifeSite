@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: 'registry.digitalocean.com/natimate-container-registry'
-  IMAGE_NAME: 'my-decaf-life-site'
+  IMAGE_NAME: 'my-decaf-life'
 
 jobs:
   build_and_push:
@@ -54,7 +54,7 @@ jobs:
         shell: bash
 
       - name: Build container image
-        run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):${{ github.ref_name }} .
+        run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):site-${{ github.ref_name }} .
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
@@ -65,10 +65,27 @@ jobs:
         run: doctl registry login --expiry-seconds 600
 
       - name: Remove all old images
-        run: if [ ! -z "$(doctl registry repository list | grep "$(echo $IMAGE_NAME)")" ]; then doctl registry repository delete-manifest $(echo $IMAGE_NAME) $(doctl registry repository list-tags $(echo $IMAGE_NAME) | grep -o "sha.*") --force; else echo "No repository"; fi
+        run: |
+          echo "Checking if repository exists..."
+          if [ -n "$(doctl registry repository list | grep -w $IMAGE_NAME)" ]; then
+            echo "Repository found. Listing tags..."
+            doctl_output=$(doctl registry repository list-tags "$IMAGE_NAME")
+            echo "doctl output: $doctl_output"
+            digests=$(echo "$doctl_output" | (grep -E "site-v[0-9]+\.[0-9]+\.[0-9]+ " || true) | (grep -o "sha.*" || true))
+            if [ -n "$digests" ]; then
+              for digest in $digests; do
+                echo "Deleting manifest with digest: $digest"
+                doctl registry repository delete-manifest "$IMAGE_NAME" "$digest" --force
+              done
+            else
+              echo "No matching manifests found"
+            fi
+          else
+            echo "No repository"
+          fi
 
       - name: Push image to DigitalOcean Container Registry
-        run: docker push $(echo $REGISTRY)/$(echo $IMAGE_NAME):${{ github.ref_name }}
+        run: docker push $(echo $REGISTRY)/$(echo $IMAGE_NAME):site-${{ github.ref_name }}
 
   deploy:
     runs-on: ubuntu-latest

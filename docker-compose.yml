@@ -1,7 +1,7 @@
 version: '3'
 services:
   my-decaf-life-site:
-    image: registry.digitalocean.com/natimate-container-registry/my-decaf-life-site:$SERVER_VERSION
+    image: registry.digitalocean.com/natimate-container-registry/my-decaf-life:site-$SERVER_VERSION
     restart: always
     networks:
       src_nginx_and_certbot:

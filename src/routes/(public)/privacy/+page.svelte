@@ -1,466 +1,553 @@
+<!-- Privacy Policy Introduction -->
 <div class="mx-auto max-w-4xl p-10 opacity-90">
-	<h3>NatiMate GmbH Datenschutzrichtlinie</h3>
-	<p>
-		Ihre Privatsphäre ist uns wichtig. Es ist NatiMate GmbH Politik, Ihre Privatsphäre zu
-		respektieren und alle geltenden Gesetze und Vorschriften in Bezug auf personenbezogene Daten
-		einzuhalten, die wir über Sie erfassen können, einschließlich unserer Website, <a
-			href="https://my-decaf-life.com">https://my-decaf-life.com</a
-		>, und anderen Websites, die uns gehören und von uns betrieben werden.
+	<h1 class="text-4xl font-bold mb-8">Introduction</h1>
+
+	<p class="mb-6">
+		Your privacy is important to us. It is NatiMate GmbH's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including via our apps, Decaf Life & Stop Gaming, and its associated services.
 	</p>
-	<p>
-		Personenbezogene Daten sind alle Informationen über Sie, die zur Identifizierung Ihrer Person
-		verwendet werden können. Dazu gehören Informationen über Sie als Person (wie Name, Adresse und
-		Geburtsdatum), Ihre Geräte, Zahlungsdetails und sogar Informationen darüber, wie Sie eine
-		Website oder einen Online-Dienst nutzen.
+
+	<p class="mb-6">
+		Personal information is any information about you which can be used to identify you. This includes information about you as a person (such as name, address, and date of birth), your devices, payment details, and even information about how you use an app or online service.
 	</p>
-	<p>
-		Wenn unsere Website Links zu Websites und Diensten von Drittanbietern enthält, beachten Sie
-		bitte, dass diese Websites und Dienste ihre eigenen Datenschutzrichtlinien haben. Nachdem Sie
-		einem Link zu Inhalten von Drittanbietern gefolgt sind, sollten Sie die dort veröffentlichten
-		Datenschutzrichtlinien lesen, um Informationen darüber zu erhalten, wie sie personenbezogene
-		Daten erfassen und verwenden. Diese Datenschutzrichtlinie gilt nicht für Ihre Aktivitäten nach
-		Verlassen unserer Website.
+
+	<p class="mb-6">
+		In the event our app contains links to third-party sites and services, please be aware that those sites and services have their own privacy policies. After following a link to any third-party content, you should read their posted privacy policy information about how they collect and use personal information. This Privacy Policy does not apply to any of your activities after you leave our app.
 	</p>
-	<p>Diese Richtlinie ist ab dem 26 Oktober 2024 wirksam.</p>
-	<p>Zuletzt aktualisiert: 26 Oktober 2024</p>
-	<h3>Informationen, die wir erfassen</h3>
-	<p>
-		Die von uns erfassten Informationen fallen in eine von zwei Kategorien: Informationen, die Sie
-		uns freiwillig zur Verfügung stellen, und Informationen, die automatisch erfasst werden.
+
+	<div class="mt-8 mb-12">
+		<p class="mb-2">This policy is effective as of November 11, 2024</p>
+		<p>Last updated: November 11, 2024</p>
+	</div>
+
+	<!-- Information We Collect Section -->
+	<h2 class="text-3xl font-bold mb-6">Information We Collect</h2>
+
+	<p class="mb-6">
+		Information we collect falls into one of two categories: 'voluntarily provided' information and 'automatically collected' information.
 	</p>
-	<p>
-		Unter 'freiwillig bereitgestellten' Informationen versteht man alle Informationen, die Sie uns
-		wissentlich und aktiv zur Verfügung stellen, wenn Sie unsere Dienste und Aktionen nutzen oder
-		daran teilnehmen.
+
+	<p class="mb-6">
+		'Voluntarily provided' information refers to any information you knowingly and actively provide us when using our app and its associated services.
 	</p>
-	<p>
-		Unter 'automatisch erfassten' Informationen versteht man alle Informationen, die Ihre Geräte
-		automatisch im Rahmen des Zugriffs auf unsere Produkte und Dienstleistungen senden.
+
+	<p class="mb-6">
+		'Automatically collected' information refers to any information automatically sent by your device in the course of accessing our app and its associated services.
 	</p>
-	<h3>Protokolldaten</h3>
-	<p>
-		Wenn Sie unsere Website besuchen, protokollieren unsere Server möglicherweise automatisch die
-		Standarddaten, die Ihr Webbrowser sendet. Dies kann Ihre Internetprotokoll- (IP-) Adresse, Ihren
-		Browsertyp und Ihre -version, die von Ihnen besuchten Seiten, die Zeit und das Datum Ihres
-		Besuchs, die auf jeder Seite verbrachte Zeit und andere Details über Ihren Besuch umfassen.
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Log Data</h3>
+
+	<p class="mb-6">
+		When you access our servers via our app, we may automatically log the standard data provided by your device. It may include your device's Internet Protocol (IP) address, your device type and version, your activity within the app, time and date, and other details about your usage.
 	</p>
-	<p>
-		Darüber hinaus erfassen wir möglicherweise automatisch Daten über Fehler, die beim Besuch der
-		Website auftreten. Diese Daten können technische Details zu Ihrem Gerät, zu dem Zeitpunkt des
-		Fehlers und zu anderen technischen Informationen zum Problem umfassen. Sie erhalten
-		möglicherweise oder möglicherweise nicht eine Benachrichtigung über solche Fehler, auch in dem
-		Moment, in dem sie auftreten, dass sie aufgetreten sind oder um welche Art von Fehler es sich
-		handelt.
+
+	<p class="mb-6">
+		Additionally, when you encounter certain errors while using the app, we automatically collect data about the error and the circumstances surrounding its occurrence. This data may include technical details about your device, what you were trying to do when the error happened, and other technical information relating to the problem. You may or may not receive notice of such errors, even in the moment they occur, that they have occurred, or what the nature of the error is.
 	</p>
-	<p>
-		Bitte beachten Sie, dass diese Informationen allein möglicherweise nicht persönlich
-		identifizierbar sind, aber in Kombination mit anderen Daten möglicherweise zur persönlichen
-		Identifizierung einzelner Personen führen können.
+
+	<p class="mb-6">
+		Please be aware that while this information may not be personally identifying by itself, it may be possible to combine it with other data to personally identify individual persons.
 	</p>
-	<h3>Gerätedaten</h3>
-	<p>
-		Wenn Sie unsere Website besuchen oder mit unseren Diensten interagieren, erfassen wir
-		möglicherweise automatisch Daten über Ihr Gerät, wie zum Beispiel:
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Data Collection</h3>
+
+	<p class="mb-6">
+		Our app may access and collect data via your device's in-built tools, such as:
 	</p>
-	<ul>
-		<li>Gerätetyp</li>
-		<li>Betriebssystem</li>
-		<li>Eindeutige Gerätekennungen</li>
-		<li>Geräteeinstellungen</li>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>Your identity</li>
+		<li>Location data & IP</li>
+		<li>Camera</li>
+		<li>Microphone</li>
+		<li>Calendar</li>
+		<li>Contacts</li>
+		<li>Phone/SMS</li>
+		<li>Storage, photos and/or media</li>
+		<li>Notifications</li>
+		<li>Background data refresh</li>
+		<li>Mobile data</li>
+		<li>Device/app history</li>
+		<li>Bluetooth</li>
 	</ul>
-	<p>
-		Die von uns erfassten Daten können von den individuellen Einstellungen Ihres Geräts und Ihrer
-		Software abhängen. Wir empfehlen Ihnen, die Richtlinien des Geräteherstellers oder
-		Softwareanbieters zu überprüfen, um herauszufinden, welche Informationen sie uns zur Verfügung
-		stellen.
+
+	<p class="mb-6">
+		When you install the app or use your device's tools within the app, we request permission to access this information. The specific data we collect can depend on the individual settings of your device and the permissions you grant when you install and use the app.
 	</p>
-	<h3>Persönliche Informationen</h3>
-	<p>
-		Wir können um persönliche Informationen bitten — Beispielsweise, wenn Sie sich für unseren
-		Newsletter anmelden oder wenn Sie uns kontaktieren — die eine oder mehrere der folgenden
-		Informationen enthalten können:
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Personal Information</h3>
+
+	<p class="mb-6">
+		We may ask for personal information — for example, when you submit content to us or when you contact us — which may include one or more of the following:
 	</p>
-	<ul>
-		<li>E-Mail</li>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>Name</li>
+		<li>Email</li>
 	</ul>
-	<h4>Transaktionsdaten</h4>
-	<p>
-		Transaktionsdaten beziehen sich auf Daten, die im normalen Betrieb auf unserer Plattform
-		anfallen. Dies kann Transaktionsaufzeichnungen, gespeicherte Dateien, Benutzerprofile,
-		Analyse-Daten und andere Metriken sowie andere Arten von Informationen umfassen, die erstellt
-		oder generiert werden, wenn Benutzer mit unseren Diensten interagieren.
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">User-Generated-Content</h3>
+
+	<p class="mb-6">
+		We consider 'user-generated content' to be materials (text, image and/or video content) voluntarily supplied to us by our users for the purpose of publication on our platform, website or re-publishing on our social media channels. All user-generated content is associated with the account or email address used to submit the materials.
 	</p>
-	<h3>Legitime Gründe für die Verarbeitung Ihrer persönlichen Informationen</h3>
-	<p>
-		Wir erfassen und verwenden Ihre persönlichen Informationen nur, wenn wir hierfür einen legitimen
-		Grund haben. In diesem Fall erfassen wir nur persönliche Informationen, die vernünftigerweise
-		notwendig sind, um Ihnen unsere Dienstleistungen zur Verfügung zu stellen.
+
+	<p class="mb-6">
+		Please be aware that any content you submit for the purpose of publication will be public after posting (and subsequent review or vetting process). Once published it may be accessible to third parties not covered under this privacy policy.
 	</p>
-	<h3>Erfassung und Verwendung von Informationen</h3>
-	<p>
-		Wir können persönliche Informationen von Ihnen erfassen, wenn Sie Folgendes auf unserer Website
-		tun:
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Legitimate Reasons for Processing Your Personal Information</h2>
+
+	<p class="mb-6">
+		We only collect and use your personal information when we have a legitimate reason for doing so. In which instance we only collect personal information that is reasonably necessary to provide our services to you.
 	</p>
-	<ul>
-		<li>Ein Konto registrieren</li>
-		<li>Ein Abonnement kaufen</li>
-		<li>Sich für Updates per E-Mail oder über Social-Media-Kanäle bei uns anmelden</li>
-		<li>Ein mobiles Gerät oder einen Webbrowser verwenden, um auf unsere Inhalte zuzugreifen</li>
-		<li>Kontakt mit uns per E-Mail, Social Media oder über ähnliche Technologien aufnehmen</li>
-		<li>Uns in den sozialen Medien erwähnen</li>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Collection and Use of Information</h3>
+
+	<p class="mb-6">
+		We may collect personal information from you when you do any of the following on our website:
+	</p>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>Register for an account</li>
+		<li>Sign up to receive updates from us via email or social media channels</li>
+		<li>Use a mobile device or web browser to access our content</li>
+		<li>Contact us via email, social media, or on any similar technologies</li>
+		<li>When you mention us on social media</li>
 	</ul>
-	<p>
-		Wir können Informationen für folgende Zwecke erfassen, halten, verwenden und offenlegen, wobei
-		personenbezogene Informationen nicht in einer Weise weiterverarbeitet werden, die mit diesen
-		Zwecken unvereinbar ist:
+
+	<p class="mb-6">
+		We may collect, hold, use and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:
 	</p>
-	<ul>
-		<li>Ihnen die Kernfunktionen und -dienste unserer Plattform bereitzustellen</li>
-		<li>
-			Ihnen die Anpassung oder Personalisierung Ihrer Erfahrung auf unserer Website zu ermöglichen
-		</li>
-		<li>Ihnen Produkte und/oder Dienstleistungen zu liefern</li>
-		<li>Kontakt mit Ihnen aufzunehmen und zu kommunizieren</li>
-		<li>
-			Für Analyse, Marktforschung und Geschäftsentwicklung, einschließlich des Betriebs und der
-			Verbesserung unserer Website, verbundener Anwendungen und verbundener Social-Media-Plattformen
-		</li>
-		<li>
-			Für Werbung und Marketing, einschließlich der Zusendung von Werbeinformationen über unsere
-			Produkte und Dienstleistungen sowie Informationen über Dritte, von denen wir annehmen, dass
-			sie für Sie von Interesse sein könnten
-		</li>
-		<li>
-			Ihnen den Zugang und die Nutzung unserer Website, verbundener Anwendungen und verbundener
-			Social-Media-Plattformen zu ermöglichen
-		</li>
-		<li>
-			Für Sicherheit und Betrugsprävention sowie um sicherzustellen, dass unsere Websites und Apps
-			sicher, geschützt und gemäß unseren Nutzungsbedingungen verwendet werden
-		</li>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>to provide you with our app and platform's core features and services</li>
+		<li>to enable you to customize or personalise your experience of our website</li>
+		<li>to deliver products and/or services to you</li>
+		<li>to contact and communicate with you</li>
+		<li>for analytics, market research, and business development, including to operate and improve our app, associated applications, and associated social media platforms</li>
+		<li>for advertising and marketing, including to send you promotional information about our products and services and information about third parties that we consider may be of interest to you</li>
+		<li>to consider your employment application</li>
+		<li>to enable you to access and use our app, associated platforms, and associated social media channels</li>
+		<li>for internal record keeping and administrative purposes</li>
+		<li>for security and fraud prevention, and to ensure that our sites and apps are safe, secure, and used in line with our terms of use</li>
 	</ul>
-	<p>
-		Wir können freiwillig bereitgestellte und automatisch erfasste personenbezogene Informationen
-		mit allgemeinen Informationen oder Forschungsdaten kombinieren, die wir von anderen
-		vertrauenswürdigen Quellen erhalten. Wenn Sie uns beispielsweise Ihren Standort mitteilen,
-		können wir dies mit allgemeinen Informationen über Währung und Sprache kombinieren, um Ihnen ein
-		verbessertes Erlebnis auf unserer Website und unserem Service zu bieten.
+
+	<p class="mb-6">
+		We may combine voluntarily provided and automatically collected personal information with general information or research data we receive from other trusted sources. For example, If you consent to us accessing your social media profiles, we may combine information sourced from those profiles with information received from you directly to provide you with an enhanced experience of our app and services.
 	</p>
-	<h4>Sicherheit Ihrer persönlichen Informationen</h4>
-	<p>
-		Wenn wir personenbezogene Informationen erfassen und verarbeiten und solange wir diese
-		Informationen speichern, werden wir sie innerhalb kommerziell akzeptabler Mittel schützen, um
-		Verlust und Diebstahl sowie unbefugten Zugriff, Offenlegung, Kopieren, Verwendung oder Änderung
-		zu verhindern.
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Security of Your Personal Information</h3>
+
+	<p class="mb-6">
+		When we collect and process personal information, and while we retain this information, we will protect it within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.
 	</p>
-	<p>
-		Obwohl wir unser Bestes tun werden, um die von Ihnen bereitgestellten personenbezogenen
-		Informationen zu schützen, weisen wir darauf hin, dass keine Methode der elektronischen
-		Übertragung oder Speicherung zu 100% sicher ist und niemand eine absolute Datensicherheit
-		garantieren kann.
+
+	<p class="mb-6">
+		Although we will do our best to protect the personal information you provide to us, we advise that no method of electronic transmission or storage is 100% secure and no one can guarantee absolute data security.
 	</p>
-	<p>
-		Sie sind dafür verantwortlich, ein Passwort auszuwählen und seine Gesamtsicherheit zu
-		gewährleisten, indem Sie die Sicherheit Ihrer eigenen Informationen im Rahmen unserer
-		Dienstleistungen gewährleisten. Beispielsweise stellen Sie sicher, dass alle Passwörter, die mit
-		dem Zugriff auf Ihre persönlichen Informationen und Konten verbunden sind, sicher und
-		vertraulich sind.
+
+	<p class="mb-6">
+		You are responsible for selecting any password and its overall security strength, ensuring the security of your own information within the bounds of our services. For example, ensuring any passwords associated with accessing your personal information and accounts are secure and confidential.
 	</p>
-	<h4>Wie lange wir Ihre persönlichen Informationen aufbewahren</h4>
-	<p>
-		Wir bewahren Ihre persönlichen Informationen nur so lange auf, wie wir sie benötigen. Dieser
-		Zeitraum kann von dem Zweck abhängen, für den wir Ihre Informationen verwenden, gemäß dieser
-		Datenschutzrichtlinie. Wenn Sie uns zum Beispiel personenbezogene Informationen zur Verfügung
-		gestellt haben, um ein Konto bei uns zu erstellen, können wir diese Informationen für die Dauer
-		der Existenz Ihres Kontos in unserem System aufbewahren. Wenn Ihre personenbezogenen
-		Informationen für diesen Zweck nicht mehr erforderlich sind, werden wir sie löschen oder
-		anonymisieren, indem wir alle Details entfernen, die Sie identifizieren.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">How Long We Keep Your Personal Information</h2>
+
+	<p class="mb-6">
+		We keep your personal information only for as long as we need to. This time period may depend on what we are using your information for, in accordance with this privacy policy. For example, if you have provided us with personal information as part of creating an account with us, we may retain this information for the duration your account exists on our system. If your personal information is no longer required for this purpose, we will delete it or make it anonymous by removing all details that identify you.
 	</p>
-	<p>
-		Wenn erforderlich, können wir Ihre persönlichen Informationen für unsere Einhaltung einer
-		rechtlichen, buchhalterischen oder berichterstattenden Verpflichtung oder für Archivzwecke im
-		öffentlichen Interesse, wissenschaftliche oder historische Forschungszwecke oder statistische
-		Zwecke aufbewahren.
+
+	<p class="mb-6">
+		However, if necessary, we may retain your personal information for our compliance with a legal, accounting, or reporting obligation or for archiving purposes in the public interest, scientific, or historical research purposes or statistical purposes.
 	</p>
-	<h3>Datenschutz für Kinder</h3>
-	<p>
-		Unsere Produkte oder Dienstleistungen richten sich nicht direkt an Kinder unter 13 Jahren, und
-		wir sammeln nicht wissentlich personenbezogene Informationen über Kinder unter 13 Jahren.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Children's Privacy</h2>
+
+	<p class="mb-6">
+		We do not aim any of our products or services directly at children under the age of 16 and we do not knowingly collect personal information about children under 16.
 	</p>
-	<h3>Weitergabe von personenbezogenen Informationen an Dritte</h3>
-	<p>
-		Wir können personenbezogene Informationen an folgende Personen oder Organisationen weitergeben:
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Disclosure of Personal Information to Third Parties</h2>
+
+	<p class="mb-6">
+		We may disclose personal information to:
 	</p>
-	<ul>
-		<li>
-			ein Mutterunternehmen, eine Tochtergesellschaft oder ein verbundenes Unternehmen unseres
-			Unternehmens
-		</li>
-		<li>
-			Drittanbieter-Dienstleister zum Zwecke der Bereitstellung ihrer Dienste, einschließlich (ohne
-			Einschränkung) IT-Dienstleister, Datenspeicherung, Hosting- und
-			Server-Anbieter,Werbenetzwerke,Analyse-Tools,Fehlerprotokollierung, Inkassobüros, Wartungs-
-			oder Problembehebungsanbieter,Marketing-Anbieter,Berater und Zahlungssystembetreiber
-		</li>
-		<li>unsere Mitarbeiter, Vertragspartner und/oder verbundene Unternehmen</li>
-		<li>unsere bestehenden oder potenziellen Bevollmächtigten oder Geschäftspartner</li>
-		<li>
-			Kreditauskunfteien, Gerichte, Schiedsgerichte und Aufsichtsbehörden, falls Sie Zahlungen für
-			von uns erbrachte Waren oder Dienstleistungen nicht leisten
-		</li>
-		<li>
-			Gerichte, Schiedsgerichte, Aufsichtsbehörden und Strafverfolgungsbehörden, wie gesetzlich
-			vorgeschrieben, im Zusammenhang mit tatsächlichen oder möglichen rechtlichen Verfahren oder um
-			unsere rechtlichen Rechte festzustellen, auszuüben oder zu verteidigen
-		</li>
-		<li>
-			Dritte, einschließlich Agenten oder Subunternehmer, die uns bei der Bereitstellung von
-			Informationen, Produkten, Dienstleistungen oder Direktmarketing an Sie unterstützen
-		</li>
-		<li>Dritte zum Sammeln und Verarbeiten von Daten</li>
-		<li>
-			ein Unternehmen, das unser gesamtes oder wesentlichen Vermögenswerte und Geschäft übernimmt
-			oder an das wir diese übertragen
-		</li>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>a parent, subsidiary or affiliate of our company</li>
+		<li>third-party service providers for the purpose of enabling them to provide their services including (without limitation) IT service providers, data storage, hosting and server providers, ad networks, analytics, error loggers, maintenance or problem-solving providers, marketing or advertising providers, professional advisors, and payment systems operators</li>
+		<li>our employees, contractors, and/or related entities</li>
+		<li>our existing or potential agents or business partners</li>
+		<li>credit reporting agencies, courts, tribunals, and regulatory authorities, in the event you fail to pay for premium goods or services we have provided to you</li>
+		<li>courts, tribunals, regulatory authorities, and law enforcement officers, as required by law, in connection with any actual or prospective legal proceedings, or in order to establish, exercise, or defend our legal rights</li>
+		<li>third parties, including agents or sub-contractors who assist us in providing information, products, services, or direct marketing to you</li>
+		<li>third parties to collect and process data</li>
+		<li>an entity that buys, or to which we transfer all or substantially all of our assets and business</li>
 	</ul>
-	<p>Zu den von uns derzeit genutzten Dritten gehören:</p>
-	<ul>
+
+	<p class="mb-6">
+		Third parties we currently use include:
+	</p>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
 		<li>Google Analytics</li>
+		<li>Amplitude & Mixpanel</li>
 		<li>Brevo</li>
-		<li>PayPal</li>
-		<li>Stripe</li>
-		<li>Klarna</li>
+		<li>Google Adsense</li>
+		<li>Paypal</li>
+		<li>Google Payments</li>
+		<li>Apple Pay</li>
 	</ul>
-	<h3>Ihre Rechte und Kontrolle über Ihre personenbezogenen Informationen</h3>
-	<p>
-		<strong>Ihre Wahl:</strong> Indem Sie uns personenbezogene Informationen zur Verfügung stellen, erklären
-		Sie sich damit einverstanden, dass wir Ihre personenbezogenen Informationen gemäß dieser Datenschutzrichtlinie
-		sammeln, speichern, verwenden und offenlegen. Sie sind nicht verpflichtet, uns personenbezogene Informationen
-		zur Verfügung zu stellen. Wenn Sie dies jedoch nicht tun, kann dies Auswirkungen auf die Nutzung
-		unserer Website oder der darüber angebotenen Produkte und/oder Dienstleistungen haben.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">International Transfers of Personal Information</h2>
+
+	<p class="mb-6">
+		The personal information we collect is stored and/or processed in Germany, and United States, or where we or our partners, affiliates, and third-party providers maintain facilities.
 	</p>
-	<p>
-		<strong>Informationen von Dritten:</strong> Wenn wir personenbezogene Informationen über Sie von
-		einem Dritten erhalten, werden wir diese gemäß dieser Datenschutzrichtlinie schützen. Wenn Sie ein
-		Dritter sind und personenbezogene Informationen über jemand anderen bereitstellen, versichern und
-		garantieren Sie, dass Sie die Einwilligung dieser Person haben, die personenbezogenen Informationen
-		an uns weiterzugeben.
+
+	<p class="mb-6">
+		The countries to which we store, process, or transfer your personal information may not have the same data protection laws as the country in which you initially provided the information. If we transfer your personal information to third parties in other countries: (i) we will perform those transfers in accordance with the requirements of applicable law; and (ii) we will protect the transferred personal information in accordance with this privacy policy.
 	</p>
-	<p>
-		<strong>Marketing-Erlaubnis:</strong> Wenn Sie zuvor der Verwendung Ihrer personenbezogenen Informationen
-		für Direktmarketing-Zwecke zugestimmt haben, können Sie Ihre Meinung jederzeit ändern, indem Sie
-		uns unter den unten angegebenen Kontaktinformationen kontaktieren.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Your Rights and Controlling Your Personal Information</h2>
+
+	<p class="mb-6">
+		<strong>Your choice:</strong> By providing personal information to us, you understand we will collect, hold, use, and disclose your personal information in accordance with this privacy policy. You do not have to provide personal information to us, however, if you do not, it may affect your use of our app or the products and/or services offered on or through it.
 	</p>
-	<p>
-		<strong>Zugriff:</strong> Sie können Informationen darüber anfordern, welche personenbezogenen Informationen
-		wir über Sie speichern.
+
+	<p class="mb-6">
+		<strong>Information from third parties:</strong> If we receive personal information about you from a third party, we will protect it as set out in this privacy policy. If you are a third party providing personal information about somebody else, you represent and warrant that you have such person's consent to provide the personal information to us.
 	</p>
-	<p>
-		<strong>Korrektur:</strong> Wenn Sie der Ansicht sind, dass die von uns über Sie gespeicherten Informationen
-		ungenau, veraltet, unvollständig, irrelevant oder irreführend sind, kontaktieren Sie uns bitte unter
-		den in dieser Datenschutzrichtlinie angegebenen Kontaktdaten. Wir werden angemessene Schritte unternehmen,
-		um alle Informationen zu korrigieren, die sich als ungenau, unvollständig, irreführend oder veraltet
-		herausstellen.
+
+	<p class="mb-6">
+		<strong>Marketing permission:</strong> If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by contacting us using the details below.
 	</p>
-	<p>
-		<strong>Keine Diskriminierung:</strong> Wir werden Sie nicht benachteiligen, wenn Sie Ihre Rechte
-		in Bezug auf Ihre personenbezogenen Informationen ausüben. Sofern Ihre personenbezogenen Informationen
-		nicht zur Erbringung einer bestimmten Dienstleistung oder eines bestimmten Angebots erforderlich
-		sind (z. B. die Verarbeitung von Transaktionsdaten), werden wir Ihnen keine Waren oder Dienstleistungen
-		verweigern und/oder Ihnen keine unterschiedlichen Preise oder Raten für Waren oder Dienstleistungen
-		berechnen, einschließlich der Gewährung von Rabatten oder anderen Vorteilen, oder Strafen auferlegen
-		oder Ihnen eine andere Art oder Qualität von Waren oder Dienstleistungen bereitstellen.
+
+	<p class="mb-6">
+		<strong>Access:</strong> You may request details of the personal information that we hold about you.
 	</p>
-	<p>
-		<strong>Benachrichtigung über Datenschutzverletzungen:</strong> Wir werden die für uns geltenden
-		Gesetze in Bezug auf Datenverletzungen einhalten.
+
+	<p class="mb-6">
+		<strong>Correction:</strong> If you believe that any information we hold about you is inaccurate, out of date, incomplete, irrelevant, or misleading, please contact us using the details provided in this privacy policy. We will take reasonable steps to correct any information found to be inaccurate, incomplete, misleading, or out of date.
 	</p>
-	<p>
-		<strong>Beschwerden:</strong> Wenn Sie der Ansicht sind, dass wir gegen ein einschlägiges Datenschutzgesetz
-		verstoßen haben und eine Beschwerde einreichen möchten, kontaktieren Sie uns bitte unter den unten
-		angegebenen Kontaktdaten und geben Sie uns alle Einzelheiten des behaupteten Verstoßes bekannt. Wir
-		werden Ihre Beschwerde umgehend untersuchen und Ihnen schriftlich das Ergebnis unserer Untersuchung
-		sowie die Maßnahmen, die wir ergreifen werden, um Ihre Beschwerde zu behandeln, mitteilen. Sie haben
-		auch das Recht, sich bezüglich Ihrer Beschwerde an eine Aufsichtsbehörde oder Datenschutzbehörde
-		zu wenden.
+
+	<p class="mb-6">
+		<strong>Non-discrimination:</strong> We will not discriminate against you for exercising any of your rights over your personal information. Unless your personal information is required to provide you with a particular service or offer (for example serving particular content to your device), we will not deny you goods or services and/or charge you different prices or rates for goods or services, including through granting discounts or other benefits, or imposing penalties, or provide you with a different level or quality of goods or services.
 	</p>
-	<p>
-		<strong>Abbestellen:</strong> Um sich von unserer E-Mail-Datenbank abzumelden oder den Erhalt von
-		Kommunikationen (einschließlich Marketingkommunikationen) abzulehnen, kontaktieren Sie uns bitte
-		unter den in dieser Datenschutzrichtlinie angegebenen Kontaktdaten oder verwenden Sie die in der
-		Kommunikation angebotenen Abmeldefunktionen. Möglicherweise müssen wir bestimmte Informationen von
-		Ihnen anfordern, um Ihre Identität zu bestätigen.
+
+	<p class="mb-6">
+		<strong>Notification of data breaches:</strong> We will comply with laws applicable to us in respect of any data breach.
 	</p>
-	<h3>Verwendung von Cookies</h3>
-	<p>
-		Wir verwenden &quot;Cookies&quot;, um Informationen über Sie und Ihre Aktivitäten auf unserer
-		Website zu sammeln. Ein Cookie ist eine kleine Datenmenge, die unsere Website auf Ihrem Computer
-		speichert und bei jedem Besuch abruft, um zu verstehen, wie Sie unsere Website nutzen. Dies
-		hilft uns dabei, Ihnen Inhalte basierend auf Ihren angegebenen Präferenzen bereitzustellen.
+
+	<p class="mb-6">
+		<strong>Complaints:</strong> If you believe that we have breached a relevant data protection law and wish to make a complaint, please contact us using the details below and provide us with full details of the alleged breach. We will promptly investigate your complaint and respond to you, in writing, setting out the outcome of our investigation and the steps we will take to deal with your complaint. You also have the right to contact a regulatory body or data protection authority in relation to your complaint.
 	</p>
-	<p>Bitte lesen Sie unsere Cookie-Richtlinie für weitere Informationen.</p>
-	<h3>Unternehmensübertragungen</h3>
-	<p>
-		Falls wir oder unsere Vermögenswerte erworben werden oder im unwahrscheinlichen Fall, dass wir
-		das Geschäft aufgeben oder Konkurs anmelden, würden wir Daten, einschließlich Ihrer
-		personenbezogenen Informationen, zu den übertragenen Vermögenswerten gehören, die von den
-		Parteien, die uns erwerben, übernommen werden. Sie erkennen an, dass solche Übertragungen
-		stattfinden können und dass alle Parteien, die uns erwerben, Ihre personenbezogenen
-		Informationen, soweit dies nach geltendem Recht zulässig ist, gemäß dieser Richtlinie weiterhin
-		verwenden dürfen, da sie die Grundlage für alle Eigentums- oder Nutzungsrechte darstellt, die
-		wir an solchen Informationen haben.
+
+	<p class="mb-6">
+		<strong>Unsubscribe:</strong> To unsubscribe from our email database or opt-out of communications (including marketing communications), please contact us using the details provided in this privacy policy, or opt-out using the opt-out facilities provided in the communication. We may need to request specific information from you to help us confirm your identity.
 	</p>
-	<h3>Grenzen unserer Richtlinie</h3>
-	<p>
-		Unsere Website kann Links zu externen Websites enthalten, die nicht von uns betrieben werden.
-		Bitte beachten Sie, dass wir keine Kontrolle über den Inhalt und die Richtlinien dieser Websites
-		haben und keine Verantwortung oder Haftung für ihre jeweiligen Datenschutzpraktiken übernehmen
-		können.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Cookie Policy</h2>
+
+	<p class="mb-6">
+		We use cookies to help improve your experience of our website at natimate.com. This cookie policy is part of NatiMate GmbH's privacy policy. It covers the use of cookies between your device and our site.
 	</p>
-	<h3>Änderungen dieser Richtlinie</h3>
-	<p>
-		Nach eigenem Ermessen können wir unsere Datenschutzrichtlinie ändern, um Aktualisierungen
-		unserer Geschäftsprozesse, aktuelle akzeptable Praktiken oder gesetzliche oder behördliche
-		Änderungen widerzuspiegeln. Wenn wir uns entscheiden, diese Datenschutzrichtlinie zu ändern,
-		werden wir die Änderungen hier unter demselben Link veröffentlichen, über den Sie auf diese
-		Datenschutzrichtlinie zugreifen.
+
+	<p class="mb-6">
+		We also provide basic information on third-party services we may use, who may also use cookies as part of their service. This policy does not cover their cookies.
 	</p>
-	<p>
-		Wenn die Änderungen wesentlich sind oder dies gesetzlich vorgeschrieben ist, werden wir Sie
-		(basierend auf Ihren ausgewählten Kommunikationspräferenzen) und alle unsere registrierten
-		Benutzer über die neuen Details und Links zur aktualisierten oder geänderten Richtlinie
-		informieren.
+
+	<p class="mb-6">
+		If you don't wish to accept cookies from us, you should instruct your browser to refuse cookies from natimate.com. In such a case, we may be unable to provide you with some of your desired content and services.
 	</p>
-	<p>
-		Sofern gesetzlich vorgeschrieben, werden wir Ihre Zustimmung einholen oder Ihnen die Möglichkeit
-		geben, gegebenenfalls neue Verwendungen Ihrer personenbezogenen Informationen zu aktivieren oder
-		zu deaktivieren.
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">What is a cookie?</h3>
+
+	<p class="mb-6">
+		A cookie is a small piece of data that a website stores on your device when you visit. It typically contains information about the website itself, a unique identifier that allows the site to recognise your web browser when you return, additional data that serves the cookie's purpose, and the lifespan of the cookie itself.
 	</p>
-	<h3>
-		Zusätzliche Angaben zur Einhaltung der Allgemeinen Datenschutzgrundverordnung (DSGVO) (EU)
-	</h3>
-	<h4>Datenverantwortlicher / Datenverarbeiter</h4>
-	<p>
-		Die DSGVO unterscheidet zwischen Organisationen, die personenbezogene Daten für ihre eigenen
-		Zwecke verarbeiten (bekannt als &quot;Datenverantwortliche&quot;) und Organisationen, die
-		personenbezogene Daten im Auftrag anderer Organisationen verarbeiten (bekannt als
-		&quot;Datenverarbeiter&quot;). Wir, NatiMate GmbH, mit Sitz an der in unserem Abschnitt
-		&quot;Kontakt&quot; angegebenen Adresse, sind ein Datenverantwortlicher in Bezug auf die
-		personenbezogenen Daten, die Sie uns zur Verfügung stellen
+
+	<p class="mb-6">
+		Cookies are used to enable certain features (eg logging in), track site usage (eg analytics), store your user settings (eg time zone, notification preferences), and to personalise your content (eg advertising, language).
 	</p>
-	<h4>Rechtsgrundlagen für die Verarbeitung Ihrer persönlichen Daten</h4>
-	<p>
-		Wir erheben und verwenden Ihre personenbezogenen Daten nur dann, wenn wir gesetzlich dazu
-		berechtigt sind. In diesem Fall werden wir Ihre personenbezogenen Daten auf rechtmäßige, faire
-		und transparente Weise erfassen und verwenden. Wenn wir Ihre Zustimmung zur Verarbeitung Ihrer
-		personenbezogenen Daten einholen und Sie unter 16 Jahre alt sind, holen wir die Zustimmung Ihrer
-		Eltern oder Ihres Erziehungsberechtigten zur Verarbeitung Ihrer personenbezogenen Daten für
-		diesen speziellen Zweck ein.
+
+	<p class="mb-6">
+		Cookies set by the website you are visiting are usually referred to as first-party cookies. They typically only track your activity on that particular site.
 	</p>
-	<p>
-		Unsere Rechtsgrundlagen hängen davon ab, welche und wie Sie diese Dienste nutzen. Das bedeutet,
-		dass wir Ihre Daten nur aus den folgenden Gründen erfassen und verwenden:
+
+	<p class="mb-6">
+		Cookies set by other sites and companies (i.e. third parties) are called third-party cookies They can be used to track you on other websites that use the same third-party service.
 	</p>
-	<h3>Ihr Einverständnis</h3>
-	<p>
-		Wenn Sie uns Ihr Einverständnis geben, Ihre personenbezogenen Daten für einen bestimmten Zweck
-		zu erfassen und zu verwenden. Sie können Ihre Zustimmung jederzeit über die von uns
-		bereitgestellten Möglichkeiten widerrufen; dies hat jedoch keine Auswirkungen auf eine bereits
-		erfolgte Verwendung Ihrer Daten. Sie können der Angabe Ihrer E-Mail-Adresse zustimmen, um
-		Marketing-E-Mails von uns zu erhalten. Sie können sich jederzeit abmelden, aber wir können keine
-		bereits versendeten E-Mails zurückrufen. Wenn Sie weitere Fragen dazu haben, wie Sie Ihre
-		Zustimmung zurückziehen können, wenden Sie sich bitte an die im Abschnitt &quot;Kontakt&quot;
-		dieser Datenschutzrichtlinie angegebenen Daten.
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Types of cookies and how we use them</h3>
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Essential cookies</h4>
+
+	<p class="mb-6">
+		Essential cookies are crucial to your experience of a website, enabling core features like user logins, account management, shopping carts, and payment processing.
 	</p>
-	<h3>Erfüllung eines Vertrags oder einer Transaktion</h3>
-	<p>
-		Wenn Sie einen Vertrag oder eine Transaktion mit uns abgeschlossen haben, oder um vorbereitende
-		Schritte zu unternehmen, bevor wir einen Vertrag oder eine Transaktion mit Ihnen abschließen.
-		Zum Beispiel, Wenn Sie ein Produkt, eine Dienstleistung oder ein Abonnement bei uns kaufen,
-		müssen wir Ihre persönlichen Daten und Zahlungsinformationen verwenden, um Ihre Bestellung zu
-		bearbeiten und zu liefern.
+
+	<p class="mb-6">
+		We use essential cookies to enable certain functions on our website.
 	</p>
-	<h3>Unsere berechtigten Interessen</h3>
-	<p>
-		Wenn wir der Meinung sind, dass dies für unsere berechtigten Interessen notwendig ist, z. B. um
-		unsere Dienste bereitzustellen, zu betreiben, zu verbessern und zu kommunizieren. Zu unseren
-		berechtigten Interessen gehören Forschung und Entwicklung, das Verständnis unserer Zielgruppe,
-		Marketing und Werbung für unsere Dienste, Maßnahmen zum effizienten Betrieb unserer Dienste,
-		Marketinganalysen und Maßnahmen zum Schutz unserer gesetzlichen Rechte und Interessen.
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Performance cookies</h4>
+
+	<p class="mb-6">
+		Performance cookies track how you use a website during your visit. Typically, this information is anonymous and aggregated, with information tracked across all site users. They help companies understand visitor usage patterns, identify and diagnose problems or errors their users may encounter, and make better strategic decisions in improving their audience's overall website experience. These cookies may be set by the website you're visiting (first-party) or by third-party services. They do not collect personal information about you.
 	</p>
-	<h3>Einhaltung der Rechtsvorschriften</h3>
-	<p>
-		In einigen Fällen können wir rechtlich verpflichtet sein, Ihre personenbezogenen Daten zu
-		verwenden oder aufzubewahren. Dazu gehören unter anderem gerichtliche Anordnungen,
-		strafrechtliche Ermittlungen, behördliche Anfragen und Auflagen. Wenn Sie weitere Fragen dazu
-		haben, wie wir personenbezogene Daten aufbewahren, um die gesetzlichen Bestimmungen zu erfüllen,
-		können Sie sich gerne an die im Abschnitt „Kontakt&quot; dieser Datenschutzrichtlinie
-		angegebenen Kontaktdaten wenden.
+
+	<p class="mb-6">
+		We use performance cookies on our site.
 	</p>
-	<h4>Internationale Übermittlungen außerhalb des Europäischen Wirtschaftsraums (EWR)</h4>
-	<p>
-		Wir stellen sicher, dass jede Übermittlung personenbezogener Daten aus Ländern des Europäischen
-		Wirtschaftsraums (EWR) in Länder außerhalb des EWR durch angemessene Schutzmaßnahmen geschützt
-		wird, z. B. durch von der Europäischen Kommission genehmigte Standard-Datenschutzklauseln oder
-		die Verwendung verbindlicher unternehmensinterner Vorschriften oder anderer rechtlich
-		anerkannter Mittel.
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Functionality cookies</h4>
+
+	<p class="mb-6">
+		Functionality cookies are used to collect information about your device and any settings you may configure on the website you're visiting (like language and time zone settings). With this information, websites can provide you with customised, enhanced, or optimised content and services. These cookies may be set by the website you're visiting (first-party) or by third-party services.
 	</p>
-	<h4>Ihre Rechte und die Kontrolle über Ihre personenbezogenen Daten</h4>
-	<p>
-		<strong>Einschränken:</strong> Sie haben das Recht, uns aufzufordern, die Verarbeitung Ihrer personenbezogenen
-		Daten einzuschränken, wenn (i) Sie Bedenken hinsichtlich der Richtigkeit Ihrer personenbezogenen
-		Daten haben; (ii) Sie der Meinung sind, dass Ihre personenbezogenen Daten unrechtmäßig verarbeitet
-		wurden; (iii) Sie die personenbezogenen Daten ausschließlich für die Zwecke eines Rechtsanspruchs
-		benötigen, oder (iv) wir gerade Ihren Einspruch gegen die Verarbeitung auf der Grundlage legitimer
-		Interessen prüfen.
+
+	<p class="mb-6">
+		We use functionality cookies for selected features on our site.
 	</p>
-	<p>
-		<strong>Einspruch gegen die Verarbeitung:</strong> Sie haben das Recht, der Verarbeitung Ihrer personenbezogenen
-		Daten zu widersprechen, wenn dies auf unserem berechtigten oder öffentlichem Interesse beruht. In
-		diesem Fall müssen wir zwingende legitime Gründe für die Verarbeitung vorbringen, die Ihre Interessen,
-		Rechte und Freiheiten überwiegen, damit wir mit der Verarbeitung Ihrer personenbezogenen Daten fortfahren
-		können.
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Targeting/advertising cookies</h4>
+
+	<p class="mb-6">
+		Targeting/advertising cookies help determine what promotional content is most relevant and appropriate to you and your interests. Websites may use them to deliver targeted advertising or limit the number of times you see an advertisement. This helps companies improve the effectiveness of their campaigns and the quality of content presented to you. These cookies may be set by the website you're visiting (first-party) or by third-party services. Targeting/advertising cookies set by third-parties may be used to track you on other websites that use the same third-party service.
 	</p>
-	<p>
-		<strong>Datenübertragbarkeit:</strong> Sie haben das Recht, eine Kopie der personenbezogenen Daten
-		anzufordern, die wir über Sie gespeichert haben. Wenn möglich, stellen wir Ihnen diese Informationen
-		im CSV-Format oder einem anderen leicht lesbaren maschinellen Format zur Verfügung. Sie haben auch
-		das Recht zu verlangen, dass wir diese personenbezogenen Daten an einen Dritten weitergeben.
+
+	<p class="mb-6">
+		We use targeting/advertising cookies on our site.
 	</p>
-	<p>
-		<strong>Löschung:</strong> Sie haben das Recht, jederzeit die Löschung der personenbezogenen Daten
-		zu verlangen, die wir über Sie gespeichert haben, und wir werden angemessene Schritte unternehmen,
-		um Ihre personenbezogenen Daten aus unseren derzeitigen Unterlagen zu löschen. Wenn Sie uns bitten,
-		Ihre personenbezogenen Daten zu löschen, werden wir Sie darüber informieren, wie sich die Löschung
-		auf Ihre Nutzung unserer Webseite oder unserer Produkte und Dienstleistungen auswirkt. Von diesem
-		Recht kann es aus bestimmten rechtlichen Gründen Ausnahmen geben, die wir Ihnen gegebenenfalls in
-		unserer Antwort auf Ihre Anfrage mitteilen werden. Wenn Sie Ihren Account kündigen oder löschen,
-		werden wir Ihre persönlichen Daten innerhalb von 30 Tagen nach der Löschung Ihres Accounts löschen.
-		Bitte beachten Sie, dass Suchmaschinen und ähnliche Dienste Kopien Ihrer personenbezogenen Daten,
-		die zumindest einmal veröffentlicht wurden, wie beispielsweise bestimmte Profilinformationen und
-		öffentliche Kommentare, diese auch dann noch aufbewahren können, wenn Sie diese Informationen aus
-		unseren Diensten gelöscht oder Ihr Konto deaktiviert haben.
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Business Transfers</h2>
+
+	<p class="mb-6">
+		If we or our assets are acquired, or in the unlikely event that we go out of business or enter bankruptcy, we would include data, including your personal information, among the assets transferred to any parties who acquire us. You acknowledge that such transfers may occur, and that any parties who acquire us may, to the extent permitted by applicable law, continue to use your personal information according to this policy, which they will be required to assume as it is the basis for any ownership or use rights we have over such information.
 	</p>
-	<h3>Kontaktieren Sie uns</h3>
-	<p>
-		Bei Fragen oder Bedenken hinsichtlich Ihrer Privatsphäre können Sie uns unter folgenden
-		Kontaktdaten erreichen:
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Limits of Our Policy</h2>
+
+	<p class="mb-6">
+		Our app may link to external sites that are not operated by us. Please be aware that we have no control over the content and policies of those sites, and cannot accept responsibility or liability for their respective privacy practices.
 	</p>
-	<p class="bottom">
-		Stefan Meintrup<br />
-		privacy@natimate.com
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Changes to This Policy</h2>
+
+	<p class="mb-6">
+		At our discretion, we may change our privacy policy to reflect updates to our business processes, current acceptable practices, or legislative or regulatory changes. If we decide to change this privacy policy, we will post the changes here and on our website.
+	</p>
+
+	<p class="mb-6">
+		If the changes are significant, or if required by applicable law, we will contact you (based on your selected preferences for communications from us) and all our registered users with the new details and links to the updated or changed policy.
+	</p>
+
+	<p class="mb-6">
+		If required by law, we will get your permission or give you the opportunity to opt in to or opt out of, as applicable, any new uses of your personal information.
+	</p>
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Additional Disclosures for Australian Privacy Act Compliance (AU)</h2>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">International Transfers of Personal Information</h3>
+
+	<p class="mb-6">
+		Where the disclosure of your personal information is solely subject to Australian privacy laws, you acknowledge that some third parties may not be regulated by the Privacy Act and the Australian Privacy Principles in the Privacy Act. You acknowledge that if any such third party engages in any act or practice that contravenes the Australian Privacy Principles, it would not be accountable under the Privacy Act, and you will not be able to seek redress under the Privacy Act.
+	</p>
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Additional Disclosures for General Data Protection Regulation (GDPR) Compliance (EU)</h2>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Data Controller / Data Processor</h3>
+
+	<p class="mb-6">
+		The GDPR distinguishes between organisations that process personal information for their own purposes (known as "data controllers") and organizations that process personal information on behalf of other organizations (known as "data processors"). We, NatiMate GmbH, located at the address provided in our Contact Us section, are a Data Controller with respect to the personal information you provide to us.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Legal Bases for Processing Your Personal Information</h3>
+
+	<p class="mb-6">
+		We will only collect and use your personal information when we have a legal right to do so. In which case, we will collect and use your personal information lawfully, fairly and in a transparent manner. If we seek your consent to process your personal information, and you are under 16 years of age, we will seek your parent or legal guardian's consent to process your personal information for that specific purpose.
+	</p>
+
+	<p class="mb-6">
+		Our lawful bases depend on the services you use and how you use them. This means we only collect and use your information on the following grounds:
+	</p>
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Consent From You</h4>
+
+	<p class="mb-6">
+		Where you give us consent to collect and use your personal information for a specific purpose. You may withdraw your consent at any time using the facilities we provide; however this will not affect any use of your information that has already taken place. You may consent to providing your email address for the purpose of receiving marketing emails from us. While you may unsubscribe at any time, we cannot recall any email we have already sent. If you have any further enquiries about how to withdraw your consent, please feel free to enquire using the details provided in the Contact Us section of this privacy policy.
+	</p>
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Performance of a Contract or Transaction</h4>
+
+	<p class="mb-6">
+		Where you have entered into a contract or transaction with us, or in order to take preparatory steps prior to our entering into a contract or transaction with you. For example, we need technical information about your device in order to provide the essential features of our app.
+	</p>
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Our Legitimate Interests</h4>
+
+	<p class="mb-6">
+		Where we assess it is necessary for our legitimate interests, such as for us to provide, operate, improve and communicate our services. For example, we collect technical information about your device in order to improve and personalise your experience of our app. We consider our legitimate interests to include research and development, understanding our audience, marketing and promoting our services, measures taken to operate our services efficiently, marketing analysis, and measures taken to protect our legal rights and interests.
+	</p>
+
+	<h4 class="text-xl font-semibold mt-6 mb-3">Compliance with Law</h4>
+
+	<p class="mb-6">
+		In some cases, we may have a legal obligation to use or keep your personal information. Such cases may include (but are not limited to) court orders, criminal investigations, government requests, and regulatory obligations. If you have any further enquiries about how we retain personal information in order to comply with the law, please feel free to enquire using the details provided in the Contact Us section of this privacy policy.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">International Transfers Outside of the European Economic Area (EEA)</h3>
+
+	<p class="mb-6">
+		We will ensure that any transfer of personal information from countries in the European Economic Area (EEA) to countries outside the EEA will be protected by appropriate safeguards, for example by using standard data protection clauses approved by the European Commission, or the use of binding corporate rules or other legally accepted means.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Your Rights and Controlling Your Personal Information</h3>
+
+	<p class="mb-6">
+		<strong>Restrict:</strong> You have the right to request that we restrict the processing of your personal information if (i) you are concerned about the accuracy of your personal information; (ii) you believe your personal information has been unlawfully processed; (iii) you need us to maintain the personal information solely for the purpose of a legal claim; or (iv) we are in the process of considering your objection in relation to processing on the basis of legitimate interests.
+	</p>
+
+	<p class="mb-6">
+		<strong>Objecting to processing:</strong> You have the right to object to processing of your personal information that is based on our legitimate interests or public interest. If this is done, we must provide compelling legitimate grounds for the processing which overrides your interests, rights, and freedoms, in order to proceed with the processing of your personal information.
+	</p>
+
+	<p class="mb-6">
+		<strong>Data portability:</strong> You may have the right to request a copy of the personal information we hold about you. Where possible, we will provide this information in CSV format or other easily readable machine format. You may also have the right to request that we transfer this personal information to a third party.
+	</p>
+
+	<p class="mb-6">
+		<strong>Deletion:</strong> You may have a right to request that we delete the personal information we hold about you at any time, and we will take reasonable steps to delete your personal information from our current records. If you ask us to delete your personal information, we will let you know how the deletion affects your use of our app, website or products and services. There may be exceptions to this right for specific legal reasons which, if applicable, we will set out for you in response to your request. If you terminate or delete your account, we will delete your personal information within 30 days of the deletion of your account. Please be aware that search engines and similar third parties may still retain copies of your personal information that has been made public at least once, like certain profile information and public comments, even after you have deleted the information from our services or deactivated your account.
+	</p>
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Additional Disclosures for California Compliance (US)</h2>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Do Not Track</h3>
+
+	<p class="mb-6">
+		Some browsers have a "Do Not Track" feature that lets you tell websites that you do not want to have your online activities tracked. At this time we do not respond to browser "Do Not Track" signals.
+	</p>
+
+	<p class="mb-6">
+		We adhere to the standards outlined in this privacy policy ensuring we collect and process personal information lawfully, fairly, transparently and with legitimate, legal reasons for doing so.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Cookies and Pixels</h3>
+
+	<p class="mb-6">
+		At all times you may decline cookies from our site if your browser permits. Most browsers allow you to activate settings on your browser to refuse the setting of all or some cookies. Accordingly, your ability to limit cookies is based only on your browser's capabilities. Please refer to the Cookies section of this privacy policy for more information.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">CCPA-permitted financial incentives</h3>
+
+	<p class="mb-6">
+		In accordance with your right to non-discrimination, we may offer you certain financial incentives permitted by the CCPA that can result in different prices, rates, or quality levels for the goods or services we provide.
+	</p>
+
+	<p class="mb-6">
+		Any CCPA-permitted financial incentive we offer will reasonably relate to the value of your personal information and we will provide written terms that describe clearly the nature of such an offer. Participation in a financial incentive program requires your prior opt-in consent, which you may revoke at any time.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">California Notice of Collection</h3>
+
+	<p class="mb-6">
+		In the past 12 months, we have collected the following categories of personal information enumerated in the California Consumer Privacy Act:
+	</p>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>Identifiers, such as name, email address, phone number account name, IP address, and an ID or number assigned to your account.</li>
+		<li>Demographics, such as your age or gender. This category includes data that may qualify as protected classifications under other California or federal laws.</li>
+		<li>Audio or visual data, such as photos or videos you share with us or post on the service.</li>
+		<li>Geolocation data.</li>
+	</ul>
+
+	<p class="mb-6">
+		For more information on information we collect, including the sources we receive information from, review the "Information We Collect" section. We collect and use these categories of personal information for the business purposes described in the "Collection and Use of Information" section, including to provide and manage our Service.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Right to Know and Delete</h3>
+
+	<p class="mb-6">
+		If you are a California resident, you have rights to delete your personal information we collected and know certain information about our data practices in the preceding 12 months. In particular, you have the right to request the following from us:
+	</p>
+
+	<ul class="list-disc pl-6 mb-6 space-y-2">
+		<li>The categories of personal information we have collected about you;</li>
+		<li>The categories of sources from which the personal information was collected;</li>
+		<li>The categories of personal information about you we disclosed for a business purpose or sold;</li>
+		<li>The categories of third parties to whom the personal information was disclosed for a business purpose or sold;</li>
+		<li>The business or commercial purpose for collecting or selling the personal information; and</li>
+		<li>The specific pieces of personal information we have collected about you.</li>
+	</ul>
+
+	<p class="mb-6">
+		To exercise any of these rights, please contact us using the details provided in this privacy policy.
+	</p>
+
+	<h3 class="text-2xl font-semibold mt-8 mb-4">Shine the Light</h3>
+
+	<p class="mb-6">
+		If you are a California resident, in addition to the rights discussed above, you have the right to request information from us regarding the manner in which we share certain personal information as defined by California's "Shine the Light" with third parties and affiliates for their own direct marketing purposes.
+	</p>
+
+	<p class="mb-6">
+		To receive this information, send us a request using the contact details provided in this privacy policy. Requests must include "California Privacy Rights Request" in the first line of the description and include your name, street address, city, state, and ZIP code.
+	</p>
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Deleting Your Data</h2>
+
+	<p class="mb-6">
+		If you would like to permanently delete your profile and data, follow the steps below:
+	</p>
+
+	<ol class="list-decimal pl-6 mb-6 space-y-2">
+		<li>Open the app and log in with your credentials.</li>
+		<li>Tap on the "Profile" section located in the top right corner of the screen.</li>
+		<li>Tap on the "Delete Account" button to proceed.</li>
+	</ol>
+
+	<p class="mb-6">
+		<strong>Important:</strong> Please note that deleting your profile will permanently remove all of your data, including your account information. This action cannot be undone.
+	</p>
+
+	<p class="mb-6">
+		A confirmation prompt will appear, asking you to verify your decision. Read the message carefully to understand the consequences of deleting your profile.
+		If you are certain about deleting your profile, tap on the "Delete my account" button.
+	</p>
+
+	<p class="mb-6">
+		Once you've completed these steps, your profile will be permanently deleted from our system. You will no longer have access to your account or any associated data.
+	</p>
+
+	<p class="mb-6">
+		If you have any further questions or need assistance, please don't hesitate to contact our support team at <a href="mailto:privacy@natimate.com" class="text-blue-600 hover:underline">privacy@natimate.com</a>.
+	</p>
+
+	<p class="mb-12">
+		Thank you for using our app, and we appreciate your feedback and support!
+	</p>
+
+	<h2 class="text-3xl font-bold mt-12 mb-6">Contact Us</h2>
+
+	<p class="mb-6">
+		For any questions or concerns regarding your privacy, you may contact us using the following details:
+	</p>
+
+	<address class="mb-6 not-italic">
+		Carolinenglückstraße 35<br>
+		44793 Bochum<br>
+		Germany
+	</address>
+
+	<p class="mb-6">
+		NatiMate GmbH<br>
+		<a href="mailto:privacy@natimate.com" class="text-blue-600 hover:underline">privacy@natimate.com</a>
 	</p>
 </div>
 
 <style>
-	h3 {
-		font-size: 1.5rem;
-		font-weight: 600;
-		margin-top: 2.5rem;
-		margin-bottom: 1rem;
-	}
-
-	a {
-		color: blue;
+	/* Add any additional custom styles here if needed */
+	p {
+		@apply text-base leading-relaxed;
 	}
 </style>

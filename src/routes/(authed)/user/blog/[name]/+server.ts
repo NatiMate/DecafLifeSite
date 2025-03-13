@@ -1,6 +1,7 @@
-import { error } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
 import { mkdir, writeFile } from 'fs/promises';
 import { join } from 'path';
+import type { RequestHandler } from './$types';
 
 export async function POST({ request, params }) {
 	try {
@@ -42,3 +43,18 @@ export async function POST({ request, params }) {
 		throw error(500, 'Error uploading file');
 	}
 }
+
+export const DELETE: RequestHandler = async ({ params }) => {
+	const { name } = params;
+
+	try {
+		// Implement your logic to delete the article from the database or file system
+		// For example:
+		// await deleteArticleFromDatabase(name);
+
+		return json({ success: true });
+	} catch (error) {
+		console.error('Error deleting article:', error);
+		return json({ success: false, error: 'Failed to delete article' }, { status: 500 });
+	}
+};

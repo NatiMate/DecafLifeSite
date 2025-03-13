@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
@@ -71,7 +72,6 @@
 	async function storeArticle() {
 		if (submittingArticleForm) return;
 		submittingArticleForm = true;
-		$sfArticleForm.name = $sfArticleForm.name.replace(/ /g, '-').replace('_', '-').toLowerCase();
 		const promise = new Promise(async (resolve, reject) => {
 			await new Promise((r) => setTimeout(r, 100));
 			const startTime = Date.now();
@@ -210,6 +210,26 @@
 		};
 	}
 
+	async function deleteArticle() {
+		if (confirm('Are you sure you want to delete this article?')) {
+			try {
+				const response = await fetch(`/user/blog/${$sfArticleForm.name}/delete`, {
+					method: 'DELETE'
+				});
+
+				if (response.ok) {
+					toast.success('Article deleted successfully');
+					goto('/user/blog');
+				} else {
+					throw new Error('Failed to delete article');
+				}
+			} catch (error) {
+				console.error('Error deleting article:', error);
+				toast.error('Error deleting article');
+			}
+		}
+	}
+
 	onMount(() => {
 		console.log(sfArticleForm);
 		window.addEventListener('scroll', updateScrollProgress);
@@ -251,7 +271,7 @@
 					id="name"
 					class="mb-4 mt-8 w-full border-none text-2xl font-semibold focus:outline-none focus:ring-0"
 					bind:value={$sfArticleForm.name}
-					placeholder="Enter url ending (without spaces, use - instead of spaces and _)"
+					placeholder="Enter url ending (without spaces, use - instead of spaces)"
 				/>
 
 				<select bind:value={$sfArticleForm.previousArticleName}>
@@ -416,6 +436,9 @@
 					storeArticle();
 				}}>Save</button
 			>
+			<button class="rounded-md bg-red-500 px-4 py-2 text-white" onclick={deleteArticle}>
+				Delete Article
+			</button>
 		</form>
 	</div>
 {/if}
